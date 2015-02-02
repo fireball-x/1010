@@ -1,0 +1,49 @@
+[
+  {
+    "__type__": "Fire.TextureMeta",
+    "ver": 0,
+    "uuid": "e33a7836-5b63-4d08-8b11-fd2b0f9a5ad8",
+    "subAssets": [
+      {
+        "asset": {
+          "__id__": 1
+        },
+        "meta": {
+          "__type__": "Fire.SpriteMeta",
+          "ver": 0,
+          "uuid": "0caa5dfc-d3d5-4fa6-b7c3-8c0b6d947d62",
+          "atlasTag": "default",
+          "allowRotation": false,
+          "trim": false,
+          "trimThreshold": 1,
+          "rawTextureUuid": "e33a7836-5b63-4d08-8b11-fd2b0f9a5ad8"
+        }
+      }
+    ],
+    "type": 1,
+    "wrapMode": 1,
+    "filterMode": 1
+  },
+  {
+    "__type__": "Fire.Sprite",
+    "_name": "panel_tooltips",
+    "_objFlags": 0,
+    "texture": {
+      "__uuid__": "e33a7836-5b63-4d08-8b11-fd2b0f9a5ad8"
+    },
+    "rotated": false,
+    "pivot": {
+      "__type__": "Fire.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "trimX": 0,
+    "trimY": 0,
+    "rawWidth": 354,
+    "rawHeight": 198,
+    "x": 0,
+    "y": 0,
+    "width": 354,
+    "height": 198
+  }
+]
