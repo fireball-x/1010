@@ -16,13 +16,13 @@
       }
     ],
     "camera": {
-      "__id__": 3
+      "__id__": 6
     }
   },
   {
     "__type__": "Fire.Entity",
-    "_name": "Main Camera",
-    "_objFlags": 0,
+    "_name": "Scene Camera",
+    "_objFlags": 3080,
     "_active": true,
     "_parent": null,
     "_children": [],
@@ -73,12 +73,12 @@
       "b": 0,
       "a": 1
     },
-    "_size": 600
+    "_size": 378
   },
   {
     "__type__": "Fire.Entity",
-    "_name": "Scene Camera",
-    "_objFlags": 3080,
+    "_name": "Main Camera",
+    "_objFlags": 0,
     "_active": true,
     "_parent": null,
     "_children": [],
@@ -129,13 +129,13 @@
       "b": 0,
       "a": 1
     },
-    "_size": 341
+    "_size": 600
   },
   {
     "__type__": "Fire.Entity",
     "_name": "Prefabs",
     "_objFlags": 0,
-    "_active": false,
+    "_active": true,
     "_parent": null,
     "_children": [
       {

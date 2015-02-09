@@ -1,5 +1,5 @@
 Fire._RFpush('3b001d5dcf804a858845506ff1189082', 'MainMenu');
-// script\Menu\MainMenu.js
+// script/Menu/MainMenu.js
 
 var MainMenu = Fire.defineComponent(function(){
     this._btnPlay = null;

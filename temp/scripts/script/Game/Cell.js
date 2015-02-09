@@ -1,5 +1,5 @@
 Fire._RFpush('18c5b355fc6d494a8a4b4ea4a5d932f8', 'Cell');
-// script\Game\Cell.js
+// script/Game/Cell.js
 
 var Cell = Fire.defineComponent(function () {
     this._tempGrid = null;
