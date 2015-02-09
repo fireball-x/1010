@@ -1,5 +1,5 @@
 Fire._RFpush('a50520d1c1374357987172078b1c7588', 'CubeGroup');
-// script/Game/CubeGroup.js
+// script\Game\CubeGroup.js
 
 var random = Fire.defineComponent();
 

@@ -73,7 +73,7 @@
       "b": 0,
       "a": 1
     },
-    "_size": 600
+    "_size": 697
   },
   {
     "__type__": "Fire.Entity",
@@ -133,7 +133,7 @@
   },
   {
     "__type__": "Fire.Entity",
-    "_name": "New Entity",
+    "_name": "Main Menu",
     "_objFlags": 0,
     "_active": true,
     "_parent": null,
