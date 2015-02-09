@@ -65,9 +65,8 @@ Cell.prototype.destroyBoard = function () {
 
 Cell.prototype.onLoad = function () {
     //     this.entity.on('mousedown',function(event) {
-    //           console.log(event); 
+    //           console.log(event);
     //     });
 };
-
 
 Fire._RFpop();

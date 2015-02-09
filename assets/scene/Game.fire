@@ -13,6 +13,9 @@
       },
       {
         "__id__": 7
+      },
+      {
+        "__id__": 13
       }
     ],
     "camera": {
@@ -129,13 +132,13 @@
       "b": 0,
       "a": 1
     },
-    "_size": 600
+    "_size": 398
   },
   {
     "__type__": "Fire.Entity",
     "_name": "Prefabs",
     "_objFlags": 0,
-    "_active": true,
+    "_active": false,
     "_parent": null,
     "_children": [
       {
@@ -145,6 +148,9 @@
     "_components": [
       {
         "__id__": 11
+      },
+      {
+        "__id__": 12
       }
     ],
     "transform": {
@@ -183,13 +189,15 @@
     "_position": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0
+      "y": 0,
+      "_iN$t": null
     },
     "_rotation": 0,
     "_scale": {
       "__type__": "Fire.Vec2",
       "x": 1,
-      "y": 1
+      "y": 1,
+      "_iN$t": null
     }
   },
   {
@@ -208,11 +216,12 @@
       "r": 1,
       "g": 1,
       "b": 1,
-      "a": 1
+      "a": 1,
+      "_iN$t": null
     },
-    "customSize_": false,
-    "width_": 100,
-    "height_": 100
+    "customSize_": true,
+    "width_": 30,
+    "height_": 30
   },
   {
     "__type__": "Fire.Transform",
@@ -233,5 +242,62 @@
       "x": 1,
       "y": 1
     }
+  },
+  {
+    "__type__": "06309e377960460cb8bc68e4e31dee66",
+    "_name": "",
+    "_objFlags": 0,
+    "entity": {
+      "__id__": 7
+    },
+    "_enabled": true
+  },
+  {
+    "__type__": "Fire.Entity",
+    "_name": "CubeGroup",
+    "_objFlags": 0,
+    "_active": true,
+    "_parent": null,
+    "_children": [],
+    "_components": [
+      {
+        "__id__": 14
+      },
+      {
+        "__id__": 15
+      }
+    ],
+    "transform": {
+      "__id__": 14
+    }
+  },
+  {
+    "__type__": "Fire.Transform",
+    "_name": "",
+    "_objFlags": 0,
+    "entity": {
+      "__id__": 13
+    },
+    "_enabled": true,
+    "_position": {
+      "__type__": "Fire.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_rotation": 0,
+    "_scale": {
+      "__type__": "Fire.Vec2",
+      "x": 1,
+      "y": 1
+    }
+  },
+  {
+    "__type__": "a50520d1c1374357987172078b1c7588",
+    "_name": "",
+    "_objFlags": 0,
+    "entity": {
+      "__id__": 13
+    },
+    "_enabled": true
   }
 ]
