@@ -1,6 +1,7 @@
-Fire._RFpush('9a18ddcf9ebc4e03ae4a14fbc4eb965b', 'Game');
-// script\Game\Game.js
+Fire._RFpush('06309e377960460cb8bc68e4e31dee66', 'Game');
+// script/Game/Game.js
 
 var Game = Fire.defineComponent();
+module.exports = Game;
 
 Fire._RFpop();
