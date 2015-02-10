@@ -55,3 +55,9 @@ quick_gen_project_*_autogen.sh.meta
 # webstorm files
 #/////////////////////////////////////////////////////////////////////////////
 .idea/
+temp/scripts/script/Game/Board.js
+temp/scripts/script/Game/Cell.js
+temp/scripts/script/Game/Cube.js
+temp/scripts/script/Game/CubeGroup.js
+temp/scripts/script/Game/Game.js
+temp/scripts/script/Menu/MainMenu.js
