@@ -1,9 +1,11 @@
-Fire._RFpush('a50520d1c1374357987172078b1c7588', 'CubeGroup');
-// script\Game\CubeGroup.js
+Fire._RFpush('e831ea33bf2b48a2be7dc1835b7160a0', 'CubeGroup');
+// script/Game/CubeGroup.js
 
 var CubeGroup = Fire.defineComponent();
 
 var Cube = require('Cube');
+
+var thisGroup = null;
 
 CubeGroup.prop("_creatCubes",false,Fire.HideInInspector);
 
@@ -16,14 +18,20 @@ CubeGroup.getset("CreatCubes",
         if (value !== this._creatCubes) {
             this._creatCubes = value;
             if (value) {
-                this.createRandom(32,function(obj) {
-                    // NOTE: 创建cubegroup成功后,返回一个obj,可调用obj.setColor来改变已经创建好的cubeGroup
-					obj.setColor(this.Colors.blue);
-                    console.log(obj.color);
-                }.bind(this));
+//                 this.createRandom(32,function(obj) {
+//                     // NOTE: 创建cubegroup成功后,返回一个obj,可调用obj.setColor来改变已经创建好的cubeGroup
+// // 					obj.setColor(this.Colors.blue);
+//                     console.log(obj.color);
+//                 }.bind(this));
+
+                var obj = this.createRandom(32);
+                console.log(obj);
 //                 this.create(32,this.gridType.Box_9,function (obj) {
 //                     console.log(obj);
 //                 }.bind(this),this.Colors.pink);
+            }
+            else {
+                this.clear();
             }
         }
     }
@@ -186,6 +194,47 @@ CubeGroup.prototype._gridType = [
      Line_5_90
 ];
 
+var GridType = (function (t) {
+    t[t.Box_9     = 0] = 'Box_9';
+    t[t.Box_4      = 1] = 'Box_4';
+    t[t.Box_1   = 2] = 'Box_1';
+    t[t.Curved_3_0   = 3] = 'Curved_3_0';
+    t[t.Curved_3_90   = 4] = 'Curved_3_90';
+    t[t.Curved_3_180   = 5] = 'Curved_3_180';
+    t[t.Curved_3_270   = 6] = 'Curved_3_270';
+    t[t.Curved_5_0   = 7] = 'Curved_5_0';
+    t[t.Curved_5_90   = 8] = 'Curved_5_90';
+    t[t.Curved_5_180   = 9] = 'Curved_5_180';
+    t[t.Curved_5_270   = 10] = 'Curved_5_270';
+    t[t.Line_2_0   = 11] = 'Line_2_0';
+    t[t.Line_2_90   = 12] = 'Line_2_90';
+    t[t.Line_3_0   = 13] = 'Line_3_0';
+    t[t.Line_3_90   = 14] = 'Line_3_90';
+    t[t.Line_4_0   = 15] = 'Line_4_0';
+    t[t.Line_4_90   = 16] = 'Line_4_90';
+    t[t.Line_5_0   = 17] = 'Line_5_0';
+    t[t.Line_5_90   = 18] = 'Line_5_90';
+    return t;
+})({});
+
+CubeGroup.prop("_select",GridType.Box_9,Fire.Enum(GridType),Fire.HideInInspector);
+CubeGroup.getset('select',
+    function () {
+      return this._select;
+    },
+    function (value) {
+        if (thisGroup) {
+            this.clear();
+        }
+        if (value != this._select) {
+            this._select = value;
+            this.create(32,this._gridType[value]);
+        }
+    },
+    Fire.Enum(GridType)
+);
+
+
 CubeGroup.prototype.gridType = {
   	 "Box_9": Box_9,
      "Box_4": Box_4,
@@ -234,7 +283,8 @@ CubeGroup.prototype.Colors = {
 /// * callback:
 /// * _color: [可选] 设置指定color. 如果不设置，则随机
 /// ***********************
-CubeGroup.prototype.create = function (size,gridType,callback,_color) {
+CubeGroup.prototype.create = function (size,gridType,_color) {
+
    	var color = this._Colors[Math.floor(Math.random()*5)];
     if (!!_color) {
         color = _color;
@@ -248,10 +298,11 @@ CubeGroup.prototype.create = function (size,gridType,callback,_color) {
          var obj = Fire.instantiate(grid);
          obj.parent = gridGroup;
          obj.name = 'child_' + i;
-         obj.addComponent(Cube);
+         var cube = obj.addComponent(Cube);
+         cube.position = new Fire.Vec2(gridType[i].x,gridType[i].y);
          obj.getComponent(Fire.SpriteRenderer).color = color;
+
          obj.transform.position = new Vec2(gridType[i].x * size , gridType[i].y * size);
-         console.log(obj);
     }
 
     gridGroup.setColor = function (color) {
@@ -261,26 +312,30 @@ CubeGroup.prototype.create = function (size,gridType,callback,_color) {
     };
 
     gridGroup.color = color;
-
-    callback(gridGroup);
+	gridGroup.on('mousedown',function (evnet) {
+        Fire.log('mousedown');
+    }.bind(this));
+    thisGroup = gridGroup;
+    return gridGroup;
 };
 
 
-CubeGroup.prototype.createRandom = function (size,callback) {
+CubeGroup.prototype.createRandom = function (size) {
     var ranGrid = this._gridType[Math.floor(Math.random()*19)];
-    this.create(size,ranGrid,callback);
+    return this.create(size,ranGrid);
 };
 
 CubeGroup.prototype.clear = function () {
-  	this.entity.destroy();
+  	thisGroup.destroy();
+    Fire.FObject._deferredDestroy();
 };
 
 CubeGroup.prototype.update = function () {
-
+    // TODO
 };
 
 CubeGroup.prototype.onLoad = function () {
-
+    // TODO
 };
 
 Fire._RFpop();

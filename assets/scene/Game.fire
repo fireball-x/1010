@@ -15,7 +15,7 @@
         "__id__": 7
       },
       {
-        "__id__": 13
+        "__id__": 12
       }
     ],
     "camera": {
@@ -132,13 +132,13 @@
       "b": 0,
       "a": 1
     },
-    "_size": 398
+    "_size": 600
   },
   {
     "__type__": "Fire.Entity",
     "_name": "Prefabs",
     "_objFlags": 0,
-    "_active": false,
+    "_active": true,
     "_parent": null,
     "_children": [
       {
@@ -148,9 +148,6 @@
     "_components": [
       {
         "__id__": 11
-      },
-      {
-        "__id__": 12
       }
     ],
     "transform": {
@@ -189,15 +186,13 @@
     "_position": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0,
-      "_iN$t": null
+      "y": 0
     },
     "_rotation": 0,
     "_scale": {
       "__type__": "Fire.Vec2",
       "x": 1,
-      "y": 1,
-      "_iN$t": null
+      "y": 1
     }
   },
   {
@@ -216,8 +211,7 @@
       "r": 1,
       "g": 1,
       "b": 1,
-      "a": 1,
-      "_iN$t": null
+      "a": 1
     },
     "customSize_": true,
     "width_": 30,
@@ -244,15 +238,6 @@
     }
   },
   {
-    "__type__": "06309e377960460cb8bc68e4e31dee66",
-    "_name": "",
-    "_objFlags": 0,
-    "entity": {
-      "__id__": 7
-    },
-    "_enabled": true
-  },
-  {
     "__type__": "Fire.Entity",
     "_name": "CubeGroup",
     "_objFlags": 0,
@@ -261,14 +246,14 @@
     "_children": [],
     "_components": [
       {
-        "__id__": 14
+        "__id__": 13
       },
       {
-        "__id__": 15
+        "__id__": 14
       }
     ],
     "transform": {
-      "__id__": 14
+      "__id__": 13
     }
   },
   {
@@ -276,7 +261,7 @@
     "_name": "",
     "_objFlags": 0,
     "entity": {
-      "__id__": 13
+      "__id__": 12
     },
     "_enabled": true,
     "_position": {
@@ -292,12 +277,13 @@
     }
   },
   {
-    "__type__": "a50520d1c1374357987172078b1c7588",
+    "__type__": "e831ea33bf2b48a2be7dc1835b7160a0",
     "_name": "",
     "_objFlags": 0,
     "entity": {
-      "__id__": 13
+      "__id__": 12
     },
-    "_enabled": true
+    "_enabled": true,
+    "_creatCubes": false
   }
 ]
