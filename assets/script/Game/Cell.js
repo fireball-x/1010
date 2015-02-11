@@ -1,6 +1,6 @@
 var Cell = Fire.defineComponent();
 
-Cell.prop('pos', new Fire.Vec2(0, 0));
+Cell.prop('offset', new Fire.Vec2(0, 0));
 Cell.prop('hasCube', false);
 Cell.prop('_cube', null, Fire.HideInInspector);
 
@@ -13,14 +13,16 @@ Cell.prototype.putCube = function (cube) {
     cube.transform.position = new Fire.Vec2(0, 0);
     this.hasCube = true;
     this._cube = cube;
-};
-
-Cell.prototype.onLoad = function() {
+    
     //-- 绑定Cube销毁消息
-    this.entity.on("cube destroyed", function () {
+    this.entity.once("curb clear", function () {
         this._cube = null;
         this.hasCube = false;
     });
+};
+
+Cell.prototype.onLoad = function() {
+   
 };
 
 module.exports = Cell;

@@ -1,17 +1,5 @@
 var cube = Fire.defineComponent();
 
-cube.prop("_clear", false, Fire.HideInInspector);
-
-cube.getset("clear",
-function() {
-    return this._clear;
-},
-
-function(value) {
-    this._clear = value;
-    this.Clear();
-});
-
 cube.prop('_position', new Fire.Vec2(0, 0), Fire.HideInInspector);
 
 cube.getset('position',
@@ -24,7 +12,8 @@ function(value) {
     }
 });
 
-cube.prototype.Clear = function() {
+cube.prototype.clear = function() {
+    this.entity.dispatchEvent(new Fire.Event("curb clear", true));
     this.entity.destroy();
 };
 

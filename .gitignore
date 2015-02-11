@@ -57,3 +57,14 @@ quick_gen_project_*_autogen.sh.meta
 .idea/
 temp/
 settings/
+assets/script/Game/Game.js
+temp/scripts/script/Game/Board.js
+temp/scripts/script/Game/Cell.js
+temp/scripts/script/Game/Cube.js
+temp/scripts/script/Game/CubeGroup.js
+temp/scripts/script/Game/Game.js
+temp/scripts/script/Menu/MainMenu.js
+temp/scripts/src/audio-clip.js
+temp/scripts/src/audio-legacy.js
+temp/scripts/src/audio-source.js
+temp/scripts/src/audio-web-audio.js

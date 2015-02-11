@@ -52,7 +52,7 @@ Board.prototype.create = function () {
             var renderer = entity.getComponent(Fire.SpriteRenderer);
             renderer.color = new Fire.Color(85 / 255, 85 / 255, 85 / 255, 1);
             var cell = entity.addComponent(Cell);
-            cell.pos = new Fire.Vec2(x, y);
+            cell.offset = new Fire.Vec2(x, y);
             this._board[x][y] = cell;
         }
     }    
@@ -66,7 +66,7 @@ Board.prototype.clean = function () {
         for (var y = 0, len = this.count.y; y < len; y++) {
             if(this._board[x][y]){
             	this._board[x][y].entity.destroy();
-            	Fire.FObject._deferredDestroy();
+            	//Fire.FObject._deferredDestroy();
             }
         }
     }
@@ -76,7 +76,10 @@ Board.prototype.clean = function () {
 
 //--  通过X Y 获取Cell（X 0-9）(Y 0-9)
 Board.prototype.getCell = function (x, y) {
-    return this._board[x][y];
+    if (x > -1 && x < 10 && y > -1 && y < 10) {
+        return this._board[x][y];
+    }
+    return null;
 };
 
 //-- 判断是否可以在格子上放置方块
@@ -84,7 +87,7 @@ Board.prototype.canPutCubeToCell = function (cubeGroup, center) {
     for (var j = 0, len = cubeGroup._children.length; j < len; j++) {
         var cube = cubeGroup._children[j].getComponent(Cube);
         var pos = cube.position;
-        var cell = this.getCell(center.pos.x + pos.x, center.pos.y + pos.y);
+        var cell = this.getCell(center.x + pos.x, center.y + pos.y);
         if (!cell || cell.hasCube) {
             return false;
         }

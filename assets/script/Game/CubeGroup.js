@@ -516,13 +516,13 @@ var groupBoradPositions = [];
 
 CubeGroup.prototype.create3 = function(size) {
     groupBoradPositions = [];
-    if (groupBorad.length > 0) {
-        for (var j = 0; j < groupBorad.length; j++) {
-            groupBorad[j].entity.destroy();
-            Fire.FObject._deferredDestroy();
-            Fire.log('destroy');
-        }
-    }
+    //if (groupBorad.length > 0) {
+    //    for (var j = 0; j < groupBorad.length; j++) {
+    //        groupBorad[j].entity.destroy();
+    //        //Fire.FObject._deferredDestroy();
+    //        Fire.log('destroy');
+    //    }
+    //}
     groupBorad = [];
     for (var i = 0; i < 3; i++) {
         var group = this.createRandom(size);
@@ -531,12 +531,13 @@ CubeGroup.prototype.create3 = function(size) {
         groupBoradPositions.push(xy);
         groupBorad.push(group);
     }
+    return groupBorad;
 };
 
 CubeGroup.prototype.clear = function() {
     try {
         thisGroup.destroy();
-        Fire.FObject._deferredDestroy();
+        //Fire.FObject._deferredDestroy();
     } catch(e) {
 
 	}
@@ -553,36 +554,40 @@ CubeGroup.prototype.resetPosition = function(group) {
 CubeGroup.prototype.onLoad = function() {
     // TODO
 	
+    if (Fire.Engine.isPlaying) {
+
+        var Game = require('Game');
+
+        Fire.Input.on('mousedown', function (event) {
+            startX = event.screenX;
+            startY = event.screenY;
+        }.bind(this));
+
+        Fire.Input.on('mousemove', function (event) {
+            if (!isMouseUp) {
+                this.move(event.screenX, event.screenY, moveGrid);
+            }
+        }.bind(this));
+
+        Fire.Input.on('mouseup', function (event) {
+            isMouseUp = true;
+
+            var canPut = Game.instance.putBoard(moveGrid);
+            if (!canPut) {
+                this.resetPosition(moveGrid);
+            }
+
+        }.bind(this));
+
+        camera = Fire.Entity.find("/Main Camera").getComponent(Fire.Camera);
+        thisTransform = Fire.Entity.find("/CubeGroup").transform.position;
+    }
 };
 
 var thisTransform = null;
 
 CubeGroup.prototype.onStart = function() {
 
-    Fire.Input.on('mousedown',
-        function (event) {
-                startX = event.screenX;
-                startY = event.screenY;
-        }.bind(this)
-    );
-
-    Fire.Input.on('mousemove',
-        function (event) {
-            if (!isMouseUp) {
-                this.move(event.screenX,event.screenY,moveGrid);
-            }
-        }.bind(this)
-    );
-
-    Fire.Input.on('mouseup',
-        function (event) {
-            isMouseUp = true;
-            this.resetPosition(moveGrid);
-        }.bind(this)
-    );
-
-    camera = Fire.Entity.find("/Main Camera").getComponent(Fire.Camera);
-    thisTransform = Fire.Entity.find("/CubeGroup").transform.position;
 };
 
 module.exports = CubeGroup;
