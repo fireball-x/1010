@@ -2,7 +2,7 @@ var CubeGroup = Fire.defineComponent();
 
 var Cube = require('Cube');
 
-var groupManager = require('group');
+// var groupManager = require('group');
 
 var thisGroup = null;
 
@@ -469,8 +469,8 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
     var grid = this.entity.find('../Prefabs/Cube');
     var gridGroup = new Fire.Entity('group');
     gridGroup.parent = this.entity;
-    var groupMgr = gridGroup.addComponent(groupManager);
-    groupMgr.cubeListInit();
+//     var groupMgr = gridGroup.addComponent(groupManager);
+//     groupMgr.cubeListInit();
 
     for (var i = 0; i < gridType.length; i++) {
         var obj = Fire.instantiate(grid);
@@ -482,15 +482,8 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
         obj.getComponent(Fire.SpriteRenderer).color = color;
 
         obj.transform.position = new Vec2(gridType[i].x * size, gridType[i].y * size);
-        groupMgr.setCubeList(cube);
+//         groupMgr.setCubeList(cube);
     }
-    gridGroup.setColor = function(color) {
-        for (var j = 0; j < gridGroup._children.length; j++) {
-            gridGroup._children[j].getComponent(Fire.SpriteRenderer).color = color;
-        }
-    };
-
-    gridGroup.color = color;
 
     gridGroup.on('mousedown',
         function(event) {
@@ -501,14 +494,8 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
         }.bind(this)
 	);
 
-    gridGroup.on('mouseup',
-        function(event) {
-            isMouseUp = true;
-        }.bind(this)
-	);
-
     thisGroup = gridGroup;
-    return groupMgr;
+    return gridGroup;
 };
 
 CubeGroup.prototype.createRandom = function(size) {
@@ -524,8 +511,11 @@ CubeGroup.prototype.move = function (moveX,moveY,grid) {
 };
 
 var groupBorad = [];
+var groupBoradPositions = [];
+
 
 CubeGroup.prototype.create3 = function(size) {
+    groupBoradPositions = [];
     if (groupBorad.length > 0) {
         for (var j = 0; j < groupBorad.length; j++) {
             groupBorad[j].entity.destroy();
@@ -537,6 +527,8 @@ CubeGroup.prototype.create3 = function(size) {
     for (var i = 0; i < 3; i++) {
         var group = this.createRandom(size);
         group.transform.position = new Fire.Vec2((( - 5 * size) + (5 * size) * i), group.transform.position.y);
+        var xy = {"id":group.id,'position':group.transform.position};
+        groupBoradPositions.push(xy);
         groupBorad.push(group);
     }
 };
@@ -547,8 +539,15 @@ CubeGroup.prototype.clear = function() {
         Fire.FObject._deferredDestroy();
     } catch(e) {
 
-}
+	}
+};
 
+CubeGroup.prototype.resetPosition = function(group) {
+	for(var i =0; i<groupBorad.length; i++ ) {
+		if (groupBorad[i].id === group.id) {
+            group.transform.position = groupBoradPositions[i].position;
+        }
+    }
 };
 
 CubeGroup.prototype.onLoad = function() {
@@ -578,6 +577,7 @@ CubeGroup.prototype.onStart = function() {
     Fire.Input.on('mouseup',
         function (event) {
             isMouseUp = true;
+            this.resetPosition(moveGrid);
         }.bind(this)
     );
 
