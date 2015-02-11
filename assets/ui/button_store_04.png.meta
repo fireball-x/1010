@@ -1,7 +1,42 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "2d9936b0-c526-47c5-b50d-487a9c505b84",
+  "uuid": "21e47acc-d145-4d74-a9b3-977173cdd838",
+  "subRawData": [
+    {
+      "asset": {
+        "__type__": "Fire.Sprite",
+        "_name": "button_store_04",
+        "_objFlags": 0,
+        "texture": {
+          "__uuid__": "21e47acc-d145-4d74-a9b3-977173cdd838"
+        },
+        "rotated": false,
+        "pivot": {
+          "__type__": "Fire.Vec2",
+          "x": 0.5,
+          "y": 0.5
+        },
+        "trimX": 8,
+        "trimY": 9,
+        "rawWidth": 189,
+        "rawHeight": 188,
+        "x": 8,
+        "y": 9,
+        "width": 156,
+        "height": 161
+      },
+      "meta": {
+        "__type__": "Fire.SpriteMeta",
+        "ver": 0,
+        "uuid": "371fa96b-ac28-4f92-a880-b0655927fff9",
+        "atlasTag": "default",
+        "trimType": 0,
+        "trimThreshold": 1,
+        "rawTextureUuid": "21e47acc-d145-4d74-a9b3-977173cdd838"
+      }
+    }
+  ],
   "type": 1,
   "wrapMode": 1,
   "filterMode": 1

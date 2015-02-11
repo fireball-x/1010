@@ -1,7 +1,42 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "442bf38e-6d30-41c7-9d45-ac1036c4c83c",
+  "uuid": "71f165d4-aeab-44e6-90d2-46f8e8bd7a11",
+  "subRawData": [
+    {
+      "asset": {
+        "__type__": "Fire.Sprite",
+        "_name": "button_play_04",
+        "_objFlags": 0,
+        "texture": {
+          "__uuid__": "71f165d4-aeab-44e6-90d2-46f8e8bd7a11"
+        },
+        "rotated": false,
+        "pivot": {
+          "__type__": "Fire.Vec2",
+          "x": 0.5,
+          "y": 0.5
+        },
+        "trimX": 7,
+        "trimY": 16,
+        "rawWidth": 189,
+        "rawHeight": 197,
+        "x": 7,
+        "y": 16,
+        "width": 156,
+        "height": 162
+      },
+      "meta": {
+        "__type__": "Fire.SpriteMeta",
+        "ver": 0,
+        "uuid": "78d555d8-6b79-465d-8e75-18d87c41e783",
+        "atlasTag": "default",
+        "trimType": 0,
+        "trimThreshold": 1,
+        "rawTextureUuid": "71f165d4-aeab-44e6-90d2-46f8e8bd7a11"
+      }
+    }
+  ],
   "type": 1,
   "wrapMode": 1,
   "filterMode": 1

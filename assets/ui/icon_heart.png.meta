@@ -1,7 +1,42 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "11e8bce0-8cc2-4e85-940e-b713338ea65e",
+  "uuid": "d9b51bd4-33f1-458b-bf04-a02427d01ea3",
+  "subRawData": [
+    {
+      "asset": {
+        "__type__": "Fire.Sprite",
+        "_name": "icon_heart",
+        "_objFlags": 0,
+        "texture": {
+          "__uuid__": "d9b51bd4-33f1-458b-bf04-a02427d01ea3"
+        },
+        "rotated": false,
+        "pivot": {
+          "__type__": "Fire.Vec2",
+          "x": 0.5,
+          "y": 0.5
+        },
+        "trimX": 0,
+        "trimY": 0,
+        "rawWidth": 165,
+        "rawHeight": 154,
+        "x": 0,
+        "y": 0,
+        "width": 165,
+        "height": 154
+      },
+      "meta": {
+        "__type__": "Fire.SpriteMeta",
+        "ver": 0,
+        "uuid": "d2a44571-2e10-488e-98df-d9bfb8586bec",
+        "atlasTag": "default",
+        "trimType": 0,
+        "trimThreshold": 1,
+        "rawTextureUuid": "d9b51bd4-33f1-458b-bf04-a02427d01ea3"
+      }
+    }
+  ],
   "type": 1,
   "wrapMode": 1,
   "filterMode": 1

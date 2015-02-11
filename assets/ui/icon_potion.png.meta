@@ -1,7 +1,42 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "000b65ec-37d3-48af-8397-91682066eb06",
+  "uuid": "8852f754-33cf-4239-b9da-3c228220772d",
+  "subRawData": [
+    {
+      "asset": {
+        "__type__": "Fire.Sprite",
+        "_name": "icon_potion",
+        "_objFlags": 0,
+        "texture": {
+          "__uuid__": "8852f754-33cf-4239-b9da-3c228220772d"
+        },
+        "rotated": false,
+        "pivot": {
+          "__type__": "Fire.Vec2",
+          "x": 0.5,
+          "y": 0.5
+        },
+        "trimX": 0,
+        "trimY": 0,
+        "rawWidth": 137,
+        "rawHeight": 183,
+        "x": 0,
+        "y": 0,
+        "width": 137,
+        "height": 183
+      },
+      "meta": {
+        "__type__": "Fire.SpriteMeta",
+        "ver": 0,
+        "uuid": "bd61c10c-9198-4981-9b5a-80f2a3afc156",
+        "atlasTag": "default",
+        "trimType": 0,
+        "trimThreshold": 1,
+        "rawTextureUuid": "8852f754-33cf-4239-b9da-3c228220772d"
+      }
+    }
+  ],
   "type": 1,
   "wrapMode": 1,
   "filterMode": 1
