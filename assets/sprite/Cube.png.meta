@@ -2,7 +2,10 @@
   "__type__": "Fire.TextureMeta",
   "ver": 0,
   "uuid": "84fe7bbd-5403-4500-872d-3a4ac0691f36",
-  "subAssets": [
+  "type": 1,
+  "wrapMode": 1,
+  "filterMode": 1,
+  "subRawData": [
     {
       "asset": {
         "__type__": "Fire.Sprite",
@@ -36,8 +39,5 @@
         "rawTextureUuid": "84fe7bbd-5403-4500-872d-3a4ac0691f36"
       }
     }
-  ],
-  "type": 1,
-  "wrapMode": 1,
-  "filterMode": 1
+  ]
 }

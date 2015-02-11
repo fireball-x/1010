@@ -1,49 +1,43 @@
-[
-  {
-    "__type__": "Fire.TextureMeta",
-    "ver": 0,
-    "uuid": "aff65a65-c1b5-4893-90a7-1a09570613d2",
-    "subAssets": [
-      {
-        "asset": {
-          "__id__": 1
+{
+  "__type__": "Fire.TextureMeta",
+  "ver": 0,
+  "uuid": "1f7fbaf0-f8e3-4e5b-ad48-7e9f4e854b15",
+  "subRawData": [
+    {
+      "asset": {
+        "__type__": "Fire.Sprite",
+        "_name": "icon_gun",
+        "_objFlags": 0,
+        "texture": {
+          "__uuid__": "1f7fbaf0-f8e3-4e5b-ad48-7e9f4e854b15"
         },
-        "meta": {
-          "__type__": "Fire.SpriteMeta",
-          "ver": 0,
-          "uuid": "686c79be-3b32-41bb-9a07-dc1b40c09bc6",
-          "atlasTag": "default",
-          "allowRotation": false,
-          "trim": false,
-          "trimThreshold": 1,
-          "rawTextureUuid": "aff65a65-c1b5-4893-90a7-1a09570613d2"
-        }
+        "rotated": false,
+        "pivot": {
+          "__type__": "Fire.Vec2",
+          "x": 0.5,
+          "y": 0.5
+        },
+        "trimX": 0,
+        "trimY": 0,
+        "rawWidth": 171,
+        "rawHeight": 189,
+        "x": 0,
+        "y": 0,
+        "width": 171,
+        "height": 189
+      },
+      "meta": {
+        "__type__": "Fire.SpriteMeta",
+        "ver": 0,
+        "uuid": "107cf9e9-5346-41e1-87ce-0cd58a984c11",
+        "atlasTag": "default",
+        "trimType": 0,
+        "trimThreshold": 1,
+        "rawTextureUuid": "1f7fbaf0-f8e3-4e5b-ad48-7e9f4e854b15"
       }
-    ],
-    "type": 1,
-    "wrapMode": 1,
-    "filterMode": 1
-  },
-  {
-    "__type__": "Fire.Sprite",
-    "_name": "icon_gun",
-    "_objFlags": 0,
-    "texture": {
-      "__uuid__": "aff65a65-c1b5-4893-90a7-1a09570613d2"
-    },
-    "rotated": false,
-    "pivot": {
-      "__type__": "Fire.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "trimX": 0,
-    "trimY": 0,
-    "rawWidth": 171,
-    "rawHeight": 189,
-    "x": 0,
-    "y": 0,
-    "width": 171,
-    "height": 189
-  }
-]
+    }
+  ],
+  "type": 1,
+  "wrapMode": 1,
+  "filterMode": 1
+}
