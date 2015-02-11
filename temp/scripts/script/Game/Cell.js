@@ -3,25 +3,29 @@ Fire._RFpush('18c5b355fc6d494a8a4b4ea4a5d932f8', 'Cell');
 
 var Cell = Fire.defineComponent();
 
-Cell.prop('pos', new Fire.Vec2(0, 0));
+Cell.prop('offset', new Fire.Vec2(0, 0));
 Cell.prop('hasCube', false);
+Cell.prop('_cube', null, Fire.HideInInspector);
 
 Cell.prototype.clean = function() {
     this.entity.destroy();
 };
 
-Cell.prototype.setPos = function(x, y) {
-    this.pos = new Fire.Vec2(x, y);
-};
-
-Cell.prototype.setCube = function(cube){
-    cube.parent = this.entity;
+Cell.prototype.putCube = function (cube) {
+    cube.entity.parent = this.entity;
     cube.transform.position = new Fire.Vec2(0, 0);
-	this.hasCube = true;
+    this.hasCube = true;
+    this._cube = cube;
+    
+    //-- 绑定Cube销毁消息
+    this.entity.once("curb clear", function () {
+        this._cube = null;
+        this.hasCube = false;
+    });
 };
 
 Cell.prototype.onLoad = function() {
-    //-- 绑定Cube销毁消息
+   
 };
 
 module.exports = Cell;

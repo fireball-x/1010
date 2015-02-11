@@ -1,4 +1,6 @@
-var CubeGroup = Fire.defineComponent();
+var CubeGroup = Fire.defineComponent(function () {
+    this.stopAnimation = true;
+});
 
 var Cube = require('Cube');
 
@@ -480,10 +482,11 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
 
         cube.position = new Fire.Vec2(gridType[i].x, gridType[i].y);
         obj.getComponent(Fire.SpriteRenderer).color = color;
-
         obj.transform.position = new Vec2(gridType[i].x * size, gridType[i].y * size);
 //         groupMgr.setCubeList(cube);
     }
+    
+    gridGroup.transform.scale = new Fire.Vec2(0.9,0.9);
 
     gridGroup.on('mousedown',
         function(event) {
@@ -527,10 +530,13 @@ CubeGroup.prototype.create3 = function(size) {
     for (var i = 0; i < 3; i++) {
         var group = this.createRandom(size);
         group.transform.position = new Fire.Vec2((( - 5 * size) + (5 * size) * i), group.transform.position.y);
+//         group.transform.scale = new Fire.Vec2(0,0);
         var xy = {"id":group.id,'position':group.transform.position};
         groupBoradPositions.push(xy);
         groupBorad.push(group);
     }
+    this.entity.transform.scale = new Fire.Vec2(0.0,0.0);
+    this.play();
     return groupBorad;
 };
 
@@ -553,7 +559,7 @@ CubeGroup.prototype.resetPosition = function(group) {
 
 CubeGroup.prototype.onLoad = function() {
     // TODO
-	
+	this.time = 0;
     if (Fire.Engine.isPlaying) {
 
         var Game = require('Game');
@@ -575,6 +581,7 @@ CubeGroup.prototype.onLoad = function() {
             var canPut = Game.instance.putBoard(moveGrid);
             if (!canPut) {
                 this.resetPosition(moveGrid);
+                
             }
 
         }.bind(this));
@@ -586,8 +593,23 @@ CubeGroup.prototype.onLoad = function() {
 
 var thisTransform = null;
 
-CubeGroup.prototype.onStart = function() {
+CubeGroup.prototype.play = function () {
+  	  this.stopAnimation = false;
+};
 
+CubeGroup.prototype.animation = function () {
+  this.entity.transform.scale = new Fire.Vec2(this.entity.transform.scale.x + Fire.Time.deltaTime * 5, this.entity.transform.scale.x + Fire.Time.deltaTime * 5);
+    if (this.entity.transform.scale.x + Fire.Time.deltaTime >= 1) {
+        this.entity.transform.scale = new Fire.Vec2(1,1);
+        this.stopAnimation = true;
+        Fire.log('stop');
+    }
+};
+
+CubeGroup.prototype.update = function() {
+	if (!this.stopAnimation) {
+        this.animation();
+    }
 };
 
 module.exports = CubeGroup;
