@@ -1,49 +1,8 @@
-[
-  {
-    "__type__": "Fire.TextureMeta",
-    "ver": 0,
-    "uuid": "39e0e401-df3f-4411-b320-6b53b357644d",
-    "subAssets": [
-      {
-        "asset": {
-          "__id__": 1
-        },
-        "meta": {
-          "__type__": "Fire.SpriteMeta",
-          "ver": 0,
-          "uuid": "01bb2626-e174-4a13-86e9-5df22484cea5",
-          "atlasTag": "default",
-          "allowRotation": false,
-          "trim": false,
-          "trimThreshold": 1,
-          "rawTextureUuid": "39e0e401-df3f-4411-b320-6b53b357644d"
-        }
-      }
-    ],
-    "type": 1,
-    "wrapMode": 1,
-    "filterMode": 1
-  },
-  {
-    "__type__": "Fire.Sprite",
-    "_name": "button_home_04",
-    "_objFlags": 0,
-    "texture": {
-      "__uuid__": "39e0e401-df3f-4411-b320-6b53b357644d"
-    },
-    "rotated": false,
-    "pivot": {
-      "__type__": "Fire.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "trimX": 0,
-    "trimY": 0,
-    "rawWidth": 189,
-    "rawHeight": 188,
-    "x": 0,
-    "y": 0,
-    "width": 189,
-    "height": 188
-  }
-]
+{
+  "__type__": "Fire.TextureMeta",
+  "ver": 0,
+  "uuid": "39e0e401-df3f-4411-b320-6b53b357644d",
+  "type": 1,
+  "wrapMode": 1,
+  "filterMode": 1
+}

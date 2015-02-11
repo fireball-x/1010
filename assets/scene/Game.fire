@@ -246,7 +246,7 @@
       "y": 30
     },
     "spacing": 2,
-    "_createOrClean": true
+    "_createOrClean": false
   },
   {
     "__type__": "Fire.Entity",
@@ -277,14 +277,14 @@
     "_enabled": true,
     "_position": {
       "__type__": "Fire.Vec2",
-      "x": 1.3595209496780183e-14,
-      "y": -222.02662034875195
+      "x": 0,
+      "y": -222
     },
     "_rotation": 0,
     "_scale": {
       "__type__": "Fire.Vec2",
-      "x": 0.7,
-      "y": 0.7
+      "x": 1,
+      "y": 1
     }
   },
   {

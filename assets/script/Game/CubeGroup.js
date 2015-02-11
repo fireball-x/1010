@@ -2,7 +2,11 @@ var CubeGroup = Fire.defineComponent();
 
 var Cube = require('Cube');
 
+var groupManager = require('group');
+
 var thisGroup = null;
+
+var camera = null;
 
 CubeGroup.prop("_creatCubes", false, Fire.HideInInspector);
 
@@ -30,16 +34,7 @@ function(value) {
     if (value !== this._creatCubes) {
         this._creatCubes = value;
         if (value) {
-            //                 this.createRandom(32,function(obj) {
-            //                     // NOTE: 创建cubegroup成功后,返回一个obj,可调用obj.setColor来改变已经创建好的cubeGroup
-            // // 					obj.setColor(this.Colors.blue);
-            //                     console.log(obj.color);
-            //                 }.bind(this));
             var obj = this.createRandom(32);
-            console.log(obj);
-            //                 this.create(32,this.gridType.Box_9,function (obj) {
-            //                     console.log(obj);
-            //                 }.bind(this),this.Colors.pink);
         } else {
             this.clear();
         }
@@ -449,6 +444,15 @@ CubeGroup.prototype.Colors = {
     "pink": pink
 };
 
+
+var startX = 0;
+var startY = 0;
+var isMouseUp = true;
+
+var startOffsetX = 0;
+var startOffsetY = 0;
+
+var moveGrid = null;
 /// ***********************
 /// * size: 单个cube大小
 /// * gridType: 指定的cubeGroup
@@ -465,18 +469,21 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
     var grid = this.entity.find('../Prefabs/Cube');
     var gridGroup = new Fire.Entity('group');
     gridGroup.parent = this.entity;
+    var groupMgr = gridGroup.addComponent(groupManager);
+    groupMgr.cubeListInit();
 
     for (var i = 0; i < gridType.length; i++) {
         var obj = Fire.instantiate(grid);
         obj.parent = gridGroup;
         obj.name = 'child_' + i;
         var cube = obj.addComponent(Cube);
+
         cube.position = new Fire.Vec2(gridType[i].x, gridType[i].y);
         obj.getComponent(Fire.SpriteRenderer).color = color;
 
         obj.transform.position = new Vec2(gridType[i].x * size, gridType[i].y * size);
+        groupMgr.setCubeList(cube);
     }
-
     gridGroup.setColor = function(color) {
         for (var j = 0; j < gridGroup._children.length; j++) {
             gridGroup._children[j].getComponent(Fire.SpriteRenderer).color = color;
@@ -484,15 +491,24 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
     };
 
     gridGroup.color = color;
-    
-    gridGroup.on('mousemove',
-        function(evnet) {
-            Fire.log(evnet);
+
+    gridGroup.on('mousedown',
+        function(event) {
+        	isMouseUp = false;
+            startOffsetX = gridGroup.transform.position.x;
+            startOffsetY = gridGroup.transform.position.y;
+            moveGrid = gridGroup;
+        }.bind(this)
+	);
+
+    gridGroup.on('mouseup',
+        function(event) {
+            isMouseUp = true;
         }.bind(this)
 	);
 
     thisGroup = gridGroup;
-    return gridGroup;
+    return groupMgr;
 };
 
 CubeGroup.prototype.createRandom = function(size) {
@@ -500,12 +516,19 @@ CubeGroup.prototype.createRandom = function(size) {
     return this.create(size, ranGrid);
 };
 
+CubeGroup.prototype.move = function (moveX,moveY,grid) {
+    var CubeGroupPosition = thisTransform;
+    var screenPosition = new Fire.Vec2(moveX,moveY);
+    var wordPostion = camera.screenToWorld(screenPosition);
+    grid.transform.position = new Fire.Vec2(wordPostion.x + CubeGroupPosition.x,wordPostion.y - CubeGroupPosition.y);
+};
+
 var groupBorad = [];
 
 CubeGroup.prototype.create3 = function(size) {
     if (groupBorad.length > 0) {
         for (var j = 0; j < groupBorad.length; j++) {
-            groupBorad[j].destroy();
+            groupBorad[j].entity.destroy();
             Fire.FObject._deferredDestroy();
             Fire.log('destroy');
         }
@@ -513,7 +536,6 @@ CubeGroup.prototype.create3 = function(size) {
     groupBorad = [];
     for (var i = 0; i < 3; i++) {
         var group = this.createRandom(size);
-        console.log(( - 5 * size) + ( - 5 * size) * i);
         group.transform.position = new Fire.Vec2((( - 5 * size) + (5 * size) * i), group.transform.position.y);
         groupBorad.push(group);
     }
@@ -529,12 +551,38 @@ CubeGroup.prototype.clear = function() {
 
 };
 
-CubeGroup.prototype.update = function() {
-    // TODO
-};
-
 CubeGroup.prototype.onLoad = function() {
     // TODO
+	
+};
+
+var thisTransform = null;
+
+CubeGroup.prototype.onStart = function() {
+
+    Fire.Input.on('mousedown',
+        function (event) {
+                startX = event.screenX;
+                startY = event.screenY;
+        }.bind(this)
+    );
+
+    Fire.Input.on('mousemove',
+        function (event) {
+            if (!isMouseUp) {
+                this.move(event.screenX,event.screenY,moveGrid);
+            }
+        }.bind(this)
+    );
+
+    Fire.Input.on('mouseup',
+        function (event) {
+            isMouseUp = true;
+        }.bind(this)
+    );
+
+    camera = Fire.Entity.find("/Main Camera").getComponent(Fire.Camera);
+    thisTransform = Fire.Entity.find("/CubeGroup").transform.position;
 };
 
 module.exports = CubeGroup;
