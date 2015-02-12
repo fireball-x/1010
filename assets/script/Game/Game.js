@@ -29,38 +29,6 @@ Game.prototype.onLoad = function () {
 			this.cubeGroupList = this.cubeGroup.create3(32);
         }
     }
-    
-//     boardObj.on('mousedown', function (event) {
-//         console.log(event);
-//         var cube = null;
-//         var cell = event.target.getComponent(Cell);
-//         if (!cell) {
-//             cube = event.target.getComponent(Cube);
-//             if (cube) {
-//                 cube.Clear();
-//             }
-//         }
-//         else {
-//             var groupObj = this.entity.find('../CubeGroup');
-//             var group = groupObj.getComponent(CubeGroup);
-//             var cubGroup = group.create(32, CubeGroup.prototype.gridType.Line_5_90);
-//             var center = cell;
-//             var child = [];
-//             for (var i = 0; i < cubGroup._children.length; ++i) {
-//                 child.push(cubGroup._children[i]);
-//             }
-//             var hasPutCube = this.board.canPutCubeToCell(cubGroup, center);
-//             if (hasPutCube) {
-//                 for (var j = 0, len = cubGroup._children.length; j < len; j++) {
-//                     cube = child[j].getComponent(Cube);
-//                     var pos = cube.position;
-//                     cell = this.board.getCell(center.pos.x + pos.x, center.pos.y + pos.y);
-//                     cell.putCube(cube);
-//                 }
-
-//             }
-//         }
-    //}.bind(this));
 };
 
 Game.prototype.update = function () {

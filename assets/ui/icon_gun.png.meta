@@ -1,7 +1,7 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "1f7fbaf0-f8e3-4e5b-ad48-7e9f4e854b15",
+  "uuid": "6cac853d-9c7b-46d8-bfd4-002391c38045",
   "subRawData": [
     {
       "asset": {
@@ -9,7 +9,7 @@
         "_name": "icon_gun",
         "_objFlags": 0,
         "texture": {
-          "__uuid__": "1f7fbaf0-f8e3-4e5b-ad48-7e9f4e854b15"
+          "__uuid__": "6cac853d-9c7b-46d8-bfd4-002391c38045"
         },
         "rotated": false,
         "pivot": {
@@ -29,11 +29,11 @@
       "meta": {
         "__type__": "Fire.SpriteMeta",
         "ver": 0,
-        "uuid": "107cf9e9-5346-41e1-87ce-0cd58a984c11",
+        "uuid": "4ec5a367-30d7-4c31-bcb1-8b15bf396051",
         "atlasTag": "default",
         "trimType": 0,
         "trimThreshold": 1,
-        "rawTextureUuid": "1f7fbaf0-f8e3-4e5b-ad48-7e9f4e854b15"
+        "rawTextureUuid": "6cac853d-9c7b-46d8-bfd4-002391c38045"
       }
     }
   ],

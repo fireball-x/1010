@@ -20,7 +20,6 @@ Cell.prototype.putCube = function (cube) {
     this.entity.on("curb clear", function () {
         this.cube = null;
         this.hasCube = false;
-        console.trace(this.entity.name);
     }.bind(this));
 };
 

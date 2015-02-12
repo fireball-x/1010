@@ -1,7 +1,7 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "c39e8c51-03e4-445f-898e-07a010214dc7",
+  "uuid": "6da0e068-9d3d-4d85-a4ef-f0a845c7ef5b",
   "subRawData": [
     {
       "asset": {
@@ -9,7 +9,7 @@
         "_name": "progress_slot",
         "_objFlags": 0,
         "texture": {
-          "__uuid__": "c39e8c51-03e4-445f-898e-07a010214dc7"
+          "__uuid__": "6da0e068-9d3d-4d85-a4ef-f0a845c7ef5b"
         },
         "rotated": false,
         "pivot": {
@@ -29,11 +29,11 @@
       "meta": {
         "__type__": "Fire.SpriteMeta",
         "ver": 0,
-        "uuid": "82f58b7a-2a59-46ec-b8bc-aa32c4191182",
+        "uuid": "2a446ad9-2bbd-4280-96ed-cc98bb08fe92",
         "atlasTag": "default",
         "trimType": 0,
         "trimThreshold": 1,
-        "rawTextureUuid": "c39e8c51-03e4-445f-898e-07a010214dc7"
+        "rawTextureUuid": "6da0e068-9d3d-4d85-a4ef-f0a845c7ef5b"
       }
     }
   ],

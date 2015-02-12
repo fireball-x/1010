@@ -1,7 +1,7 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "3ef8eaf6-eab5-4c16-82c9-b63970f85296",
+  "uuid": "a4a4dda5-b829-4fee-98f9-b3c6a0dc7594",
   "subRawData": [
     {
       "asset": {
@@ -9,7 +9,7 @@
         "_name": "icon_time",
         "_objFlags": 0,
         "texture": {
-          "__uuid__": "3ef8eaf6-eab5-4c16-82c9-b63970f85296"
+          "__uuid__": "a4a4dda5-b829-4fee-98f9-b3c6a0dc7594"
         },
         "rotated": false,
         "pivot": {
@@ -29,11 +29,11 @@
       "meta": {
         "__type__": "Fire.SpriteMeta",
         "ver": 0,
-        "uuid": "4097756c-3880-44ac-8a6c-aeefae5235c0",
+        "uuid": "f76cbc22-a9cf-446c-8879-e6f62ce8bb18",
         "atlasTag": "default",
         "trimType": 0,
         "trimThreshold": 1,
-        "rawTextureUuid": "3ef8eaf6-eab5-4c16-82c9-b63970f85296"
+        "rawTextureUuid": "a4a4dda5-b829-4fee-98f9-b3c6a0dc7594"
       }
     }
   ],

@@ -396,12 +396,12 @@ function() {
     return this._select;
 },
 function(value) {
-    if (thisGroup.isValid) {
-        this.clear();
-    }
+    //if (thisGroup.isValid) {
+    //    this.clear();
+    //}
     if (value != this._select) {
         this._select = value;
-        this.create(32, this._gridType[value]);
+        //this.create(32, this._gridType[value]);
     }
 },
 Fire.Enum(GridType));
@@ -485,8 +485,6 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
     gridGroup.on('mousedown',
         function(event) {
         	isMouseUp = false;
-            startOffsetX = gridGroup.transform.position.x;
-            startOffsetY = gridGroup.transform.position.y;
             moveGrid = gridGroup;
         	moveGrid.transform.scale = new Fire.Vec2(0.9,0.9);
         }.bind(this)

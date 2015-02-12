@@ -1,7 +1,7 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "d9b51bd4-33f1-458b-bf04-a02427d01ea3",
+  "uuid": "333ea1e6-3da1-4c32-9b95-1ba407b370f3",
   "subRawData": [
     {
       "asset": {
@@ -9,7 +9,7 @@
         "_name": "icon_heart",
         "_objFlags": 0,
         "texture": {
-          "__uuid__": "d9b51bd4-33f1-458b-bf04-a02427d01ea3"
+          "__uuid__": "333ea1e6-3da1-4c32-9b95-1ba407b370f3"
         },
         "rotated": false,
         "pivot": {
@@ -29,11 +29,11 @@
       "meta": {
         "__type__": "Fire.SpriteMeta",
         "ver": 0,
-        "uuid": "d2a44571-2e10-488e-98df-d9bfb8586bec",
+        "uuid": "be832d3d-8109-49ad-bac0-524c267d0767",
         "atlasTag": "default",
         "trimType": 0,
         "trimThreshold": 1,
-        "rawTextureUuid": "d9b51bd4-33f1-458b-bf04-a02427d01ea3"
+        "rawTextureUuid": "333ea1e6-3da1-4c32-9b95-1ba407b370f3"
       }
     }
   ],
