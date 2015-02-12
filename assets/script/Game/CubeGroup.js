@@ -4,7 +4,7 @@ var CubeGroup = Fire.defineComponent(function () {
 
 var Cube = require('Cube');
 
-// var groupManager = require('group');
+var thisTransform = null;
 
 var thisGroup = null;
 
@@ -15,6 +15,7 @@ CubeGroup.prop("_creatCubes", false, Fire.HideInInspector);
 CubeGroup.prop('_creatThree', false, Fire.HideInInspector);
 
 CubeGroup.getset('CreatThree',
+                 
 function() {
     return this._creatThree;
 },
@@ -28,6 +29,7 @@ function(value) {
 });
 
 CubeGroup.getset("CreatCubes",
+                 
 function() {
     return this._creatCubes;
 },
@@ -54,10 +56,6 @@ var Box_9 = [{
 {
     "y": 0,
     "x": 1
-},
-{
-    "y": -1,
-    "x": -1
 },
 {
     "y": -1,
@@ -392,6 +390,7 @@ var GridType = (function(t) {
 })({});
 
 CubeGroup.prop("_select", GridType.Box_9, Fire.Enum(GridType), Fire.HideInInspector);
+
 CubeGroup.getset('select',
 function() {
     return this._select;
@@ -451,8 +450,6 @@ var startX = 0;
 var startY = 0;
 var isMouseUp = true;
 
-var startOffsetX = 0;
-var startOffsetY = 0;
 
 var moveGrid = null;
 /// ***********************
@@ -471,8 +468,6 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
     var grid = this.entity.find('../Prefabs/Cube');
     var gridGroup = new Fire.Entity('group');
     gridGroup.parent = this.entity;
-//     var groupMgr = gridGroup.addComponent(groupManager);
-//     groupMgr.cubeListInit();
 
     for (var i = 0; i < gridType.length; i++) {
         var obj = Fire.instantiate(grid);
@@ -483,10 +478,9 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
         cube.position = new Fire.Vec2(gridType[i].x, gridType[i].y);
         obj.getComponent(Fire.SpriteRenderer).color = color;
         obj.transform.position = new Vec2(gridType[i].x * size, gridType[i].y * size);
-//         groupMgr.setCubeList(cube);
     }
     
-    gridGroup.transform.scale = new Fire.Vec2(0.9,0.9);
+    gridGroup.transform.scale = new Fire.Vec2(0.8,0.8);
 
     gridGroup.on('mousedown',
         function(event) {
@@ -494,6 +488,7 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
             startOffsetX = gridGroup.transform.position.x;
             startOffsetY = gridGroup.transform.position.y;
             moveGrid = gridGroup;
+        	moveGrid.transform.scale = new Fire.Vec2(0.9,0.9);
         }.bind(this)
 	);
 
@@ -519,18 +514,11 @@ var groupBoradPositions = [];
 
 CubeGroup.prototype.create3 = function(size) {
     groupBoradPositions = [];
-    //if (groupBorad.length > 0) {
-    //    for (var j = 0; j < groupBorad.length; j++) {
-    //        groupBorad[j].entity.destroy();
-    //        //Fire.FObject._deferredDestroy();
-    //        Fire.log('destroy');
-    //    }
-    //}
+    
     groupBorad = [];
     for (var i = 0; i < 3; i++) {
         var group = this.createRandom(size);
         group.transform.position = new Fire.Vec2((( - 5 * size) + (5 * size) * i), group.transform.position.y);
-//         group.transform.scale = new Fire.Vec2(0,0);
         var xy = {"id":group.id,'position':group.transform.position};
         groupBoradPositions.push(xy);
         groupBorad.push(group);
@@ -543,23 +531,25 @@ CubeGroup.prototype.create3 = function(size) {
 CubeGroup.prototype.clear = function() {
     try {
         thisGroup.destroy();
-        //Fire.FObject._deferredDestroy();
     } catch(e) {
 
 	}
 };
 
 CubeGroup.prototype.resetPosition = function(group) {
-	for(var i =0; i<groupBorad.length; i++ ) {
+	for(var i =0; i < groupBorad.length; i++ ) {
 		if (groupBorad[i].id === group.id) {
-            group.transform.position = groupBoradPositions[i].position;
+            for (var j = 0; j < groupBoradPositions.length; j++) {
+                if (groupBoradPositions[j].id === group.id) {
+                    group.transform.position = groupBoradPositions[j].position;
+                    group.transform.scale = new Fire.Vec2(0.8,0.8);
+                }
+            }
         }
     }
 };
 
 CubeGroup.prototype.onLoad = function() {
-    // TODO
-	this.time = 0;
     if (Fire.Engine.isPlaying) {
 
         var Game = require('Game');
@@ -581,7 +571,6 @@ CubeGroup.prototype.onLoad = function() {
             var canPut = Game.instance.putBoard(moveGrid);
             if (!canPut) {
                 this.resetPosition(moveGrid);
-                
             }
 
         }.bind(this));
@@ -591,7 +580,6 @@ CubeGroup.prototype.onLoad = function() {
     }
 };
 
-var thisTransform = null;
 
 CubeGroup.prototype.play = function () {
   	  this.stopAnimation = false;
