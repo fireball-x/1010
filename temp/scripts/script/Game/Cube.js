@@ -45,7 +45,6 @@ cube.prototype.animation = function() {
     if (this.entity.transform.scale.x - Fire.Time.deltaTime <= 0) {
         this.stopAnimation = true;
         this.clear();
-        Fire.log('stop');
     }
 };
 

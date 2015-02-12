@@ -17,7 +17,7 @@ CubeGroup.prop("_creatCubes", false, Fire.HideInInspector);
 CubeGroup.prop('_creatThree', false, Fire.HideInInspector);
 
 CubeGroup.getset('CreatThree',
-                 
+
 function() {
     return this._creatThree;
 },
@@ -31,7 +31,7 @@ function(value) {
 });
 
 CubeGroup.getset("CreatCubes",
-                 
+
 function() {
     return this._creatCubes;
 },
@@ -481,7 +481,7 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
         obj.getComponent(Fire.SpriteRenderer).color = color;
         obj.transform.position = new Vec2(gridType[i].x * size, gridType[i].y * size);
     }
-    
+
     gridGroup.transform.scale = new Fire.Vec2(0.8,0.8);
 
     gridGroup.on('mousedown',
@@ -514,7 +514,7 @@ var groupBoradPositions = [];
 
 CubeGroup.prototype.create3 = function(size) {
     groupBoradPositions = [];
-    
+
     groupBorad = [];
     for (var i = 0; i < 3; i++) {
         var group = this.createRandom(size);
@@ -537,6 +537,7 @@ CubeGroup.prototype.clear = function() {
 };
 
 CubeGroup.prototype.resetPosition = function(group) {
+    var undoPosition = group.transform.position;
 	for(var i =0; i < groupBorad.length; i++ ) {
 		if (groupBorad[i].id === group.id) {
             for (var j = 0; j < groupBoradPositions.length; j++) {
@@ -550,7 +551,7 @@ CubeGroup.prototype.resetPosition = function(group) {
 };
 
 CubeGroup.prototype.onLoad = function() {
-    
+
     if (Fire.Engine.isPlaying) {
 
         var Game = require('Game');
@@ -573,7 +574,6 @@ CubeGroup.prototype.onLoad = function() {
             if (!canPut) {
                 this.resetPosition(moveGrid);
             }
-//             Fire.Entity.find("/Audio/").getComponent();
             AudioControl.play_bobo();
         }.bind(this));
 
@@ -592,7 +592,6 @@ CubeGroup.prototype.animation = function () {
     if (this.entity.transform.scale.x + Fire.Time.deltaTime >= 1) {
         this.entity.transform.scale = new Fire.Vec2(1,1);
         this.stopAnimation = true;
-        Fire.log('stop');
     }
 };
 
