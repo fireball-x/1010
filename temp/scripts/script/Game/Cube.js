@@ -1,4 +1,4 @@
-Fire._RFpush('5f850977476541df9bc5f1ab745b993b', 'Cube');
+Fire._RFpush('44e7ec334e374001b311c94e5ef7d9d0', 'Cube');
 // script/Game/Cube.js
 
 var cube = Fire.defineComponent(function() {

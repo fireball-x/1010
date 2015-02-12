@@ -6,6 +6,8 @@ var Cube = require('Cube');
 
 var thisTransform = null;
 
+var AudioControl = require('AudioControl');
+
 var thisGroup = null;
 
 var camera = null;
@@ -548,6 +550,7 @@ CubeGroup.prototype.resetPosition = function(group) {
 };
 
 CubeGroup.prototype.onLoad = function() {
+    
     if (Fire.Engine.isPlaying) {
 
         var Game = require('Game');
@@ -570,7 +573,8 @@ CubeGroup.prototype.onLoad = function() {
             if (!canPut) {
                 this.resetPosition(moveGrid);
             }
-
+//             Fire.Entity.find("/Audio/").getComponent();
+            AudioControl.play_bobo();
         }.bind(this));
 
         camera = Fire.Entity.find("/Main Camera").getComponent(Fire.Camera);
