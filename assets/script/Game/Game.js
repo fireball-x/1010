@@ -27,7 +27,7 @@ Game.prototype.onLoad = function () {
     if(Fire.Engine.isPlaying){
         if(this.cubeGroupList.length === 0){
 			this.cubeGroupList = this.cubeGroup.create3(32);
-    	}
+        }
     }
     
 //     boardObj.on('mousedown', function (event) {
@@ -77,7 +77,6 @@ Game.prototype.putBoard = function (cubeGroup) {
 
     var x = Math.round(pos.x / (this.board.size.x + this.board.spacing / 2));
     var y = Math.round(pos.y / (this.board.size.y + this.board.spacing / 2));
-    console.log(x + "  " + y);
     var center = new Vec2(x, y);
     var hasPutCube = this.board.canPutCubeToCell(cubeGroup, center);
 
@@ -102,6 +101,8 @@ Game.prototype.putBoard = function (cubeGroup) {
         }
         cubeGroup.destroy();
 
+        this.removeLine();
+
         if (this.cubeGroupList.length === 0) {
             this.cubeGroupList = this.cubeGroup.create3(32);
         }
@@ -109,58 +110,22 @@ Game.prototype.putBoard = function (cubeGroup) {
     return hasPutCube;
 };
 
-Game.prototype.delline = function(cube){
-	
-    var clearRow = true, clearCol = true;
-    var cell = null;
-    var x = 0, y = 0, len = cube.position.y;
-    var delCubeList = [];
-    for (x = 0; x < len; ++x) {
-        cell = this.board.getCell(x, cube.position.y);
-        if (!cell.hasCube) {
-            clearRow = false;
-            break;
-        }
-        else {
-            delCubeList.push(cell.child)
+Game.prototype.removeLine = function () {
+    var i = 0, j = 0, delCubeList = null;
+    for (i = 0; i < this.board.delCubeRowList.length; i++) {
+        delCubeList = this.board.delCubeRowList[i];
+        for (j = 0; j < delCubeList.length; j++) {
+            delCubeList[j].playAnimation();
         }
     }
-    if (clearRow) {
-        len = Math.abs(cube.position.x - this.board.count.x);
-        for (x = 0; x < len; ++x) {
-            cell = this.board.getCell(x, cube.position.y);
-            if (!cell.hasCube) {
-                clearRow = false;
-                break;
-            }
+    for (i = 0; i < this.board.delCubeColList.length; i++) {
+        delCubeList = this.board.delCubeColList[i];
+        for (j = 0; j < delCubeList.length; j++) {
+            delCubeList[j].playAnimation();
         }
     }
-    for (y = 0, len = cube.position.y; y < len; ++y) {
-        cell = this.board.getCell(cube.position.x, y);
-        if (!cell.hasCube) {
-            clearCol = false;
-            break;
-        }
-    }
-    if (clearCol) {
-        len = Math.abs(cube.position.y - this.board.count.y);
-        for (y = 0; y < len; ++y) {
-            cell = this.board.getCell(cube.position.x, y);
-            if (!cell.hasCube) {
-                clearCol = false;
-                break;
-            }
-        }
-    }
-    
-    if(clearRow){
-        
-    }
-    
-    if(clearCol){
-        
-    }
-    
+    this.board.delCubeRowList = [];
+    this.board.delCubeColList = [];
 };
 
 module.exports = Game;

@@ -77,12 +77,12 @@
     "_enabled": true,
     "_background": {
       "__type__": "Fire.Color",
-      "r": 0,
-      "g": 0,
-      "b": 0,
+      "r": 0.1333333333333333,
+      "g": 0.1333333333333333,
+      "b": 0.1333333333333333,
       "a": 1
     },
-    "_size": 600
+    "_size": 697
   },
   {
     "__type__": "Fire.Entity",
@@ -138,7 +138,7 @@
       "b": 0,
       "a": 1
     },
-    "_size": 658
+    "_size": 677
   },
   {
     "__type__": "Fire.Entity",
@@ -181,6 +181,7 @@
   },
   {
     "__type__": "06309e377960460cb8bc68e4e31dee66",
+    "_name": "",
     "_objFlags": 0,
     "entity": {
       "__id__": 7
@@ -587,7 +588,7 @@
       "y": 0
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -666,10 +667,10 @@
     "offset": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0
+      "y": 1
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -748,10 +749,10 @@
     "offset": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0
+      "y": 2
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -830,10 +831,10 @@
     "offset": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0
+      "y": 3
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -912,10 +913,10 @@
     "offset": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0
+      "y": 4
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -994,10 +995,10 @@
     "offset": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0
+      "y": 5
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1076,10 +1077,10 @@
     "offset": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0
+      "y": 6
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1158,10 +1159,10 @@
     "offset": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0
+      "y": 7
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1240,10 +1241,10 @@
     "offset": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0
+      "y": 8
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1322,10 +1323,10 @@
     "offset": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0
+      "y": 9
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1403,11 +1404,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
+      "x": 1,
       "y": 0
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1485,11 +1486,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 1,
+      "y": 1
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1567,11 +1568,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 1,
+      "y": 2
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1649,11 +1650,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 1,
+      "y": 3
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1731,11 +1732,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 1,
+      "y": 4
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1813,11 +1814,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 1,
+      "y": 5
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1895,11 +1896,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 1,
+      "y": 6
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -1977,11 +1978,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 1,
+      "y": 7
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2059,11 +2060,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 1,
+      "y": 8
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2141,11 +2142,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 1,
+      "y": 9
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2223,11 +2224,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
+      "x": 2,
       "y": 0
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2305,11 +2306,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 2,
+      "y": 1
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2387,11 +2388,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 2,
+      "y": 2
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2469,11 +2470,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 2,
+      "y": 3
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2551,11 +2552,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 2,
+      "y": 4
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2633,11 +2634,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 2,
+      "y": 5
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2715,11 +2716,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 2,
+      "y": 6
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2797,11 +2798,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 2,
+      "y": 7
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2879,11 +2880,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 2,
+      "y": 8
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -2961,11 +2962,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 2,
+      "y": 9
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3043,11 +3044,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
+      "x": 3,
       "y": 0
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3125,11 +3126,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 3,
+      "y": 1
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3207,11 +3208,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 3,
+      "y": 2
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3289,11 +3290,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 3,
+      "y": 3
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3371,11 +3372,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 3,
+      "y": 4
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3453,11 +3454,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 3,
+      "y": 5
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3535,11 +3536,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 3,
+      "y": 6
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3617,11 +3618,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 3,
+      "y": 7
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3699,11 +3700,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 3,
+      "y": 8
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3781,11 +3782,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 3,
+      "y": 9
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3863,11 +3864,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
+      "x": 4,
       "y": 0
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -3945,11 +3946,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 4,
+      "y": 1
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4027,11 +4028,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 4,
+      "y": 2
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4109,11 +4110,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 4,
+      "y": 3
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4191,11 +4192,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 4,
+      "y": 4
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4273,11 +4274,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 4,
+      "y": 5
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4355,11 +4356,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 4,
+      "y": 6
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4437,11 +4438,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 4,
+      "y": 7
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4519,11 +4520,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 4,
+      "y": 8
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4601,11 +4602,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 4,
+      "y": 9
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4683,11 +4684,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
+      "x": 5,
       "y": 0
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4765,11 +4766,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 5,
+      "y": 1
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4847,11 +4848,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 5,
+      "y": 2
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -4929,11 +4930,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 5,
+      "y": 3
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5011,11 +5012,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 5,
+      "y": 4
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5093,11 +5094,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 5,
+      "y": 5
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5175,11 +5176,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 5,
+      "y": 6
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5257,11 +5258,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 5,
+      "y": 7
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5339,11 +5340,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 5,
+      "y": 8
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5421,11 +5422,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 5,
+      "y": 9
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5503,11 +5504,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
+      "x": 6,
       "y": 0
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5585,11 +5586,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 6,
+      "y": 1
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5667,11 +5668,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 6,
+      "y": 2
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5749,11 +5750,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 6,
+      "y": 3
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5831,11 +5832,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 6,
+      "y": 4
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5913,11 +5914,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 6,
+      "y": 5
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -5995,11 +5996,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 6,
+      "y": 6
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6077,11 +6078,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 6,
+      "y": 7
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6159,11 +6160,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 6,
+      "y": 8
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6241,11 +6242,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 6,
+      "y": 9
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6323,11 +6324,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
+      "x": 7,
       "y": 0
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6405,11 +6406,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 7,
+      "y": 1
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6487,11 +6488,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 7,
+      "y": 2
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6569,11 +6570,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 7,
+      "y": 3
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6651,11 +6652,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 7,
+      "y": 4
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6733,11 +6734,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 7,
+      "y": 5
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6815,11 +6816,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 7,
+      "y": 6
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6897,11 +6898,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 7,
+      "y": 7
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -6979,11 +6980,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 7,
+      "y": 8
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7061,11 +7062,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 7,
+      "y": 9
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7143,11 +7144,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
+      "x": 8,
       "y": 0
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7225,11 +7226,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 8,
+      "y": 1
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7307,11 +7308,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 8,
+      "y": 2
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7389,11 +7390,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 8,
+      "y": 3
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7471,11 +7472,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 8,
+      "y": 4
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7553,11 +7554,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 8,
+      "y": 5
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7635,11 +7636,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 8,
+      "y": 6
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7717,11 +7718,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 8,
+      "y": 7
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7799,11 +7800,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 8,
+      "y": 8
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7881,11 +7882,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 8,
+      "y": 9
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -7963,11 +7964,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
+      "x": 9,
       "y": 0
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -8045,11 +8046,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 9,
+      "y": 1
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -8127,11 +8128,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 9,
+      "y": 2
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -8209,11 +8210,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 9,
+      "y": 3
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -8291,11 +8292,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 9,
+      "y": 4
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -8373,11 +8374,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 9,
+      "y": 5
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -8455,11 +8456,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 9,
+      "y": 6
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -8537,11 +8538,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 9,
+      "y": 7
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -8619,11 +8620,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 9,
+      "y": 8
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Entity",
@@ -8701,11 +8702,11 @@
     "_enabled": true,
     "offset": {
       "__type__": "Fire.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 9,
+      "y": 9
     },
     "hasCube": false,
-    "_cube": null
+    "cube": null
   },
   {
     "__type__": "Fire.Transform",
@@ -8718,7 +8719,7 @@
     "_position": {
       "__type__": "Fire.Vec2",
       "x": -144,
-      "y": -123.92
+      "y": -123.92312475569796
     },
     "_rotation": 0,
     "_scale": {
@@ -9173,7 +9174,7 @@
     "_position": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 2000
+      "y": 0
     },
     "_rotation": 0,
     "_scale": {
@@ -9214,7 +9215,7 @@
     "_enabled": true,
     "_position": {
       "__type__": "Fire.Vec2",
-      "x": 0,
+      "x": 2000,
       "y": 0
     },
     "_rotation": 0,
