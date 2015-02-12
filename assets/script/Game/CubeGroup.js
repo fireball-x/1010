@@ -485,8 +485,6 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
     gridGroup.on('mousedown',
         function(event) {
         	isMouseUp = false;
-            startOffsetX = gridGroup.transform.position.x;
-            startOffsetY = gridGroup.transform.position.y;
             moveGrid = gridGroup;
         	moveGrid.transform.scale = new Fire.Vec2(0.9,0.9);
         }.bind(this)
