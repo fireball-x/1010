@@ -1,4 +1,4 @@
-Fire._RFpush('3b001d5dcf804a858845506ff1189082', 'MainMenu');
+Fire._RFpush('01e145a602ef435fbea668d5c1cae93c', 'MainMenu');
 // script/Menu/MainMenu.js
 
 var MainMenu = Fire.defineComponent(function(){

@@ -1,11 +1,11 @@
-Fire._RFpush('18c5b355fc6d494a8a4b4ea4a5d932f8', 'Cell');
+Fire._RFpush('1d5f53c190754efab76db34d6032ea99', 'Cell');
 // script/Game/Cell.js
 
 var Cell = Fire.defineComponent();
 
 Cell.prop('offset', new Fire.Vec2(0, 0));
 Cell.prop('hasCube', false);
-Cell.prop('_cube', null, Fire.HideInInspector);
+Cell.prop('cube', null, Fire.HideInInspector);
 
 Cell.prototype.clean = function() {
     this.entity.destroy();
@@ -15,17 +15,15 @@ Cell.prototype.putCube = function (cube) {
     cube.entity.parent = this.entity;
     cube.transform.position = new Fire.Vec2(0, 0);
     this.hasCube = true;
-    this._cube = cube;
+    this.cube = cube;
     
+    //-- 绑定已经放置方块消息
+    this.entity.dispatchEvent(new Fire.Event("putCube", true));
     //-- 绑定Cube销毁消息
-    this.entity.once("curb clear", function () {
-        this._cube = null;
+    this.entity.on("curb clear", function () {
+        this.cube = null;
         this.hasCube = false;
-    });
-};
-
-Cell.prototype.onLoad = function() {
-   
+    }.bind(this));
 };
 
 module.exports = Cell;

@@ -2,42 +2,43 @@ var Board = require('Board');
 var Cell = require('Cell');
 var Cube = require('Cube');
 var CubeGroup = require('CubeGroup');
+var AudioControl = require('AudioControl');
 
-var Game = Fire.defineComponent(function () {
+var Game = Fire.defineComponent(function() {
     this.board = null;
     this.cubeGroup = null;
     this.cubeGroupList = [];
     this.fraction = 0;//--当前分数
-    
+
     Game.instance = this;
 });
 
 Game.instance = null;
 
-Game.prototype.onLoad = function () {
-	//-- 创建格子到棋盘上
+Game.prototype.onLoad = function() {
+    //-- 创建格子到棋盘上
     if (!this.tempCube) {
         this.tempCube = Fire.Entity.find('/Prefabs/Cube');
     }
     var boardObj = Fire.Entity.find('/Board');
     this.board = boardObj.getComponent(Board);
     this.board.create();
-    
+
     var cubeGroupObj = Fire.Entity.find('/CubeGroup');
     this.cubeGroup = cubeGroupObj.getComponent(CubeGroup);
-    if(Fire.Engine.isPlaying){
-        if(this.cubeGroupList.length === 0){
-			this.cubeGroupList = this.cubeGroup.create3(32);
+    if (Fire.Engine.isPlaying) {
+        if (this.cubeGroupList.length === 0) {
+            this.cubeGroupList = this.cubeGroup.create3(32);
         }
     }
 };
 
-Game.prototype.update = function () {
+Game.prototype.update = function() {
 
 };
 
-//-- 把 方块组放到棋盘上
-Game.prototype.putBoard = function (cubeGroup) {
+//-- �方块组放到棋盘上
+Game.prototype.putBoard = function(cubeGroup) {
     if (!cubeGroup && !cubeGroup._children) {
         return;
     }
@@ -51,7 +52,9 @@ Game.prototype.putBoard = function (cubeGroup) {
 
     var curbCount = cubeGroup._children.length;
     if (hasPutCube) {
-        var i = 0, len = 0, child = [];
+        var i = 0,
+        len = 0,
+        child = [];
         for (i = 0, len = cubeGroup._children.length; i < len; ++i) {
             child.push(cubeGroup._children[i]);
         }
@@ -64,7 +67,7 @@ Game.prototype.putBoard = function (cubeGroup) {
 
         for (i = 0, len = this.cubeGroupList.length; i < len; ++i) {
             var group = this.cubeGroupList[i];
-            if (group.id === cubeGroup.id ) {
+            if (group.id === cubeGroup.id) {
                 this.cubeGroupList.splice(i, 1);
                 break;
             }
@@ -82,8 +85,14 @@ Game.prototype.putBoard = function (cubeGroup) {
     return hasPutCube;
 };
 
-Game.prototype.removeLine = function () {
-    var i = 0, j = 0, delCubeList = null;
+Game.prototype.removeLine = function() {
+    if (this.board.delCubeRowList.length > 0 || this.board.delCubeColList.length > 0) {
+        AudioControl.play_finished();
+    }
+    
+    var i = 0,
+    j = 0,
+    delCubeList = null;
     for (i = 0; i < this.board.delCubeRowList.length; i++) {
         delCubeList = this.board.delCubeRowList[i];
         for (j = 0; j < delCubeList.length; j++) {
@@ -96,6 +105,7 @@ Game.prototype.removeLine = function () {
             delCubeList[j].playAnimation();
         }
     }
+
     this.board.delCubeRowList = [];
     this.board.delCubeColList = [];
 };

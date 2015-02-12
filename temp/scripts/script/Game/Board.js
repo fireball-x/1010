@@ -1,4 +1,4 @@
-Fire._RFpush('08c0f5f70d6b4b0aa8a4eebc4b45279b', 'Board');
+Fire._RFpush('49d3528c4dd14ebd849f5e04753d70c8', 'Board');
 // script/Game/Board.js
 
 var Cell = require('Cell');
@@ -6,6 +6,9 @@ var Cube = require('Cube');
 
 var Board = Fire.defineComponent(function () {
     this._tempGrid = null;
+
+    this.delCubeRowList = [];
+    this.delCubeColList = [];
 });
 
 Board.prop("_board", [], Fire.HideInInspector);
@@ -62,6 +65,75 @@ Board.prototype.create = function () {
     this._createOrClean = true;
 };
 
+Board.prototype.onLoad = function () {
+    //-- 判断行是否可以消除
+    this.entity.on("putCube", function (event) {
+        var cell = event.target.getComponent(Cell);
+        this.delline(cell);
+    }.bind(this));
+};
+
+Board.prototype.delline = function (cell) {
+    var clearRow = true, clearCol = true;
+    var tempCell = null;
+    var x = 0, y = 0;
+    var tempDelCubeRowList = []
+    var tempDelCubeColList = []
+    for (x = cell.offset.x; x >= 0; --x) {
+        tempCell = this.getCell(x, cell.offset.y);
+        if (!tempCell.hasCube) {
+            clearRow = false;
+            break;
+        }
+        else {
+            tempDelCubeRowList.push(tempCell.cube);
+        }
+    }
+    if (clearRow) {
+        for (x = cell.offset.x; x < this.count.x; ++x) {
+            tempCell = this.getCell(x, cell.offset.y);
+            if (!tempCell.hasCube) {
+                clearRow = false;
+                break;
+            }
+            else {
+                tempDelCubeRowList.push(tempCell.cube);
+            }
+        }
+    }
+    for (y = cell.offset.y; y >= 0; --y) {
+        tempCell = this.getCell(cell.offset.x, y);
+        if (!tempCell.hasCube) {
+            clearCol = false;
+            break;
+        }
+        else {
+            tempDelCubeColList.push(tempCell.cube);
+        }
+    }
+    if (clearCol) {
+        for (y = cell.offset.y; y < this.count.y; ++y) {
+            tempCell = this.getCell(cell.offset.x, y);
+            if (!tempCell.hasCube) {
+                clearCol = false;
+                break;
+            }
+            else {
+                tempDelCubeColList.push(tempCell.cube);
+            }
+        }
+    }
+
+    if (clearRow) {
+        this.delCubeRowList.push(tempDelCubeRowList);
+    }
+    if (clearCol) {
+        this.delCubeColList.push(tempDelCubeColList);
+    }
+    
+};
+
+
 //-- 清空棋盘
 Board.prototype.clean = function () {
     var len = 0;
@@ -69,7 +141,9 @@ Board.prototype.clean = function () {
         for (var y = 0, len = this.count.y; y < len; y++) {
             if(this._board[x][y]){
             	this._board[x][y].entity.destroy();
-            	//Fire.FObject._deferredDestroy();
+            	if (!Fire.Engine.isPlaying) {
+            	    Fire.FObject._deferredDestroy();
+            	}
             }
         }
     }
