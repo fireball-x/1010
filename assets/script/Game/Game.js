@@ -7,6 +7,7 @@ var Game = Fire.defineComponent(function () {
     this.board = null;
     this.cubeGroup = null;
     this.cubeGroupList = [];
+    this.fraction = 0;//--当前分数
     
     Game.instance = this;
 });
@@ -48,6 +49,7 @@ Game.prototype.putBoard = function (cubeGroup) {
     var center = new Vec2(x, y);
     var hasPutCube = this.board.canPutCubeToCell(cubeGroup, center);
 
+    var curbCount = cubeGroup._children.length;
     if (hasPutCube) {
         var i = 0, len = 0, child = [];
         for (i = 0, len = cubeGroup._children.length; i < len; ++i) {
@@ -68,6 +70,8 @@ Game.prototype.putBoard = function (cubeGroup) {
             }
         }
         cubeGroup.destroy();
+
+        this.addFraction(curbCount);
 
         this.removeLine();
 
@@ -94,6 +98,23 @@ Game.prototype.removeLine = function () {
     }
     this.board.delCubeRowList = [];
     this.board.delCubeColList = [];
+};
+
+//-- 添加分数
+Game.prototype.addFraction = function (curbCount) {
+    var curFraction = this.fraction;
+    
+    var lineNum = this.board.delCubeRowList.length;
+    
+    var rowNum = (1 + ((lineNum - 1) * 0.5)) * this.board.count.x;
+    
+    lineNum =  this.board.delCubeColList.length;
+    
+    var colNum = (1 + (( lineNum - 1) * 0.5)) * this.board.count.y;
+    
+    this.fraction = (curFraction + curbCount) + rowNum + colNum;
+
+    console.log(this.fraction);
 };
 
 module.exports = Game;
