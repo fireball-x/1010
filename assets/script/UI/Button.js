@@ -18,7 +18,7 @@ Button.prototype.onLoad = function () {
     
     this.entity.on('mousedown', function () {
         this._btnRender.sprite = this.pressed;
-    });
+    }.bind(this));
 
     this.entity.on('mouseup', function () {
         this._btnRender.sprite = this.normal;

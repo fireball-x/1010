@@ -10,6 +10,9 @@ var Game = Fire.defineComponent(function() {
     this.cubeGroupList = [];
     this.fraction = 0;//--当前分数
 
+    this._btnBackDown = false;
+    this._btnBack = null;
+    this._scoreValue = null;
     Game.instance = this;
 });
 
@@ -20,6 +23,7 @@ Game.prototype.onLoad = function() {
     if (!this.tempCube) {
         this.tempCube = Fire.Entity.find('/Prefabs/Cube');
     }
+
     var boardObj = Fire.Entity.find('/Board');
     this.board = boardObj.getComponent(Board);
     this.board.create();
@@ -31,13 +35,28 @@ Game.prototype.onLoad = function() {
             this.cubeGroupList = this.cubeGroup.create3(32);
         }
     }
+
+    this._btnBack = Fire.Entity.find("/btn_back");
+
+    this._btnBack.on("mousedown", function () {
+        this._btnBackDown = true;
+    }.bind(this));
+
+    this._btnBack.on("mouseup", function () {
+        if (this._btnBackDown) {
+            Fire.Engine.loadScene("42308794-9962-4cc5-ba9b-c42028d19ae2");
+            this._btnBackDown = false;
+        }
+    }.bind(this));
+
+    this._scoreValue = Fire.Entity.find("/Score/Value");
 };
 
 Game.prototype.update = function() {
 
 };
 
-//-- �方块组放到棋盘上
+//-- �方块组放到棋盘上
 Game.prototype.putBoard = function(cubeGroup) {
     if (!cubeGroup && !cubeGroup._children) {
         return;
@@ -115,16 +134,27 @@ Game.prototype.addFraction = function (curbCount) {
     var curFraction = this.fraction;
     
     var lineNum = this.board.delCubeRowList.length;
-    
-    var rowNum = (1 + ((lineNum - 1) * 0.5)) * this.board.count.x;
+    var rowNum = lineNum * this.board.count.x;
+    if (lineNum > 1) {
+        rowNum = (1 + (lineNum - 1) * 0.5) * (this.board.count.x * lineNum);
+    }
     
     lineNum =  this.board.delCubeColList.length;
-    
-    var colNum = (1 + (( lineNum - 1) * 0.5)) * this.board.count.y;
+    var colNum = lineNum * this.board.count.x;
+    if (lineNum > 1) {
+        colNum = (1 + (lineNum - 1) * 0.5) * (this.board.count.y * lineNum);
+    }
     
     this.fraction = (curFraction + curbCount) + rowNum + colNum;
 
+
+    console.log(curFraction);
+    console.log(curbCount);
+    console.log(rowNum);
+    console.log(colNum);
     console.log(this.fraction);
+
+    this._scoreValue.text = this.fraction;
 };
 
 module.exports = Game;
