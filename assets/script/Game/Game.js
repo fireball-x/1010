@@ -12,7 +12,8 @@ var Game = Fire.defineComponent(function() {
     this.fraction = 0;//--当前分数
 	
     this.idleCellList = [];//-- 场上空闲的格�
-
+	
+    this.scoreText = null;
     this._btnBackDown = false;
     this._btnBack = null;
     this.restart = null;
@@ -20,7 +21,9 @@ var Game = Fire.defineComponent(function() {
     
     // 分数上涨动画
     this.isJump = false;
+    this.isScore = false;
     this.jumpFirst = true;
+    this.scoreFirst = true;
     
     Game.instance = this;
 });
@@ -37,6 +40,7 @@ Game.prototype.onLoad = function() {
         this.tempCube = Fire.Entity.find('/Prefabs/Cube');
     }
 	    
+    this.scoreText = Fire.Entity.find('/GameOver/TipAndImage/score/Value');
     var boardObj = Fire.Entity.find('/Board');
     this.board = boardObj.getComponent(Board);
     this.board.create();
@@ -50,6 +54,18 @@ Game.prototype.onLoad = function() {
     }
 
     this._btnBack = Fire.Entity.find("/btn_back");
+    var gameOverRestart = Fire.Entity.find("/GameOver/Restart");
+    var gameOverHome = Fire.Entity.find("/GameOver/Home");
+    gameOverRestart.on('mouseup',function () {
+        Fire.Engine.loadScene("de895751-2fef-47bf-8cd8-024ad8e3778d");
+    });
+    
+    gameOverHome.on('mouseup',function () {
+        Fire.Engine.loadScene("42308794-9962-4cc5-ba9b-c42028d19ae2");
+    });
+    
+    
+    
     this._btnBack.on("mousedown", function () {
         this._btnBackDown = true;
     }.bind(this));
@@ -74,6 +90,10 @@ Game.prototype.onLoad = function() {
 Game.prototype.update = function() {
 	if (this.isJump) {
         this.jumpAnimation();
+    }
+    
+    if (this.isScore) {
+        this.gameOverScoreAnimation();
     }
 };
 
@@ -236,8 +256,26 @@ Game.prototype.pass = function () {
 };
 
 Game.prototype.gameOver = function () {
+    this.scoreText.getComponent(Fire.BitmapText).text = this.fraction;
     var gameOverBoard = Fire.Entity.find('/GameOver');
     gameOverBoard.transform.scale = new Fire.Vec2(1,1);
+    this.isScore = true;
+};
+
+Game.prototype.gameOverScoreAnimation = function () {
+  	  if (this.scoreFirst) {
+        this.scoreText.transform.scale = new Fire.Vec2(this.scoreText.transform.scale.x + Fire.Time.deltaTime * 10,this.scoreText.transform.scale.y + Fire.Time.deltaTime * 10);    
+        if (this._scoreValue.transform.scale.x >= 1.5) {
+            this.scoreFirst = false;
+        }
+    }else {
+        this.scoreText.transform.scale = new Fire.Vec2(this.scoreText.transform.scale.x - Fire.Time.deltaTime * 10,this.scoreText.transform.scale.y - Fire.Time.deltaTime * 10);    
+        if (this.scoreText.transform.scale.x <= 1) {
+            this.scoreText.transform.scale = new Fire.Vec2(1,1);
+            this.isScore = false;
+            this.scoreFirst = true;
+        }
+    }
 };
 
 module.exports = Game;
