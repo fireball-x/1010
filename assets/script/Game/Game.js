@@ -154,7 +154,7 @@ Game.prototype.addFraction = function (curbCount) {
     console.log(colNum);
     console.log(this.fraction);
 
-    this._scoreValue.text = this.fraction;
+    this._scoreValue.getComponent(Fire.BitmapText).text = this.fraction;
 };
 
 module.exports = Game;
