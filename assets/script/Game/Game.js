@@ -167,13 +167,15 @@ Game.prototype.removeLine = function() {
     for (i = 0; i < this.board.delCubeRowList.length; i++) {
         delCubeList = this.board.delCubeRowList[i];
         for (j = 0; j < delCubeList.length; j++) {
-            delCubeList[j].playAnimation();
+            delCubeList[j].readyClear = true;
+            delCubeList[j].cube.playAnimation();
         }
     }
     for (i = 0; i < this.board.delCubeColList.length; i++) {
         delCubeList = this.board.delCubeColList[i];
         for (j = 0; j < delCubeList.length; j++) {
-            delCubeList[j].playAnimation();
+            delCubeList[j].readyClear = true;
+            delCubeList[j].cube.playAnimation();
         }
     }
 
@@ -209,7 +211,7 @@ Game.prototype.updateIdleCellList = function () {
     for (var x = 0; x < this.board.count.x; ++x) {
         for (var y = 0; y < this.board.count.x; ++y) {
             var cell = this.board.getCell(x, y);
-            if (!cell.hasCube || (cell.cube && cell.cube.readyClear)) {
+            if (!cell.hasCube || (cell.cube && cell.readyClear)) {
                 this.idleCellList.push(cell);
             }
         }

@@ -2,7 +2,6 @@ var cube = Fire.defineComponent(function() {
     this.stopAnimation = true;
 });
 
-cube.prop('readyClear', false, Fire.HideInInspector);
 cube.prop('_position', new Fire.Vec2(0, 0), Fire.HideInInspector);
 cube.prop('_play', false, Fire.HideInInspector);
 
@@ -31,12 +30,10 @@ function(value) {
 
 cube.prototype.clear = function() {
     this.entity.dispatchEvent(new Fire.Event("curb clear", true));
-    this.readyClear = false;
     this.entity.destroy();
 };
 
 cube.prototype.playAnimation = function() {
-    this.readyClear = true;
     this.stopAnimation = false;
 };
 

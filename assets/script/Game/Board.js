@@ -83,7 +83,7 @@ Board.prototype.delline = function (cell) {
             break;
         }
         else {
-            tempDelCubeRowList.push(tempCell.cube);
+            tempDelCubeRowList.push(tempCell);
         }
     }
     if (clearRow) {
@@ -94,7 +94,7 @@ Board.prototype.delline = function (cell) {
                 break;
             }
             else {
-                tempDelCubeRowList.push(tempCell.cube);
+                tempDelCubeRowList.push(tempCell);
             }
         }
     }
@@ -105,7 +105,7 @@ Board.prototype.delline = function (cell) {
             break;
         }
         else {
-            tempDelCubeColList.push(tempCell.cube);
+            tempDelCubeColList.push(tempCell);
         }
     }
     if (clearCol) {
@@ -116,7 +116,7 @@ Board.prototype.delline = function (cell) {
                 break;
             }
             else {
-                tempDelCubeColList.push(tempCell.cube);
+                tempDelCubeColList.push(tempCell);
             }
         }
     }
@@ -162,7 +162,10 @@ Board.prototype.canPutCubeToCell = function (cubeGroup, center) {
         var cube = cubeGroup._children[j].getComponent(Cube);
         var pos = cube.position;
         var cell = this.getCell(center.x + pos.x, center.y + pos.y);
-        if (!cell || (cell.hasCube && !cube.readyClear)) {
+        if (!cell || (cell.hasCube && !cell.readyClear)) {
+            if (cell) {
+                console.log(cell.offset.x + "  " + cell.offset.y + "  " + cell.hasCube + "  " + cell.readyClear);
+            }
             return false;
         }
     }
