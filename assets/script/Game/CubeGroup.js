@@ -432,19 +432,23 @@ CubeGroup.prototype.gridType = {
 
 ///color
 var blue = new Fire.Color(97 / 255, 190 / 255, 227 / 255, 1);
-var orange = new Fire.Color(253 / 255, 197 / 255, 76 / 255, 1);
+var yellow = new Fire.Color(253 / 255, 197 / 255, 76 / 255, 1);
 var red = new Fire.Color(218 / 255, 192 / 255, 90 / 255, 1);
 var lightblue = new Fire.Color(83 / 255, 211 / 255, 174 / 255, 1);
 var pink = new Fire.Color(229 / 255, 107 / 255, 129 / 255, 1);
+var orange = new Fire.Color(243/255,80/255,12/255,1);
+var green = new Fire.Color(85/255,192/255,67/255,1);
 
-CubeGroup.prototype._Colors = [blue, orange, red, lightblue, pink];
+CubeGroup.prototype._Colors = [blue, yellow, red, lightblue, pink,orange,green];
 
 CubeGroup.prototype.Colors = {
     "blue": blue,
-    "orange": orange,
+    "yellow": yellow,
     "red": red,
     "lightblue": lightblue,
-    "pink": pink
+    "pink": pink,
+    "orange": orange,
+    "green": green,
 };
 
 
@@ -454,6 +458,7 @@ var isMouseUp = true;
 
 
 var moveGrid = null;
+
 /// ***********************
 /// * size: 单个cube大小
 /// * gridType: 指定的cubeGroup
@@ -462,7 +467,7 @@ var moveGrid = null;
 /// ***********************
 CubeGroup.prototype.create = function(size, gridType, _color) {
 
-    var color = this._Colors[Math.floor(Math.random() * 5)];
+    var color = this._Colors[Math.floor(Math.random() * 7)];
     if ( !! _color) {
         color = _color;
     }
