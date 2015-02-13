@@ -497,6 +497,12 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
         }.bind(this)
 	);
 
+    gridGroup.on('mouseup',
+       function (event) {
+           moveGrid = null;
+       }.bind(this)
+   );
+
     thisGroup = gridGroup;
     return gridGroup;
 };
@@ -574,12 +580,15 @@ CubeGroup.prototype.onLoad = function() {
 
         Fire.Input.on('mouseup', function (event) {
             isMouseUp = true;
-
-            var canPut = Game.instance.putBoard(moveGrid);
-            if (!canPut) {
-                this.resetPosition(moveGrid);
+            if (moveGrid) {
+                console.log(moveGrid);  
+                var canPut = Game.instance.putBoard(moveGrid);
+                if (!canPut) {
+                    this.resetPosition(moveGrid);
+                }
+                AudioControl.play_bobo();
+                moveGrid = null;
             }
-            AudioControl.play_bobo();
         }.bind(this));
 
         camera = Fire.Entity.find("/Main Camera").getComponent(Fire.Camera);
