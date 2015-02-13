@@ -11,6 +11,8 @@ var Game = Fire.defineComponent(function() {
     this.cubeGroupList = [];
     this.fraction = 0;//--当前分数
 	
+    this.idleCellList = [];//-- 场上空闲的格�
+
     this._btnBackDown = false;
     this._btnBack = null;
     this.restart = null;
@@ -48,7 +50,6 @@ Game.prototype.onLoad = function() {
     }
 
     this._btnBack = Fire.Entity.find("/btn_back");
-	this.restart = Fire.Entity.find('/restart');
     this._btnBack.on("mousedown", function () {
         this._btnBackDown = true;
     }.bind(this));
@@ -60,11 +61,14 @@ Game.prototype.onLoad = function() {
         }
     }.bind(this));
 
+    var soceObj = Fire.Entity.find("/Score/Value");
+    this._scoreValue = soceObj.getComponent(Fire.BitmapText);
+
+	this.restart = Fire.Entity.find('/restart');
     this.restart.on("mouseup",function () {
         Fire.Engine.loadScene("de895751-2fef-47bf-8cd8-024ad8e3778d");
     });
     
-    this._scoreValue = Fire.Entity.find("/Score/Value");
 };
 
 Game.prototype.update = function() {
@@ -73,7 +77,7 @@ Game.prototype.update = function() {
     }
 };
 
-//-- �方块组放到棋盘上
+//-- �方块组放到棋盘�
 Game.prototype.putBoard = function(cubeGroup) {
     if (!cubeGroup && !cubeGroup._children) {
         return;
@@ -108,14 +112,25 @@ Game.prototype.putBoard = function(cubeGroup) {
                 break;
             }
         }
+
+        //-- 添加分数
+        this.addFraction(curbCount);
         cubeGroup.destroy();
 
-        this.addFraction(curbCount);
-
+        //-- 清除满格
         this.removeLine();
 
+        //-- 更新棋盘上的空格
+        this.updateIdleCellList();
+
+        //-- 创建新的Cube Group
         if (this.cubeGroupList.length === 0) {
             this.cubeGroupList = this.cubeGroup.create3(32);
+        }
+        //-- 判断pass或者失败
+        var pass = this.pass();
+        if (!pass) {
+            this.gameOver();
         }
     }
     return hasPutCube;
@@ -166,34 +181,61 @@ Game.prototype.addFraction = function (curbCount) {
     
     this.fraction = (curFraction + curbCount) + rowNum + colNum;
 
-
-    console.log(curFraction);
-    console.log(curbCount);
-    console.log(rowNum);
-    console.log(colNum);
-    console.log(this.fraction);
-
-    this._scoreValue.getComponent(Fire.BitmapText).text = this.fraction;
+    this._scoreValue.text = this.fraction;
 };
 
+Game.prototype.updateIdleCellList = function () {
+    this.idleCellList = [];
+    for (var x = 0; x < this.board.count.x; ++x) {
+        for (var y = 0; y < this.board.count.x; ++y) {
+            var cell = this.board.getCell(x, y);
+            if (!cell.hasCube || (cell.cube && cell.cube.readyClear)) {
+                this.idleCellList.push(cell);
+            }
+        }
+    }
+};
 
 Game.prototype.jumpAnimation = function () {
     if (this.jumpFirst) {
-    	this._scoreValue.transform.scale = new Fire.Vec2(this._scoreValue.transform.scale.x + Fire.Time.deltaTime * 10,this._scoreValue.transform.scale.y + Fire.Time.deltaTime * 10);    
-    	if (this._scoreValue.transform.scale.x >= 1.5) {
+        this._scoreValue.transform.scale = new Fire.Vec2(this._scoreValue.transform.scale.x + Fire.Time.deltaTime * 10,this._scoreValue.transform.scale.y + Fire.Time.deltaTime * 10);    
+        if (this._scoreValue.transform.scale.x >= 1.5) {
             this.jumpFirst = false;
         }
     }else {
         this._scoreValue.transform.scale = new Fire.Vec2(this._scoreValue.transform.scale.x - Fire.Time.deltaTime * 10,this._scoreValue.transform.scale.y - Fire.Time.deltaTime * 10);    
-    	if (this._scoreValue.transform.scale.x <= 1) {
+        if (this._scoreValue.transform.scale.x <= 1) {
             this._scoreValue.transform.scale = new Fire.Vec2(1,1);
             this.isJump = false;
             this.jumpFirst = true;
         }
     }
+}
+
+Game.prototype.pass = function () {
+    var groupList = this.cubeGroupList;
+    var idleCellList = this.idleCellList;
+    var grouplen = groupList.length;
+    var celllen = idleCellList.length;
+    var canPut = false;
+    for (var i = 0; i < grouplen; i++) {
+        for (var j = 0; j < celllen; j++) {
+            var center = new Fire.Vec2(idleCellList[j].offset.x, idleCellList[j].offset.y);
+            var canPut = this.board.canPutCubeToCell(groupList[i], center);
+            console.log(center + "   " + canPut);
+            if (canPut) {
+                break
+            }
+        }
+        if (canPut) {
+            break
+        }
+    }
+    console.log(canPut);
+    return canPut;
 };
 
-Game.prototype.GameOver = function () {
+Game.prototype.gameOver = function () {
     var gameOverBoard = Fire.Entity.find('/GameOver');
     gameOverBoard.transform.scale = new Fire.Vec2(1,1);
 };

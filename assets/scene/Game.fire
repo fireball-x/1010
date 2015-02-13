@@ -103,7 +103,7 @@
       "b": 0,
       "a": 1
     },
-    "_size": 600
+    "_size": 697
   },
   {
     "__type__": "Fire.Entity",
@@ -159,7 +159,7 @@
       "b": 0,
       "a": 1
     },
-    "_size": 715
+    "_size": 677
   },
   {
     "__type__": "Fire.Entity",
@@ -237,7 +237,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "e848c705-ae8b-4126-be53-856e796dcfe5"
+      "__uuid__": "3ba8d1f1-315d-4f15-bf27-39d2290c63f0"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -300,7 +300,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "ca80b8b4-687a-4d30-8efd-8ece0a0a56a2"
+      "__uuid__": "61235f96-a519-44d8-a268-361ae918e442"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -363,7 +363,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "86a823d0-9fe1-4307-8759-8d0e650d84d0"
+      "__uuid__": "97822e1d-fc8d-4b30-8646-817c8e68aed2"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -10236,9 +10236,7 @@
       "__id__": 464
     },
     "_enabled": true,
-    "_sprite": {
-      "__uuid__": "00739934-c742-4f71-be94-2a2659ed4101"
-    },
+    "_sprite": null,
     "_color": {
       "__type__": "Fire.Color",
       "r": 1,
@@ -10259,12 +10257,10 @@
     },
     "_enabled": true,
     "defaultAnimation": {
-      "__uuid__": "63846c7d-5e1e-4b89-bc9f-db3bbd20dbbf"
+      "__uuid__": "c1bf660c-3d8a-4f49-b06f-fb88abe83592"
     },
     "animations": [
-      {
-        "__uuid__": "63846c7d-5e1e-4b89-bc9f-db3bbd20dbbf"
-      }
+      null
     ],
     "_playAutomatically": true
   },

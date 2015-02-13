@@ -134,8 +134,8 @@ Board.prototype.delline = function (cell) {
 //-- 清空棋盘
 Board.prototype.clean = function () {
     var len = 0;
-    for (var x = 0, len = this.count.x; x < len; x++) {
-        for (var y = 0, len = this.count.y; y < len; y++) {
+    for (var x = 0, len = this.count.x; x < len; ++x) {
+        for (var y = 0, len = this.count.y; y < len; ++y) {
             if(this._board[x][y]){
             	this._board[x][y].entity.destroy();
             	if (!Fire.Engine.isPlaying) {
@@ -158,11 +158,11 @@ Board.prototype.getCell = function (x, y) {
 
 //-- 判断是否可以在格子上放置方块
 Board.prototype.canPutCubeToCell = function (cubeGroup, center) {
-    for (var j = 0, len = cubeGroup._children.length; j < len; j++) {
+    for (var j = 0, len = cubeGroup._children.length; j < len; ++j) {
         var cube = cubeGroup._children[j].getComponent(Cube);
         var pos = cube.position;
         var cell = this.getCell(center.x + pos.x, center.y + pos.y);
-        if (!cell || cell.hasCube) {
+        if (!cell || (cell.hasCube && !cube.readyClear)) {
             return false;
         }
     }

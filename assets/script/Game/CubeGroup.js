@@ -540,6 +540,7 @@ CubeGroup.prototype.create3 = function(size) {
     }
     this.entity.transform.scale = new Fire.Vec2(0.0,0.0);
     this.play();
+
     return groupBorad;
 };
 
@@ -585,7 +586,6 @@ CubeGroup.prototype.onLoad = function() {
         Fire.Input.on('mouseup', function (event) {
             isMouseUp = true;
             if (moveGrid) {
-                console.log(moveGrid);  
                 var canPut = Game.instance.putBoard(moveGrid);
                 if (!canPut) {
                     this.resetPosition(moveGrid);
