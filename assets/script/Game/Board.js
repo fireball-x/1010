@@ -39,7 +39,7 @@ Board.prototype.create = function () {
         return;
     }
     if (!this._tempGrid) {
-        this._tempGrid = this.entity.find('../Prefabs/Cube');
+        this._tempGrid = this.entity.find('/Prefabs/Cube');
     }
     var widthX = (this.size.x + this.spacing);
     var widthY = (this.size.y + this.spacing);

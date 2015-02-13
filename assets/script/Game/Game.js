@@ -3,31 +3,42 @@ var Cell = require('Cell');
 var Cube = require('Cube');
 var CubeGroup = require('CubeGroup');
 var AudioControl = require('AudioControl');
+var Background = require('Background');
 
 var Game = Fire.defineComponent(function() {
     this.board = null;
     this.cubeGroup = null;
     this.cubeGroupList = [];
     this.fraction = 0;//--当前分数
-
+	
     this._btnBackDown = false;
     this._btnBack = null;
+    this.restart = null;
     this._scoreValue = null;
+    
+    // 分数上涨动画
+    this.isJump = false;
+    this.jumpFirst = true;
+    
     Game.instance = this;
 });
 
 Game.instance = null;
 
 Game.prototype.onLoad = function() {
+    
+    //随机切换背景图片
+    Background.loadBackground();
+    
     //-- 创建格子到棋盘上
     if (!this.tempCube) {
         this.tempCube = Fire.Entity.find('/Prefabs/Cube');
     }
-
+	    
     var boardObj = Fire.Entity.find('/Board');
     this.board = boardObj.getComponent(Board);
     this.board.create();
-
+    
     var cubeGroupObj = Fire.Entity.find('/CubeGroup');
     this.cubeGroup = cubeGroupObj.getComponent(CubeGroup);
     if (Fire.Engine.isPlaying) {
@@ -37,7 +48,7 @@ Game.prototype.onLoad = function() {
     }
 
     this._btnBack = Fire.Entity.find("/btn_back");
-
+	this.restart = Fire.Entity.find('/restart');
     this._btnBack.on("mousedown", function () {
         this._btnBackDown = true;
     }.bind(this));
@@ -49,11 +60,17 @@ Game.prototype.onLoad = function() {
         }
     }.bind(this));
 
+    this.restart.on("mouseup",function () {
+        Fire.Engine.loadScene("de895751-2fef-47bf-8cd8-024ad8e3778d");
+    });
+    
     this._scoreValue = Fire.Entity.find("/Score/Value");
 };
 
 Game.prototype.update = function() {
-
+	if (this.isJump) {
+        this.jumpAnimation();
+    }
 };
 
 //-- �方块组放到棋盘上
@@ -127,6 +144,8 @@ Game.prototype.removeLine = function() {
 
     this.board.delCubeRowList = [];
     this.board.delCubeColList = [];
+    this._scoreValue.transform.scale = new Fire.Vec2(0.5,0.5);
+    this.isJump = true;
 };
 
 //-- 添加分数
@@ -155,6 +174,28 @@ Game.prototype.addFraction = function (curbCount) {
     console.log(this.fraction);
 
     this._scoreValue.getComponent(Fire.BitmapText).text = this.fraction;
+};
+
+
+Game.prototype.jumpAnimation = function () {
+    if (this.jumpFirst) {
+    	this._scoreValue.transform.scale = new Fire.Vec2(this._scoreValue.transform.scale.x + Fire.Time.deltaTime * 10,this._scoreValue.transform.scale.y + Fire.Time.deltaTime * 10);    
+    	if (this._scoreValue.transform.scale.x >= 1.5) {
+            this.jumpFirst = false;
+        }
+    }else {
+        this._scoreValue.transform.scale = new Fire.Vec2(this._scoreValue.transform.scale.x - Fire.Time.deltaTime * 10,this._scoreValue.transform.scale.y - Fire.Time.deltaTime * 10);    
+    	if (this._scoreValue.transform.scale.x <= 1) {
+            this._scoreValue.transform.scale = new Fire.Vec2(1,1);
+            this.isJump = false;
+            this.jumpFirst = true;
+        }
+    }
+};
+
+Game.prototype.GameOver = function () {
+    var gameOverBoard = Fire.Entity.find('/GameOver');
+    gameOverBoard.transform.scale = new Fire.Vec2(1,1);
 };
 
 module.exports = Game;

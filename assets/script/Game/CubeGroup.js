@@ -84,69 +84,49 @@ var Box_9 = [{
     "x": 1
 },
 ]; // 田 *3
+
 var Curved_3_0 = [{
-    "y": 0,
-    "x": -1
-},
-{
-    "y": -1,
-    "x": -1
-},
-{
-    "y": -1,
+    "y": 1,
     "x": 0
+},
+{
+    "y": 0,
+    "x": 0
+},
+{
+    "y": 0,
+    "x": 1
 },
 ]; //L *3  0
 var Curved_3_90 = [{
-    "y": 1,
-    "x": -1
+    "y": 0,
+    "x": 0
+},
+{
+    "y": -1,
+    "x": 0
 },
 {
     "y": 0,
-    "x": -1
-},
-{
-    "y": 1,
-    "x": 0
+    "x": 1
 },
 ]; //L *3 90
 var Curved_3_180 = [{
-    "y": 1,
-    "x": 1
-},
-{
-    "y": 1,
+    "y": 0,
     "x": 0
 },
 {
     "y": 0,
-    "x": 1
+    "x": -1
+},
+{
+    "y": -1,
+    "x": 0
 },
 ]; //L *3 180
 var Curved_3_270 = [{
-    "y": -1,
-    "x": 1
-},
-{
-    "y": -1,
-    "x": 0
-},
-{
     "y": 0,
-    "x": 1
-},
-]; //L *3 270
-var Curved_5_0 = [{
-    "y": -1,
-    "x": -1
-},
-{
-    "y": -1,
     "x": 0
-},
-{
-    "y": -1,
-    "x": 1
 },
 {
     "y": 0,
@@ -154,70 +134,92 @@ var Curved_5_0 = [{
 },
 {
     "y": 1,
-    "x": -1
+    "x": 0
+},
+]; //L *3 270
+
+var Curved_5_0 = [{
+    "y": 0,
+    "x": 0
+},
+{
+    "y": 1,
+    "x": 0
+},
+{
+    "y": 2,
+    "x": 0
+},
+{
+    "y": 0,
+    "x": 1
+},
+{
+    "y": 0,
+    "x": 2
 },
 ]; //L *5 0
 var Curved_5_90 = [{
-    "y": -1,
-    "x": -1
+    "y": 0,
+    "x": 0
 },
 {
     "y": 0,
-    "x": -1
-},
-{
-    "y": 1,
-    "x": -1
-},
-{
-    "y": 1,
     "x": 1
 },
 {
-    "y": 1,
+    "y": 0,
+    "x": 2
+},
+{
+    "y": -1,
+    "x": 0
+},
+{
+    "y": -2,
     "x": 0
 },
 ]; //L *5 0 90
 var Curved_5_180 = [{
-    "y": 1,
-    "x": -1
-},
-{
-    "y": 1,
+    "y": 0,
     "x": 0
 },
 {
-    "y": 1,
-    "x": 1
+    "y": 0,
+    "x": -1
 },
 {
     "y": 0,
-    "x": 1
+    "x": -2
 },
 {
     "y": -1,
-    "x": 1
+    "x": 0
+},
+{
+    "y": -2,
+    "x": 0
 },
 ]; //L *5 0 180
 var Curved_5_270 = [{
-    "y": 1,
-    "x": 1
-},
-{
     "y": 0,
-    "x": 1
-},
-{
-    "y": -1,
-    "x": 1
-},
-{
-    "y": -1,
     "x": 0
 },
 {
-    "y": -1,
+    "y": 0,
     "x": -1
+},
+{
+    "y": 0,
+    "x": -2
+},
+{
+    "y": 2,
+    "x": 0
+},
+{
+    "y": 1,
+    "x": 0
 },
 ]; //L *5 0 270
 var Box_4 = [{
@@ -466,7 +468,6 @@ var moveGrid = null;
 /// * _color: [可选] 设置指定color. 如果不设置，则随机
 /// ***********************
 CubeGroup.prototype.create = function(size, gridType, _color) {
-
     var color = this._Colors[Math.floor(Math.random() * 7)];
     if ( !! _color) {
         color = _color;
@@ -508,7 +509,10 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
 };
 
 CubeGroup.prototype.createRandom = function(size) {
-    var ranGrid = this._gridType[Math.floor(Math.random() * 19)];
+    var ran = 0;
+    ran = Math.floor(Math.random() * 19);
+    var ranGrid = this._gridType[ran];
+            console.log(ran);
     return this.create(size, ranGrid);
 };
 
