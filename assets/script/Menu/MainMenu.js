@@ -8,6 +8,6 @@ MainMenu.prototype.onLoad = function(){
 	this._btnPlay = Fire.Entity.find("/btn_play");
 
 	this._btnPlay.on("mouseup", function () {
-	    Fire.Engine.loadScene("de895751-2fef-47bf-8cd8-024ad8e3778d");
+	    Fire.Engine.loadScene("be073680-7270-41f2-a043-b3658ec77ee7");
 	});
 };

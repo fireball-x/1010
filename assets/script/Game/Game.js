@@ -49,7 +49,7 @@ Game.prototype.onLoad = function () {
 
     var btnBack = Fire.Entity.find("/btn_Back");
     btnBack.on("mouseup", function () {
-        Fire.Engine.loadScene("42308794-9962-4cc5-ba9b-c42028d19ae2");
+        Fire.Engine.loadScene("c5e53b9b-9352-43e5-a80f-3e04bd34e305");
     }.bind(this));
 
     var restart = Fire.Entity.find('/btn_Restart');
@@ -64,7 +64,7 @@ Game.prototype.onLoad = function () {
     
     var gameOverHome = Fire.Entity.find("/GameOver/btn_Home");
     gameOverHome.on('mouseup',function () {
-        Fire.Engine.loadScene("42308794-9962-4cc5-ba9b-c42028d19ae2");
+        Fire.Engine.loadScene("c5e53b9b-9352-43e5-a80f-3e04bd34e305");
     });
 };
 

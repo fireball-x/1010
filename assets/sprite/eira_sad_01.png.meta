@@ -1,0 +1,43 @@
+{
+  "__type__": "Fire.TextureMeta",
+  "ver": 0,
+  "uuid": "7b29e402-5e52-479b-b4bf-ad258a2924a9",
+  "subRawData": [
+    {
+      "asset": {
+        "__type__": "Fire.Sprite",
+        "_name": "eira_sad_01",
+        "_objFlags": 0,
+        "pivot": {
+          "__type__": "Fire.Vec2",
+          "x": 0.5,
+          "y": 0.5
+        },
+        "trimX": 0,
+        "trimY": 0,
+        "width": 158,
+        "height": 74,
+        "texture": {
+          "__uuid__": "7b29e402-5e52-479b-b4bf-ad258a2924a9"
+        },
+        "rotated": false,
+        "x": 0,
+        "y": 0,
+        "rawWidth": 158,
+        "rawHeight": 74
+      },
+      "meta": {
+        "__type__": "Fire.SpriteMeta",
+        "ver": 0,
+        "uuid": "5e4bf755-9bcd-429e-96af-62ef01a498d3",
+        "atlasTag": "default",
+        "trimType": 0,
+        "trimThreshold": 1,
+        "rawTextureUuid": "7b29e402-5e52-479b-b4bf-ad258a2924a9"
+      }
+    }
+  ],
+  "type": 1,
+  "wrapMode": 1,
+  "filterMode": 1
+}

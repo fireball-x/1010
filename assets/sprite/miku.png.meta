@@ -1,0 +1,43 @@
+{
+  "__type__": "Fire.TextureMeta",
+  "ver": 0,
+  "uuid": "0eddd5e8-aac4-4452-acc6-869a3c915020",
+  "subRawData": [
+    {
+      "asset": {
+        "__type__": "Fire.Sprite",
+        "_name": "miku",
+        "_objFlags": 0,
+        "pivot": {
+          "__type__": "Fire.Vec2",
+          "x": 0.5,
+          "y": 0.5
+        },
+        "trimX": 57,
+        "trimY": 8,
+        "width": 523,
+        "height": 572,
+        "texture": {
+          "__uuid__": "0eddd5e8-aac4-4452-acc6-869a3c915020"
+        },
+        "rotated": false,
+        "x": 57,
+        "y": 8,
+        "rawWidth": 580,
+        "rawHeight": 580
+      },
+      "meta": {
+        "__type__": "Fire.SpriteMeta",
+        "ver": 0,
+        "uuid": "87629814-f379-4084-bfec-6a8ba19ae507",
+        "atlasTag": "default",
+        "trimType": 0,
+        "trimThreshold": 1,
+        "rawTextureUuid": "0eddd5e8-aac4-4452-acc6-869a3c915020"
+      }
+    }
+  ],
+  "type": 1,
+  "wrapMode": 1,
+  "filterMode": 1
+}
