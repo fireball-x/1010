@@ -10,21 +10,21 @@
     {
       "__type__": "FrameInfo",
       "sprite": {
-        "__uuid__": "91852704-4ee4-4675-96cf-18f00feb97da"
+        "__uuid__": "5e4bf755-9bcd-429e-96af-62ef01a498d3"
       },
       "frames": 10
     },
     {
       "__type__": "FrameInfo",
       "sprite": {
-        "__uuid__": "1c4eef78-154e-458c-ad02-cbe20195f81b"
+        "__uuid__": "2d372bbd-f94d-4044-812a-abd7a5105f80"
       },
       "frames": 10
     },
     {
       "__type__": "FrameInfo",
       "sprite": {
-        "__uuid__": "ebaef512-7042-482a-9ca2-c74b76975405"
+        "__uuid__": "83bb275e-1ea2-4342-94c8-11b0a7ab7b5f"
       },
       "frames": 10
     }
