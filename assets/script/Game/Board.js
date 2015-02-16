@@ -35,11 +35,10 @@ Board.getset("createOrClean",
 
 //-- 创建棋盘格子
 Board.prototype.create = function () {
-    if (this._board.length > 0) {
-        return;
-    }
+    this._board = [];
+
     if (!this._tempGrid) {
-        this._tempGrid = this.entity.find('/Prefabs/Cube');
+        this._tempGrid = Fire.Entity.find('/Prefabs/cube');
     }
     var widthX = (this.size.x + this.spacing);
     var widthY = (this.size.y + this.spacing);
@@ -163,9 +162,6 @@ Board.prototype.canPutCubeToCell = function (cubeGroup, center) {
         var pos = cube.position;
         var cell = this.getCell(center.x + pos.x, center.y + pos.y);
         if (!cell || (cell.hasCube && !cell.readyClear)) {
-            if (cell) {
-                console.log(cell.offset.x + "  " + cell.offset.y + "  " + cell.hasCube + "  " + cell.readyClear);
-            }
             return false;
         }
     }

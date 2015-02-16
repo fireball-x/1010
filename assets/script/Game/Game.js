@@ -3,7 +3,6 @@ var Cell = require('Cell');
 var Cube = require('Cube');
 var CubeGroup = require('CubeGroup');
 var AudioControl = require('AudioControl');
-var Background = require('Background');
 
 var Game = Fire.defineComponent(function() {
     this.board = null;
@@ -14,9 +13,6 @@ var Game = Fire.defineComponent(function() {
     this.idleCellList = [];//-- 场上空闲的格�
 	
     this.scoreText = null;
-    this._btnBackDown = false;
-    this._btnBack = null;
-    this.restart = null;
     this._scoreValue = null;
     
     // 分数上涨动画
@@ -30,61 +26,46 @@ var Game = Fire.defineComponent(function() {
 
 Game.instance = null;
 
-Game.prototype.onLoad = function() {
-    
-    //随机切换背景图片
-    Background.loadBackground();
-    
+Game.prototype.onLoad = function () {
+
     //-- 创建格子到棋盘上
     if (!this.tempCube) {
-        this.tempCube = Fire.Entity.find('/Prefabs/Cube');
+        this.tempCube = Fire.Entity.find('/Prefabs/cube');
     }
 	    
-    this.scoreText = Fire.Entity.find('/GameOver/TipAndImage/score/Value');
+    this.scoreText = Fire.Entity.find('/GameOver/TipAndImage/score/value');
     var boardObj = Fire.Entity.find('/Board');
     this.board = boardObj.getComponent(Board);
     this.board.create();
     
     var cubeGroupObj = Fire.Entity.find('/CubeGroup');
     this.cubeGroup = cubeGroupObj.getComponent(CubeGroup);
-    if (Fire.Engine.isPlaying) {
-        if (this.cubeGroupList.length === 0) {
-            this.cubeGroupList = this.cubeGroup.create3(32);
-        }
+    if (this.cubeGroupList.length === 0) {
+        this.cubeGroupList = this.cubeGroup.create3(32);
     }
 
-    this._btnBack = Fire.Entity.find("/btn_back");
-    var gameOverRestart = Fire.Entity.find("/GameOver/Restart");
-    var gameOverHome = Fire.Entity.find("/GameOver/Home");
+    var soceObj = Fire.Entity.find("/Score/value");
+    this._scoreValue = soceObj.getComponent(Fire.BitmapText);
+
+    var btnBack = Fire.Entity.find("/btn_Back");
+    btnBack.on("mouseup", function () {
+        Fire.Engine.loadScene("42308794-9962-4cc5-ba9b-c42028d19ae2");
+    }.bind(this));
+
+    var restart = Fire.Entity.find('/btn_Restart');
+    restart.on("mouseup", function () {
+        Fire.Engine.loadScene("de895751-2fef-47bf-8cd8-024ad8e3778d");
+    });
+
+    var gameOverRestart = Fire.Entity.find("/GameOver/btn_Restart");
     gameOverRestart.on('mouseup',function () {
         Fire.Engine.loadScene("de895751-2fef-47bf-8cd8-024ad8e3778d");
     });
     
+    var gameOverHome = Fire.Entity.find("/GameOver/btn_Home");
     gameOverHome.on('mouseup',function () {
         Fire.Engine.loadScene("42308794-9962-4cc5-ba9b-c42028d19ae2");
     });
-    
-    
-    
-    this._btnBack.on("mousedown", function () {
-        this._btnBackDown = true;
-    }.bind(this));
-
-    this._btnBack.on("mouseup", function () {
-        if (this._btnBackDown) {
-            Fire.Engine.loadScene("42308794-9962-4cc5-ba9b-c42028d19ae2");
-            this._btnBackDown = false;
-        }
-    }.bind(this));
-
-    var soceObj = Fire.Entity.find("/Score/Value");
-    this._scoreValue = soceObj.getComponent(Fire.BitmapText);
-
-	this.restart = Fire.Entity.find('/restart');
-    this.restart.on("mouseup",function () {
-        Fire.Engine.loadScene("de895751-2fef-47bf-8cd8-024ad8e3778d");
-    });
-    
 };
 
 Game.prototype.update = function() {
@@ -244,7 +225,6 @@ Game.prototype.pass = function () {
         for (var j = 0; j < celllen; j++) {
             var center = new Fire.Vec2(idleCellList[j].offset.x, idleCellList[j].offset.y);
             var canPut = this.board.canPutCubeToCell(groupList[i], center);
-            console.log(center + "   " + canPut);
             if (canPut) {
                 break
             }
@@ -253,7 +233,6 @@ Game.prototype.pass = function () {
             break
         }
     }
-    console.log(canPut);
     return canPut;
 };
 

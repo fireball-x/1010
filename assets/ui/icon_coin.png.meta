@@ -1,17 +1,13 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "a0607db7-dc0f-4135-be77-29dfe0057028",
+  "uuid": "7488f088-924f-409f-9b0f-0cb1b6dd1f87",
   "subRawData": [
     {
       "asset": {
         "__type__": "Fire.Sprite",
         "_name": "icon_coin",
         "_objFlags": 0,
-        "texture": {
-          "__uuid__": "a0607db7-dc0f-4135-be77-29dfe0057028"
-        },
-        "rotated": false,
         "pivot": {
           "__type__": "Fire.Vec2",
           "x": 0.5,
@@ -19,21 +15,25 @@
         },
         "trimX": 0,
         "trimY": 0,
-        "rawWidth": 144,
-        "rawHeight": 157,
+        "width": 144,
+        "height": 157,
+        "texture": {
+          "__uuid__": "7488f088-924f-409f-9b0f-0cb1b6dd1f87"
+        },
+        "rotated": false,
         "x": 0,
         "y": 0,
-        "width": 144,
-        "height": 157
+        "rawWidth": 144,
+        "rawHeight": 157
       },
       "meta": {
         "__type__": "Fire.SpriteMeta",
         "ver": 0,
-        "uuid": "ee35ecbe-c750-43d1-8b30-700a1412ae55",
+        "uuid": "f12eb9d4-7b5e-4508-ae0a-ccdaea90fbcd",
         "atlasTag": "default",
         "trimType": 0,
         "trimThreshold": 1,
-        "rawTextureUuid": "a0607db7-dc0f-4135-be77-29dfe0057028"
+        "rawTextureUuid": "7488f088-924f-409f-9b0f-0cb1b6dd1f87"
       }
     }
   ],

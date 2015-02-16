@@ -1,17 +1,13 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "478db173-8c60-4f60-9ea9-064ec4730a45",
+  "uuid": "6ba23110-a30e-4370-ba0c-fe974cc632e2",
   "subRawData": [
     {
       "asset": {
         "__type__": "Fire.Sprite",
         "_name": "Linotte-white-crimson-shadow",
         "_objFlags": 0,
-        "texture": {
-          "__uuid__": "478db173-8c60-4f60-9ea9-064ec4730a45"
-        },
-        "rotated": false,
         "pivot": {
           "__type__": "Fire.Vec2",
           "x": 0.5,
@@ -19,21 +15,25 @@
         },
         "trimX": 2,
         "trimY": 4,
-        "rawWidth": 512,
-        "rawHeight": 256,
+        "width": 504,
+        "height": 241,
+        "texture": {
+          "__uuid__": "6ba23110-a30e-4370-ba0c-fe974cc632e2"
+        },
+        "rotated": false,
         "x": 2,
         "y": 4,
-        "width": 504,
-        "height": 241
+        "rawWidth": 512,
+        "rawHeight": 256
       },
       "meta": {
         "__type__": "Fire.SpriteMeta",
         "ver": 0,
-        "uuid": "7e529af1-edf9-4903-bd00-d6d8812afeb0",
+        "uuid": "5bcccaa6-0747-4e20-a685-07cfa72415e8",
         "atlasTag": "default",
         "trimType": 0,
         "trimThreshold": 1,
-        "rawTextureUuid": "478db173-8c60-4f60-9ea9-064ec4730a45"
+        "rawTextureUuid": "6ba23110-a30e-4370-ba0c-fe974cc632e2"
       }
     }
   ],

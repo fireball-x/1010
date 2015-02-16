@@ -473,7 +473,7 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
         color = _color;
     }
 
-    var grid = this.entity.find('../Prefabs/Cube');
+    var grid = this.entity.find('../Prefabs/cube');
     var gridGroup = new Fire.Entity('group');
     gridGroup.parent = this.entity;
 
@@ -512,7 +512,6 @@ CubeGroup.prototype.createRandom = function(size) {
     var ran = 0;
     ran = Math.floor(Math.random() * 19);
     var ranGrid = this._gridType[ran];
-            console.log(ran);
     return this.create(size, ranGrid);
 };
 

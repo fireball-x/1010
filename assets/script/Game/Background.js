@@ -1,12 +1,12 @@
-var Background = {};
+var Background = Fire.defineComponent();
 
-Background.loadBackground = function() {
-    var bg1 = Fire.Entity.find('/Bg-Image/bg');
-    var bg2 = Fire.Entity.find('/Bg-Image/bg2');
-    var bg3 = Fire.Entity.find('/Bg-Image/bg3');
-    var bgimgs = [bg1,bg2,bg3];
-    bgimgs[Math.floor(Math.random() * 3)].active = true;
-    Fire.log('background');
+Background.prop('backGroups', [], Fire.ObjectType(Fire.Sprite));
+
+Background.prototype.onLoad = function() {
+    var bgSprite = this.backGroups[Math.floor(Math.random() * this.backGroups.length)];
+    
+    var render = this.entity.getComponent(Fire.SpriteRenderer);
+    render.sprite = bgSprite;
 };
 
 module.exports = Background;

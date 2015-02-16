@@ -1,17 +1,13 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "6cac853d-9c7b-46d8-bfd4-002391c38045",
+  "uuid": "975807ba-00c3-4efe-b92c-f1fe21f07bb7",
   "subRawData": [
     {
       "asset": {
         "__type__": "Fire.Sprite",
         "_name": "icon_gun",
         "_objFlags": 0,
-        "texture": {
-          "__uuid__": "6cac853d-9c7b-46d8-bfd4-002391c38045"
-        },
-        "rotated": false,
         "pivot": {
           "__type__": "Fire.Vec2",
           "x": 0.5,
@@ -19,21 +15,25 @@
         },
         "trimX": 0,
         "trimY": 0,
-        "rawWidth": 171,
-        "rawHeight": 189,
+        "width": 171,
+        "height": 189,
+        "texture": {
+          "__uuid__": "975807ba-00c3-4efe-b92c-f1fe21f07bb7"
+        },
+        "rotated": false,
         "x": 0,
         "y": 0,
-        "width": 171,
-        "height": 189
+        "rawWidth": 171,
+        "rawHeight": 189
       },
       "meta": {
         "__type__": "Fire.SpriteMeta",
         "ver": 0,
-        "uuid": "4ec5a367-30d7-4c31-bcb1-8b15bf396051",
+        "uuid": "24160b60-83a6-457f-b808-d275e63c482f",
         "atlasTag": "default",
         "trimType": 0,
         "trimThreshold": 1,
-        "rawTextureUuid": "6cac853d-9c7b-46d8-bfd4-002391c38045"
+        "rawTextureUuid": "975807ba-00c3-4efe-b92c-f1fe21f07bb7"
       }
     }
   ],

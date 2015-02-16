@@ -1,17 +1,13 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "5ce37afc-b439-4b11-956b-506a2adc2f93",
+  "uuid": "4015b0b5-ef40-4277-841e-f8b045b46cfb",
   "subRawData": [
     {
       "asset": {
         "__type__": "Fire.Sprite",
         "_name": "button_confirm_03",
         "_objFlags": 0,
-        "texture": {
-          "__uuid__": "5ce37afc-b439-4b11-956b-506a2adc2f93"
-        },
-        "rotated": false,
         "pivot": {
           "__type__": "Fire.Vec2",
           "x": 0.5,
@@ -19,21 +15,25 @@
         },
         "trimX": 12,
         "trimY": 9,
-        "rawWidth": 190,
-        "rawHeight": 189,
+        "width": 157,
+        "height": 162,
+        "texture": {
+          "__uuid__": "4015b0b5-ef40-4277-841e-f8b045b46cfb"
+        },
+        "rotated": false,
         "x": 12,
         "y": 9,
-        "width": 157,
-        "height": 162
+        "rawWidth": 190,
+        "rawHeight": 189
       },
       "meta": {
         "__type__": "Fire.SpriteMeta",
         "ver": 0,
-        "uuid": "16497929-40db-49f8-ba16-26b3b853b8a2",
+        "uuid": "6238a219-d3cd-4a6e-993b-590b9cdb8454",
         "atlasTag": "default",
         "trimType": 0,
         "trimThreshold": 1,
-        "rawTextureUuid": "5ce37afc-b439-4b11-956b-506a2adc2f93"
+        "rawTextureUuid": "4015b0b5-ef40-4277-841e-f8b045b46cfb"
       }
     }
   ],

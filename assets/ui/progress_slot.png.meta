@@ -1,17 +1,13 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "6da0e068-9d3d-4d85-a4ef-f0a845c7ef5b",
+  "uuid": "158a1306-7c9d-4b0c-80a5-8600965403e1",
   "subRawData": [
     {
       "asset": {
         "__type__": "Fire.Sprite",
         "_name": "progress_slot",
         "_objFlags": 0,
-        "texture": {
-          "__uuid__": "6da0e068-9d3d-4d85-a4ef-f0a845c7ef5b"
-        },
-        "rotated": false,
         "pivot": {
           "__type__": "Fire.Vec2",
           "x": 0.5,
@@ -19,21 +15,25 @@
         },
         "trimX": 15,
         "trimY": 8,
-        "rawWidth": 1298,
-        "rawHeight": 211,
+        "width": 1261,
+        "height": 183,
+        "texture": {
+          "__uuid__": "158a1306-7c9d-4b0c-80a5-8600965403e1"
+        },
+        "rotated": false,
         "x": 15,
         "y": 8,
-        "width": 1261,
-        "height": 183
+        "rawWidth": 1298,
+        "rawHeight": 211
       },
       "meta": {
         "__type__": "Fire.SpriteMeta",
         "ver": 0,
-        "uuid": "2a446ad9-2bbd-4280-96ed-cc98bb08fe92",
+        "uuid": "23994464-e0a6-49d2-82c8-d3d334a188f0",
         "atlasTag": "default",
         "trimType": 0,
         "trimThreshold": 1,
-        "rawTextureUuid": "6da0e068-9d3d-4d85-a4ef-f0a845c7ef5b"
+        "rawTextureUuid": "158a1306-7c9d-4b0c-80a5-8600965403e1"
       }
     }
   ],
