@@ -5,7 +5,7 @@ var SpriteAnimationClip = require('sprite-animation-clip');
 var SpriteAnimationState = require('sprite-animation-state');
 
 // 定义一个名叫Sprite Animation 组件
-var SpriteAnimation = Fire.define('Fire.SpriteAnimation', Fire.Component, function () {
+var SpriteAnimation = Fire.extend('Fire.SpriteAnimation', Fire.Component, function () {
     Fire.Component.call(this);
 
     this.animations = [];
