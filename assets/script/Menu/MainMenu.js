@@ -5,6 +5,9 @@ var MainMenu = Fire.defineComponent(function(){
 //MainMenu.prop('')
 
 MainMenu.prototype.onLoad = function(){
+    
+    console.log(Fire.Engine.screenSize);
+    
 	this._btnPlay = Fire.Entity.find("/btn_play");
 
 	this._btnPlay.on("mouseup", function () {

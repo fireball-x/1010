@@ -201,13 +201,15 @@ Game.prototype.updateIdleCellList = function () {
 
 Game.prototype.jumpAnimation = function () {
     if (this.jumpFirst) {
-        this._scoreValue.transform.scale = new Fire.Vec2(this._scoreValue.transform.scale.x + Fire.Time.deltaTime * 10,this._scoreValue.transform.scale.y + Fire.Time.deltaTime * 10);    
-        if (this._scoreValue.transform.scale.x >= 1.5) {
+        this._scoreValue.transform.scaleX += Fire.Time.deltaTime * 10;
+        this._scoreValue.transform.scaleY += Fire.Time.deltaTime * 10;
+        if (this._scoreValue.transform.scaleX >= 1.5) {
             this.jumpFirst = false;
         }
     }else {
-        this._scoreValue.transform.scale = new Fire.Vec2(this._scoreValue.transform.scale.x - Fire.Time.deltaTime * 10,this._scoreValue.transform.scale.y - Fire.Time.deltaTime * 10);    
-        if (this._scoreValue.transform.scale.x <= 1) {
+        this._scoreValue.transform.scaleX -= Fire.Time.deltaTime * 10;
+        this._scoreValue.transform.scaleY -= Fire.Time.deltaTime * 10;
+        if (this._scoreValue.transform.scaleX <= 1) {
             this._scoreValue.transform.scale = new Fire.Vec2(1,1);
             this.isJump = false;
             this.jumpFirst = true;
@@ -245,13 +247,15 @@ Game.prototype.gameOver = function () {
 
 Game.prototype.gameOverScoreAnimation = function () {
   	  if (this.scoreFirst) {
-        this.scoreText.transform.scale = new Fire.Vec2(this.scoreText.transform.scale.x + Fire.Time.deltaTime * 10,this.scoreText.transform.scale.y + Fire.Time.deltaTime * 10);    
-        if (this._scoreValue.transform.scale.x >= 1.5) {
+        this.scoreText.transform.scaleX += Fire.Time.deltaTime * 10;
+        this.scoreText.transform.scaleY += Fire.Time.deltaTime * 10;    
+        if (this._scoreValue.transform.scaleX >= 1.5) {
             this.scoreFirst = false;
         }
     }else {
-        this.scoreText.transform.scale = new Fire.Vec2(this.scoreText.transform.scale.x - Fire.Time.deltaTime * 10,this.scoreText.transform.scale.y - Fire.Time.deltaTime * 10);    
-        if (this.scoreText.transform.scale.x <= 1) {
+        this.scoreText.transform.scaleX -= Fire.Time.deltaTime * 10;
+        this.scoreText.transform.scaleY -= Fire.Time.deltaTime * 10;    
+        if (this.scoreText.transform.scaleX <= 1) {
             this.scoreText.transform.scale = new Fire.Vec2(1,1);
             this.isScore = false;
             this.scoreFirst = true;
