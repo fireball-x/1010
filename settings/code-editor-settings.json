@@ -1,0 +1,8 @@
+{
+  "theme": "zenburn",
+  "tabSize": 4,
+  "keyMap": "sublime",
+  "fontSize": 12,
+  "fontFamily": "DejaVu Sans Mono",
+  "autoComplete": true
+}
