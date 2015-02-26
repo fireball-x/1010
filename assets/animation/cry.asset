@@ -1,0 +1,32 @@
+{
+  "__type__": "Fire.SpriteAnimationClip",
+  "_name": "",
+  "_objFlags": 0,
+  "wrapMode": 2,
+  "stopAction": 0,
+  "speed": 1,
+  "_frameRate": 60,
+  "frameInfos": [
+    {
+      "__type__": "FrameInfo",
+      "sprite": {
+        "__uuid__": "4048cd36-28a8-4bb8-a9a1-cd25ac88b87e"
+      },
+      "frames": 10
+    },
+    {
+      "__type__": "FrameInfo",
+      "sprite": {
+        "__uuid__": "752976cd-161e-40af-a9ce-660809ca21b0"
+      },
+      "frames": 10
+    },
+    {
+      "__type__": "FrameInfo",
+      "sprite": {
+        "__uuid__": "9f501582-b3a2-47d3-a598-2bf4b4e1c1e6"
+      },
+      "frames": 10
+    }
+  ]
+}

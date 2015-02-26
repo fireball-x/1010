@@ -27,13 +27,13 @@ GameMenu.prototype.onLoad = function () {
         Fire.Engine.loadScene(this.homeUUID);
     }.bind(this));
 
-    //var gameOverRestart = Fire.Entity.find("/GameOver/btn_Restart");
-    //gameOverRestart.on('mouseup',function () {
-    //    Fire.Engine.loadScene(this.gameUUID);
-    //});
+    var gameOverRestart = Fire.Entity.find("/GameOver/btn_Restart");
+    gameOverRestart.on('mouseup',function () {
+       Fire.Engine.loadScene(this.gameUUID);
+    });
     
-    //var gameOverHome = Fire.Entity.find("/GameOver/btn_Home");
-    //gameOverHome.on('mouseup',function () {
-    //    Fire.Engine.loadScene(this.homeUUID);
-    //}.bind(this));
+    var gameOverHome = Fire.Entity.find("/GameOver/btn_Home");
+    gameOverHome.on('mouseup',function () {
+       Fire.Engine.loadScene(this.homeUUID);
+    }.bind(this));
 };
