@@ -1,6 +1,8 @@
 {
-  "__type__": "Fire.TextAssetMeta",
+  "__type__": "Fire.BitmapFontMeta",
   "ver": 0,
-  "uuid": "a4065600-dd2f-4420-a4f5-fc01030184ad",
-  "binary": false
+  "uuid": "98d3691e-4f5b-4e06-835a-e2117d1dd87c",
+  "texture": {
+    "__uuid__": "a8a4915b-7a09-4219-acdf-9a6f249d6906"
+  }
 }

@@ -1,0 +1,20 @@
+{
+    "builtins": {
+        "asset-db-debugger": {
+            "enable": true
+        },
+        "atlas-editor": {
+            "enable": true
+        },
+        "audio": {
+            "enable": true
+        },
+        "code-editor": {
+            "enable": true
+        },
+        "sprite-animation": {
+            "enable": true
+        }
+    },
+    "globals": {}
+}
