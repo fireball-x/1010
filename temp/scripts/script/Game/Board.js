@@ -1,4 +1,7 @@
-﻿var Cell = require('Cell');
+Fire._RFpush('fbbb16a7f4a84ff59ef689649c3168ec', 'Board');
+// script/Game/Board.js
+
+var Cell = require('Cell');
 var Cube = require('Cube');
 
 var Board = Fire.defineComponent(function () {
@@ -169,3 +172,5 @@ Board.prototype.canPutCubeToCell = function (cubeGroup, center) {
 };
 
 module.exports = Board;
+
+Fire._RFpop();

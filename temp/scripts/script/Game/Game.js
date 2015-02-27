@@ -1,3 +1,6 @@
+Fire._RFpush('ff42982fad42403380ce38c75cf236f8', 'Game');
+// script/Game/Game.js
+
 var Board = require('Board');
 var Cell = require('Cell');
 var Cube = require('Cube');
@@ -223,3 +226,5 @@ Game.prototype.gameOver = function () {
 
 module.exports = Game;
 
+
+Fire._RFpop();
