@@ -156,7 +156,7 @@
       "b": 0,
       "a": 1
     },
-    "_size": 963
+    "_size": 760
   },
   {
     "__type__": "Fire.Entity",
@@ -9894,15 +9894,13 @@
     "_position": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0,
-      "_iN$t": null
+      "y": 0
     },
     "_rotation": 0,
     "_scale": {
       "__type__": "Fire.Vec2",
       "x": 1,
-      "y": 1,
-      "_iN$t": null
+      "y": 1
     }
   },
   {
@@ -9921,8 +9919,7 @@
       "r": 0.7133333333333334,
       "g": 0.7133333333333334,
       "b": 0.7133333333333334,
-      "a": 1,
-      "_iN$t": null
+      "a": 1
     },
     "customSize_": true,
     "width_": 30,
@@ -12017,7 +12014,7 @@
     },
     "_loop": false,
     "_mute": false,
-    "_volume": 1,
+    "_volume": 0.5,
     "playOnAwake": false
   },
   {
@@ -12075,7 +12072,7 @@
     },
     "_loop": true,
     "_mute": false,
-    "_volume": 0.5,
+    "_volume": 0.3,
     "playOnAwake": true
   },
   {
@@ -12133,7 +12130,7 @@
     },
     "_loop": false,
     "_mute": false,
-    "_volume": 1,
+    "_volume": 0.5,
     "playOnAwake": false
   },
   {
