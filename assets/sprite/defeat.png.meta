@@ -1,39 +1,39 @@
 {
   "__type__": "Fire.TextureMeta",
   "ver": 0,
-  "uuid": "2ca057c0-eaab-4682-947d-7eee6e080c12",
+  "uuid": "d19bc54a-7a7d-4d03-af6e-0890cf366e14",
   "subRawData": [
     {
       "asset": {
         "__type__": "Fire.Sprite",
-        "_name": "cube",
+        "_name": "defeat",
         "_objFlags": 0,
         "pivot": {
           "__type__": "Fire.Vec2",
           "x": 0.5,
           "y": 0.5
         },
-        "trimX": 0,
-        "trimY": 0,
-        "width": 70,
-        "height": 70,
+        "trimX": 77,
+        "trimY": 1,
+        "width": 486,
+        "height": 285,
         "texture": {
-          "__uuid__": "2ca057c0-eaab-4682-947d-7eee6e080c12"
+          "__uuid__": "d19bc54a-7a7d-4d03-af6e-0890cf366e14"
         },
         "rotated": false,
-        "x": 0,
-        "y": 0,
-        "rawWidth": 70,
-        "rawHeight": 70
+        "x": 77,
+        "y": 1,
+        "rawWidth": 640,
+        "rawHeight": 300
       },
       "meta": {
         "__type__": "Fire.SpriteMeta",
         "ver": 0,
-        "uuid": "9b43faaf-40ff-4539-a2d7-10aa2e07a182",
+        "uuid": "5cc84ad9-904e-40b4-96aa-a7fa574f4b8f",
         "atlasTag": "default",
         "trimType": 0,
         "trimThreshold": 1,
-        "rawTextureUuid": "2ca057c0-eaab-4682-947d-7eee6e080c12"
+        "rawTextureUuid": "d19bc54a-7a7d-4d03-af6e-0890cf366e14"
       }
     }
   ],
