@@ -498,7 +498,7 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
     
     var yCount = 0;
 
-    for (var i =0; i< gridType.length; i ++) {
+    for (var i =0; i < gridType.length; i ++) {
         if (gridType[i].y < 0) {
             if (gridType[i].y < yCount) {
                 yCount = -gridType[i].y;
@@ -544,7 +544,6 @@ CubeGroup.prototype.move = function (moveX,moveY,grid,moveYcount) {
 
 var groupBorad = [];
 var groupBoradPositions = [];
-
 
 CubeGroup.prototype.create3 = function(size) {
     groupBoradPositions = [];
