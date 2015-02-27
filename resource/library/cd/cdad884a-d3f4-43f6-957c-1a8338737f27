@@ -1,0 +1,10 @@
+{
+  "__type__": "Fire.Texture",
+  "_name": "button_empty_03",
+  "_objFlags": 0,
+  "_rawext": "png",
+  "width": 152,
+  "height": 163,
+  "wrapMode": 1,
+  "filterMode": 1
+}

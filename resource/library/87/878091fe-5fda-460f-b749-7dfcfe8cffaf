@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "radio_02",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 9,
+  "trimY": 11,
+  "width": 46,
+  "height": 59,
+  "texture": {
+    "__uuid__": "f9005cec-e485-4919-902b-a08b17f5b14e"
+  },
+  "rotated": false,
+  "x": 9,
+  "y": 11,
+  "rawWidth": 72,
+  "rawHeight": 83
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "button_home_02",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 15,
+  "trimY": 10,
+  "width": 156,
+  "height": 162,
+  "texture": {
+    "__uuid__": "d4483a13-2b23-4a70-b8c5-56a14eace01a"
+  },
+  "rotated": false,
+  "x": 15,
+  "y": 10,
+  "rawWidth": 189,
+  "rawHeight": 188
+}

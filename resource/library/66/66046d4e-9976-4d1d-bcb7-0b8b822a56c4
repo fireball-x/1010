@@ -1,0 +1,10 @@
+{
+  "__type__": "Fire.Texture",
+  "_name": "icon_coin",
+  "_objFlags": 0,
+  "_rawext": "png",
+  "width": 144,
+  "height": 157,
+  "wrapMode": 1,
+  "filterMode": 1
+}

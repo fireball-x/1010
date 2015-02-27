@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "progress_bar_yellow",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 11,
+  "trimY": 7,
+  "width": 297,
+  "height": 57,
+  "texture": {
+    "__uuid__": "63ae357b-033a-409e-9add-7aece3a4509c"
+  },
+  "rotated": false,
+  "x": 11,
+  "y": 7,
+  "rawWidth": 322,
+  "rawHeight": 84
+}

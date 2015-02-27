@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "button_confirm_03",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 12,
+  "trimY": 9,
+  "width": 157,
+  "height": 162,
+  "texture": {
+    "__uuid__": "6223a76e-b1a7-4250-8e6b-6cfcd65b74af"
+  },
+  "rotated": false,
+  "x": 12,
+  "y": 9,
+  "rawWidth": 190,
+  "rawHeight": 189
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "button_cancel_03",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 12,
+  "trimY": 13,
+  "width": 156,
+  "height": 162,
+  "texture": {
+    "__uuid__": "b5abfb6f-bb4f-472e-8f44-801da1bb82ba"
+  },
+  "rotated": false,
+  "x": 12,
+  "y": 13,
+  "rawWidth": 191,
+  "rawHeight": 189
+}

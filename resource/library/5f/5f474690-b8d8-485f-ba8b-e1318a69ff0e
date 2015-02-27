@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "panel_bg",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 8,
+  "trimY": 6,
+  "width": 754,
+  "height": 450,
+  "texture": {
+    "__uuid__": "fc772f40-e54d-4b9b-9c06-4040eda18843"
+  },
+  "rotated": false,
+  "x": 8,
+  "y": 6,
+  "rawWidth": 774,
+  "rawHeight": 476
+}

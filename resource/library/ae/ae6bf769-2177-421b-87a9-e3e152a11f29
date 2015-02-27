@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "icon_heart",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 0,
+  "trimY": 0,
+  "width": 165,
+  "height": 154,
+  "texture": {
+    "__uuid__": "11e8bce0-8cc2-4e85-940e-b713338ea65e"
+  },
+  "rotated": false,
+  "x": 0,
+  "y": 0,
+  "rawWidth": 165,
+  "rawHeight": 154
+}

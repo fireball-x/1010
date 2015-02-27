@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "icon_star_small",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 0,
+  "trimY": 0,
+  "width": 88,
+  "height": 96,
+  "texture": {
+    "__uuid__": "4aa91b64-1991-4697-80f2-5f6199e22868"
+  },
+  "rotated": false,
+  "x": 0,
+  "y": 0,
+  "rawWidth": 88,
+  "rawHeight": 96
+}

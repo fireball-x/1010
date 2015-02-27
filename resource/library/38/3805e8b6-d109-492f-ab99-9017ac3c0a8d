@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "button_restart_03",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 12,
+  "trimY": 16,
+  "width": 157,
+  "height": 162,
+  "texture": {
+    "__uuid__": "3f46282e-c266-4cc6-b26d-bab97923c82c"
+  },
+  "rotated": false,
+  "x": 12,
+  "y": 16,
+  "rawWidth": 190,
+  "rawHeight": 197
+}

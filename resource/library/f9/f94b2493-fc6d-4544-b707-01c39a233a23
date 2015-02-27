@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "Linotte-white-crimson-shadow",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 2,
+  "trimY": 4,
+  "width": 504,
+  "height": 241,
+  "texture": {
+    "__uuid__": "a8a4915b-7a09-4219-acdf-9a6f249d6906"
+  },
+  "rotated": false,
+  "x": 2,
+  "y": 4,
+  "rawWidth": 512,
+  "rawHeight": 256
+}

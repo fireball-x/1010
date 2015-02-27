@@ -1,0 +1,10 @@
+{
+  "__type__": "Fire.Texture",
+  "_name": "star_01",
+  "_objFlags": 0,
+  "_rawext": "png",
+  "width": 230,
+  "height": 203,
+  "wrapMode": 1,
+  "filterMode": 1
+}

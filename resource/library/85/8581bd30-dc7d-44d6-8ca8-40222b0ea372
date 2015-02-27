@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "button_play_02",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 15,
+  "trimY": 16,
+  "width": 156,
+  "height": 162,
+  "texture": {
+    "__uuid__": "29fdddd9-8c24-4f0a-bb4c-3e34d1888600"
+  },
+  "rotated": false,
+  "x": 15,
+  "y": 16,
+  "rawWidth": 189,
+  "rawHeight": 197
+}
