@@ -17,9 +17,7 @@ var Game = Fire.defineComponent(function() {
     
     // 分数上涨动画
     this.isJump = false;
-    this.isScore = false;
     this.jumpFirst = true;
-    this.scoreFirst = true;
     
     Game.instance = this;
 });
@@ -52,10 +50,6 @@ Game.prototype.onLoad = function () {
 Game.prototype.update = function() {
 	if (this.isJump) {
         this.jumpAnimation();
-    }
-    
-    if (this.isScore) {
-        this.gameOverScoreAnimation();
     }
 };
 
@@ -225,24 +219,6 @@ Game.prototype.gameOver = function () {
     var gameOverBoard = Fire.Entity.find('/GameOver');
     gameOverBoard.transform.scale = new Fire.Vec2(1,1);
     this.isScore = true;
-};
-
-Game.prototype.gameOverScoreAnimation = function () {
-  	  if (this.scoreFirst) {
-        this.scoreText.transform.scaleX += Fire.Time.deltaTime * 10;
-        this.scoreText.transform.scaleY += Fire.Time.deltaTime * 10;    
-        if (this._scoreValue.transform.scaleX >= 1.5) {
-            this.scoreFirst = false;
-        }
-    }else {
-        this.scoreText.transform.scaleX -= Fire.Time.deltaTime * 10;
-        this.scoreText.transform.scaleY -= Fire.Time.deltaTime * 10;    
-        if (this.scoreText.transform.scaleX <= 1) {
-            this.scoreText.transform.scale = new Fire.Vec2(1,1);
-            this.isScore = false;
-            this.scoreFirst = true;
-        }
-    }
 };
 
 module.exports = Game;

@@ -30,7 +30,7 @@ GameMenu.prototype.onLoad = function () {
     var gameOverRestart = Fire.Entity.find("/GameOver/btn_Restart");
     gameOverRestart.on('mouseup',function () {
        Fire.Engine.loadScene(this.gameUUID);
-    });
+    }.bind(this));
     
     var gameOverHome = Fire.Entity.find("/GameOver/btn_Home");
     gameOverHome.on('mouseup',function () {
