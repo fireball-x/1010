@@ -1,5 +1,5 @@
 Fire._RFpush('audio-clip');
-// src\audio-clip.js
+// src/audio-clip.js
 
 Fire.AudioClip = (function () {
     var AudioClip = Fire.extend("Fire.AudioClip", Fire.Asset);

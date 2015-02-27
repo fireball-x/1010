@@ -1,5 +1,5 @@
 Fire._RFpush('38f164e9c2b844baa46f0d4d7d7205dd', 'AudioControl');
-// script\Game\AudioControl.js
+// script/Game/AudioControl.js
 
 var AudioControl = {};
 

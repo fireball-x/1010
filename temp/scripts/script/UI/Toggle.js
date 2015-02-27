@@ -1,5 +1,5 @@
 Fire._RFpush('e0ac2b810a73466d9f305d401ca23234', 'Toggle');
-// script\UI\Toggle.js
+// script/UI/Toggle.js
 
 var Toggle = Fire.defineComponent(function () { 
 	this._btnRender = null;

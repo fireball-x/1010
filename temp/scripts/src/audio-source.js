@@ -1,5 +1,5 @@
 Fire._RFpush('audio-source');
-// src\audio-source.js
+// src/audio-source.js
 
 var AudioSource = (function () {
     var AudioSource = Fire.extend("Fire.AudioSource", Fire.Component, function () {

@@ -1,5 +1,5 @@
 Fire._RFpush('cc304a3ca44e43488b9c400d9fab8945', 'Button');
-// script\UI\Button.js
+// script/UI/Button.js
 
 var Button = Fire.defineComponent(function () { 
 	this._btnRender = null;

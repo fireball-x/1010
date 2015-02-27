@@ -1,5 +1,5 @@
 Fire._RFpush('6634f146f45a4791a3ab864e29497a89', 'GameMenu');
-// script\Game\GameMenu.js
+// script/Game/GameMenu.js
 
 var GameMenu = Fire.defineComponent(function() {
 });

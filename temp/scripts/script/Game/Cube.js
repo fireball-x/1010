@@ -1,5 +1,5 @@
 Fire._RFpush('1b94adf1d4114c4480e3a5fe8e59c19b', 'Cube');
-// script\Game\Cube.js
+// script/Game/Cube.js
 
 var cube = Fire.defineComponent(function() {
     this.stopAnimation = true;

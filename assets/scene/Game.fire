@@ -156,7 +156,7 @@
       "b": 0,
       "a": 1
     },
-    "_size": 677
+    "_size": 581
   },
   {
     "__type__": "Fire.Entity",
@@ -675,7 +675,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -758,7 +758,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -841,7 +841,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -924,7 +924,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1007,7 +1007,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1090,7 +1090,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1173,7 +1173,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1256,7 +1256,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1339,7 +1339,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1422,7 +1422,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1505,7 +1505,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1588,7 +1588,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1671,7 +1671,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1754,7 +1754,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1837,7 +1837,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -1920,7 +1920,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2003,7 +2003,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2086,7 +2086,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2169,7 +2169,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2252,7 +2252,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2335,7 +2335,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2418,7 +2418,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2501,7 +2501,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2584,7 +2584,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2667,7 +2667,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2750,7 +2750,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2833,7 +2833,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2916,7 +2916,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -2999,7 +2999,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3082,7 +3082,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3165,7 +3165,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3248,7 +3248,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3331,7 +3331,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3414,7 +3414,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3497,7 +3497,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3580,7 +3580,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3663,7 +3663,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3746,7 +3746,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3829,7 +3829,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3912,7 +3912,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -3995,7 +3995,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4078,7 +4078,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4161,7 +4161,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4244,7 +4244,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4327,7 +4327,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4410,7 +4410,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4493,7 +4493,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4576,7 +4576,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4659,7 +4659,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4742,7 +4742,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4825,7 +4825,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4908,7 +4908,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -4991,7 +4991,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5074,7 +5074,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5157,7 +5157,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5240,7 +5240,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5323,7 +5323,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5406,7 +5406,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5489,7 +5489,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5572,7 +5572,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5655,7 +5655,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5738,7 +5738,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5821,7 +5821,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5904,7 +5904,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -5987,7 +5987,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6070,7 +6070,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6153,7 +6153,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6236,7 +6236,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6319,7 +6319,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6402,7 +6402,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6485,7 +6485,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6568,7 +6568,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6651,7 +6651,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6734,7 +6734,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6817,7 +6817,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6900,7 +6900,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -6983,7 +6983,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7066,7 +7066,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7149,7 +7149,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7232,7 +7232,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7315,7 +7315,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7398,7 +7398,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7481,7 +7481,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7564,7 +7564,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7647,7 +7647,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7730,7 +7730,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7813,7 +7813,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7896,7 +7896,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -7979,7 +7979,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -8062,7 +8062,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -8145,7 +8145,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -8228,7 +8228,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -8311,7 +8311,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -8394,7 +8394,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -8477,7 +8477,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -8560,7 +8560,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -8643,7 +8643,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -8726,7 +8726,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -8809,7 +8809,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -8892,7 +8892,7 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
@@ -9389,13 +9389,15 @@
     "_position": {
       "__type__": "Fire.Vec2",
       "x": 0,
-      "y": 0
+      "y": 0,
+      "_iN$t": null
     },
     "_rotation": 0,
     "_scale": {
       "__type__": "Fire.Vec2",
       "x": 1,
-      "y": 1
+      "y": 1,
+      "_iN$t": null
     }
   },
   {
@@ -9407,14 +9409,15 @@
     },
     "_enabled": true,
     "_sprite": {
-      "__uuid__": "3c3e9234-b15a-4d8c-b4e5-4c33fca94af9"
+      "__uuid__": "1282f877-86cf-4598-95c7-a76ced06a683"
     },
     "_color": {
       "__type__": "Fire.Color",
       "r": 1,
       "g": 1,
       "b": 1,
-      "a": 1
+      "a": 1,
+      "_iN$t": null
     },
     "customSize_": true,
     "width_": 30,

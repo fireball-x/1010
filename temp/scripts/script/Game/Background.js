@@ -1,5 +1,5 @@
 Fire._RFpush('3f84586b6cee4e6ca5d46cfd6ba8498a', 'Background');
-// script\Game\Background.js
+// script/Game/Background.js
 
 var Background = Fire.defineComponent();
 

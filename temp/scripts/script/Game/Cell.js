@@ -1,5 +1,5 @@
 Fire._RFpush('d2a358201e6d4a36b7fd92369c3dd36d', 'Cell');
-// script\Game\Cell.js
+// script/Game/Cell.js
 
 var Cell = Fire.defineComponent();
 
