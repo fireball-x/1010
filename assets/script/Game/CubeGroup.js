@@ -488,7 +488,7 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
         obj.transform.position = new Vec2(gridType[i].x * size, gridType[i].y * size);
     }
 
-    gridGroup.transform.scale = new Fire.Vec2(0.8,0.8);
+    gridGroup.transform.scale = new Fire.Vec2(0.6,0.6);
 
     gridGroup.on('mousedown',
         function(event) {
@@ -532,7 +532,8 @@ CubeGroup.prototype.create3 = function(size) {
     groupBorad = [];
     for (var i = 0; i < 3; i++) {
         var group = this.createRandom(size);
-        group.transform.position = new Fire.Vec2((( - 5 * size) + (5 * size) * i), group.transform.position.y);
+        group.transform.position = new Fire.Vec2((( - 5 * size * 0.8) + (5 * size * 0.8) * i), group.transform.position.y);
+        group.transform.scale = new Fire.Vec2(0.6,0.6);
         var xy = {"id":group.id,'position':group.transform.position};
         groupBoradPositions.push(xy);
         groupBorad.push(group);
@@ -558,7 +559,7 @@ CubeGroup.prototype.resetPosition = function(group) {
             for (var j = 0; j < groupBoradPositions.length; j++) {
                 if (groupBoradPositions[j].id === group.id) {
                     group.transform.position = groupBoradPositions[j].position;
-                    group.transform.scale = new Fire.Vec2(0.8,0.8);
+                    group.transform.scale = new Fire.Vec2(0.6,0.6);
                 }
             }
         }

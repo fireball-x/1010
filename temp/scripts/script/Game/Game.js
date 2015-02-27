@@ -221,6 +221,8 @@ Game.prototype.gameOver = function () {
     scoreBitmapText.text = this.fraction;
     var gameOverBoard = Fire.Entity.find('/GameOver');
     gameOverBoard.transform.scale = new Fire.Vec2(1,1);
+//     gameOverBoard.active = true;
+    Fire.info('GameOver');
     this.isScore = true;
 };
 
