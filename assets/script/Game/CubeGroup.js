@@ -460,6 +460,7 @@ var isMouseUp = true;
 
 
 var moveGrid = null;
+var moveYcount = 0;
 
 /// ***********************
 /// * size: 单个cube大小
@@ -475,6 +476,13 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
 
     var grid = this.entity.find('../Prefabs/cube');
     var gridGroup = new Fire.Entity('group');
+    
+    var touchGrid = Fire.instantiate(grid);
+    touchGrid.parent = gridGroup;
+    touchGrid.name = 'touchGrid';
+    touchGrid.transform.scale = new Fire.Vec2(5,5);
+    touchGrid.getComponent(Fire.SpriteRenderer).color = new Fire.Color(0,0,0,0);
+
     gridGroup.parent = this.entity;
 
     for (var i = 0; i < gridType.length; i++) {
@@ -487,14 +495,26 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
         obj.getComponent(Fire.SpriteRenderer).color = color;
         obj.transform.position = new Vec2(gridType[i].x * size, gridType[i].y * size);
     }
+    
+    var yCount = 0;
 
+    for (var i =0; i< gridType.length; i ++) {
+        if (gridType[i].y < 0) {
+            if (gridType[i].y < yCount) {
+                yCount = -gridType[i].y;
+            }
+        }
+    }
+    
     gridGroup.transform.scale = new Fire.Vec2(0.6,0.6);
 
     gridGroup.on('mousedown',
         function(event) {
         	isMouseUp = false;
             moveGrid = gridGroup;
+            moveYcount = yCount;
         	moveGrid.transform.scale = new Fire.Vec2(0.9,0.9);
+        	moveGrid.transform.position = new Fire.Vec2(moveGrid.transform.position.x,moveGrid.transform.position.y + (yCount + 1) * 30 * 0.9);
         }.bind(this)
 	);
 
@@ -515,11 +535,11 @@ CubeGroup.prototype.createRandom = function(size) {
     return this.create(size, ranGrid);
 };
 
-CubeGroup.prototype.move = function (moveX,moveY,grid) {
+CubeGroup.prototype.move = function (moveX,moveY,grid,moveYcount) {
     var CubeGroupPosition = thisTransform;
     var screenPosition = new Fire.Vec2(moveX,moveY);
     var wordPostion = camera.screenToWorld(screenPosition);
-    grid.transform.position = new Fire.Vec2(wordPostion.x + CubeGroupPosition.x,wordPostion.y - CubeGroupPosition.y);
+    grid.transform.position = new Fire.Vec2(wordPostion.x + CubeGroupPosition.x,wordPostion.y - CubeGroupPosition.y + (moveYcount +1) * 30 * 0.9);
 };
 
 var groupBorad = [];
@@ -579,7 +599,7 @@ CubeGroup.prototype.onLoad = function() {
 
         Fire.Input.on('mousemove', function (event) {
             if (!isMouseUp) {
-                this.move(event.screenX, event.screenY, moveGrid);
+                this.move(event.screenX, event.screenY, moveGrid, moveYcount);
             }
         }.bind(this));
 

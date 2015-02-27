@@ -76,6 +76,9 @@ Game.prototype.putBoard = function(cubeGroup) {
         }
         for (i = 0, len = child.length; i < len; ++i) {
             var cube = child[i].getComponent(Cube);
+            if (!cube) {
+           		continue;
+        	}
             var pos = cube.position;
             var cell = this.board.getCell(center.x + pos.x, center.y + pos.y);
             cell.putCube(cube);

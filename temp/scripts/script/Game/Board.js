@@ -162,6 +162,9 @@ Board.prototype.getCell = function (x, y) {
 Board.prototype.canPutCubeToCell = function (cubeGroup, center) {
     for (var j = 0, len = cubeGroup._children.length; j < len; ++j) {
         var cube = cubeGroup._children[j].getComponent(Cube);
+        if (!cube) {
+            continue;
+        }
         var pos = cube.position;
         var cell = this.getCell(center.x + pos.x, center.y + pos.y);
         if (!cell || (cell.hasCube && !cell.readyClear)) {
