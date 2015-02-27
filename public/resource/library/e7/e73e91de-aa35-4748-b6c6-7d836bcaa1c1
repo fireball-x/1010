@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "panel_tooltips",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 15,
+  "trimY": 18,
+  "width": 318,
+  "height": 169,
+  "texture": {
+    "__uuid__": "e33a7836-5b63-4d08-8b11-fd2b0f9a5ad8"
+  },
+  "rotated": false,
+  "x": 15,
+  "y": 18,
+  "rawWidth": 354,
+  "rawHeight": 198
+}

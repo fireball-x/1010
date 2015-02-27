@@ -1,0 +1,10 @@
+{
+  "__type__": "Fire.Texture",
+  "_name": "button_restart_02",
+  "_objFlags": 0,
+  "_rawext": "png",
+  "width": 190,
+  "height": 197,
+  "wrapMode": 1,
+  "filterMode": 1
+}

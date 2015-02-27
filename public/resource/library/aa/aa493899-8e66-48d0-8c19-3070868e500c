@@ -1,0 +1,10 @@
+{
+  "__type__": "Fire.Texture",
+  "_name": "button_next_01",
+  "_objFlags": 0,
+  "_rawext": "png",
+  "width": 191,
+  "height": 184,
+  "wrapMode": 1,
+  "filterMode": 1
+}

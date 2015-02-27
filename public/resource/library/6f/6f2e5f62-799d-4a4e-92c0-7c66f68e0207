@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "button_big_04",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 11,
+  "trimY": 10,
+  "width": 421,
+  "height": 135,
+  "texture": {
+    "__uuid__": "671d3302-1c6f-4023-9263-adb90f01535f"
+  },
+  "rotated": false,
+  "x": 11,
+  "y": 10,
+  "rawWidth": 443,
+  "rawHeight": 174
+}

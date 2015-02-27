@@ -1,0 +1,10 @@
+{
+  "__type__": "Fire.Texture",
+  "_name": "Linotte-black-white-shadow",
+  "_objFlags": 0,
+  "_rawext": "png",
+  "width": 512,
+  "height": 256,
+  "wrapMode": 1,
+  "filterMode": 1
+}

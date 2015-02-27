@@ -1,0 +1,10 @@
+{
+  "__type__": "Fire.Texture",
+  "_name": "progress_bar_green",
+  "_objFlags": 0,
+  "_rawext": "png",
+  "width": 322,
+  "height": 88,
+  "wrapMode": 1,
+  "filterMode": 1
+}

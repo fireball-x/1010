@@ -1,0 +1,10 @@
+{
+  "__type__": "Fire.Texture",
+  "_name": "icon_potion",
+  "_objFlags": 0,
+  "_rawext": "png",
+  "width": 137,
+  "height": 183,
+  "wrapMode": 1,
+  "filterMode": 1
+}

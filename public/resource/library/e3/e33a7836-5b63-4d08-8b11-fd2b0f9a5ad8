@@ -1,0 +1,10 @@
+{
+  "__type__": "Fire.Texture",
+  "_name": "panel_tooltips",
+  "_objFlags": 0,
+  "_rawext": "png",
+  "width": 354,
+  "height": 198,
+  "wrapMode": 1,
+  "filterMode": 1
+}

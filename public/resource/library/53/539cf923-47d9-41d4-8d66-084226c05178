@@ -1,0 +1,10 @@
+{
+  "__type__": "Fire.Texture",
+  "_name": "field_currency",
+  "_objFlags": 0,
+  "_rawext": "png",
+  "width": 176,
+  "height": 87,
+  "wrapMode": 1,
+  "filterMode": 1
+}

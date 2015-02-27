@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "icon_warning",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 0,
+  "trimY": 0,
+  "width": 92,
+  "height": 95,
+  "texture": {
+    "__uuid__": "7dafd252-494b-4ab9-af53-b1f87f07e285"
+  },
+  "rotated": false,
+  "x": 0,
+  "y": 0,
+  "rawWidth": 92,
+  "rawHeight": 95
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "button_next_04",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 7,
+  "trimY": 7,
+  "width": 156,
+  "height": 162,
+  "texture": {
+    "__uuid__": "23179351-8b51-41ba-90af-4f3a8ffbd934"
+  },
+  "rotated": false,
+  "x": 7,
+  "y": 7,
+  "rawWidth": 189,
+  "rawHeight": 184
+}

@@ -1,0 +1,10 @@
+{
+  "__type__": "Fire.Texture",
+  "_name": "cube",
+  "_objFlags": 0,
+  "_rawext": "png",
+  "width": 70,
+  "height": 70,
+  "wrapMode": 1,
+  "filterMode": 1
+}

@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "button_back_04",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 8,
+  "trimY": 12,
+  "width": 156,
+  "height": 162,
+  "texture": {
+    "__uuid__": "009812fc-f2d4-43c7-80cd-8b6f1f8d3108"
+  },
+  "rotated": false,
+  "x": 8,
+  "y": 12,
+  "rawWidth": 189,
+  "rawHeight": 193
+}

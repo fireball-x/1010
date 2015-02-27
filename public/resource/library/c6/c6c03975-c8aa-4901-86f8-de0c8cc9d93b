@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "button_store_02",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 16,
+  "trimY": 9,
+  "width": 156,
+  "height": 161,
+  "texture": {
+    "__uuid__": "52806323-2b3a-41e0-8654-6e9346f7309d"
+  },
+  "rotated": false,
+  "x": 16,
+  "y": 9,
+  "rawWidth": 190,
+  "rawHeight": 188
+}

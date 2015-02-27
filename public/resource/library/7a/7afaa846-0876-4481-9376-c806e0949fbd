@@ -1,0 +1,22 @@
+{
+  "__type__": "Fire.Sprite",
+  "_name": "icon_time",
+  "_objFlags": 0,
+  "pivot": {
+    "__type__": "Fire.Vec2",
+    "x": 0.5,
+    "y": 0.5
+  },
+  "trimX": 0,
+  "trimY": 0,
+  "width": 144,
+  "height": 157,
+  "texture": {
+    "__uuid__": "b0894eaa-03f9-4846-a61f-1417ce01435e"
+  },
+  "rotated": false,
+  "x": 0,
+  "y": 0,
+  "rawWidth": 144,
+  "rawHeight": 157
+}
