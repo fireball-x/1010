@@ -400,12 +400,8 @@ function() {
     return this._select;
 },
 function(value) {
-    //if (thisGroup.isValid) {
-    //    this.clear();
-    //}
     if (value != this._select) {
         this._select = value;
-        //this.create(32, this._gridType[value]);
     }
 },
 Fire.Enum(GridType));

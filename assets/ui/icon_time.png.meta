@@ -32,7 +32,7 @@
         "uuid": "7afaa846-0876-4481-9376-c806e0949fbd",
         "atlasTag": "default",
         "trimType": 0,
-        "trimThreshold": 1,
+        "trimThreshold": 0,
         "rawTextureUuid": "b0894eaa-03f9-4846-a61f-1417ce01435e"
       }
     }
