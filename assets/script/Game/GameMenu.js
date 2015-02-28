@@ -1,5 +1,8 @@
 var GameMenu = Fire.defineComponent(function() {
+    this.soundMute = false;
 });
+
+GameMenu.prop('sounds', [], Fire.ObjectType(Fire.AudioSource));
 
 GameMenu.prototype.onLoad = function () {
 
@@ -25,6 +28,26 @@ GameMenu.prototype.onLoad = function () {
     var btn_Home = Fire.Entity.find('/Menu/btn_Home');
     btn_Home.on("mouseup", function () {
         Fire.Engine.loadScene(this.homeUUID);
+    }.bind(this));
+    
+    var btn_sound = Fire.Entity.find('/Menu/sound/slider_slot');
+    var btn_sound_off = Fire.Entity.find('/Menu/sound/slider_slot/button_empty_01');
+    var btn_sound_on = Fire.Entity.find('/Menu/sound/slider_slot/button_empty_03');
+    btn_sound.on('mouseup',function(){
+        if(this.soundMute){
+			btn_sound_off.active = false;
+            btn_sound_on.active = true;
+        }
+        else{
+            btn_sound_off.active = true;
+			btn_sound_on.active = false;
+        }
+        this.soundMute = !this.soundMute;
+        
+        for(var i = 0, len = this.sounds.length;i < len; ++i){
+			this.sounds[i].mute = this.soundMute;
+        }
+        
     }.bind(this));
 
     var gameOverRestart = Fire.Entity.find("/GameOver/btn_Restart");

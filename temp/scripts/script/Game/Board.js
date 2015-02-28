@@ -1,5 +1,5 @@
 Fire._RFpush('fbbb16a7f4a84ff59ef689649c3168ec', 'Board');
-// script/Game/Board.js
+// script\Game\Board.js
 
 var Cell = require('Cell');
 var Cube = require('Cube');
