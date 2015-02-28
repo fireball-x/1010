@@ -231,5 +231,4 @@ Game.prototype.gameOver = function () {
 
 module.exports = Game;
 
-
 Fire._RFpop();

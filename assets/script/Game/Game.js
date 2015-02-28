@@ -227,4 +227,3 @@ Game.prototype.gameOver = function () {
 };
 
 module.exports = Game;
-
