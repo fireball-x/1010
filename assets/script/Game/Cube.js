@@ -3,21 +3,22 @@ var cube = Fire.defineComponent(function() {
 });
 
 cube.prop('_position', new Fire.Vec2(0, 0), Fire.HideInInspector);
-cube.prop('_play', false, Fire.HideInInspector);
+cube.prop('_destroy', false, Fire.HideInInspector);
 
-cube.getset('play',
+cube.getset('destroy',
 function() {
-    return this._play;
+    return this._destroy;
 },
 function(value) {
-    if (value !== this._play) {
-        this._play = value;
+    if (value !== this._destroy) {
+        this._destroy = value;
     }
     if (value) {
         this.playAnimation();
     }
 });
 
+// 单个cube的相对坐标
 cube.getset('position',
 function() {
     return this._position;
@@ -37,6 +38,7 @@ cube.prototype.playAnimation = function() {
     this.stopAnimation = false;
 };
 
+// 单个cube的消失动画
 cube.prototype.animation = function() {
     this.entity.transform.scale = new Fire.Vec2(this.entity.transform.scale.x - Fire.Time.deltaTime * 5, this.entity.transform.scale.x - Fire.Time.deltaTime * 5);
     if (this.entity.transform.scale.x - Fire.Time.deltaTime <= 0) {

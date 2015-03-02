@@ -404,6 +404,7 @@ function(value) {
         this._select = value;
     }
 },
+                 
 Fire.Enum(GridType));
 
 CubeGroup.prototype.gridType = {
@@ -524,6 +525,7 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
     return gridGroup;
 };
 
+// 生成单个随机cubegroup
 CubeGroup.prototype.createRandom = function(size) {
     var ran = 0;
     ran = Math.floor(Math.random() * 19);
@@ -531,6 +533,7 @@ CubeGroup.prototype.createRandom = function(size) {
     return this.create(size, ranGrid);
 };
 
+// cubegroup的move操作
 CubeGroup.prototype.move = function (moveX,moveY,grid,moveYcount) {
     var CubeGroupPosition = thisTransform;
     var screenPosition = new Fire.Vec2(moveX,moveY);
@@ -541,6 +544,7 @@ CubeGroup.prototype.move = function (moveX,moveY,grid,moveYcount) {
 var groupBorad = [];
 var groupBoradPositions = [];
 
+// 生成3个随机cubegroup并排列到指定位置
 CubeGroup.prototype.create3 = function(size) {
     groupBoradPositions = [];
 
@@ -559,6 +563,7 @@ CubeGroup.prototype.create3 = function(size) {
     return groupBorad;
 };
 
+// 清除cubegroup
 CubeGroup.prototype.clear = function() {
     try {
         thisGroup.destroy();
@@ -567,6 +572,8 @@ CubeGroup.prototype.clear = function() {
 	}
 };
 
+
+// 如果move过程中不允许put on,则复原cubegroup的原始位置
 CubeGroup.prototype.resetPosition = function(group) {
     var undoPosition = group.transform.position;
 	for(var i =0; i < groupBorad.length; i++ ) {
@@ -620,6 +627,7 @@ CubeGroup.prototype.play = function () {
   	  this.stopAnimation = false;
 };
 
+// cubegroup的出现动画
 CubeGroup.prototype.animation = function () {
   this.entity.transform.scale = new Fire.Vec2(this.entity.transform.scale.x + Fire.Time.deltaTime * 5, this.entity.transform.scale.x + Fire.Time.deltaTime * 5);
     if (this.entity.transform.scale.x + Fire.Time.deltaTime >= 1) {

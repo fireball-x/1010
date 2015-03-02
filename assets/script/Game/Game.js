@@ -9,16 +9,16 @@ var Game = Fire.defineComponent(function() {
     this.cubeGroup = null;
     this.cubeGroupList = [];
     this.fraction = 0;//--当前分数
-	
-    this.idleCellList = [];//-- 场上空闲的格�
-	
+
+    this.idleCellList = [];//-- 场上空闲的格
+
     this.scoreText = null;
     this._scoreValue = null;
-    
+
     // 分数上涨动画
     this.isJump = false;
     this.jumpFirst = true;
-    
+
     Game.instance = this;
 });
 
@@ -30,12 +30,12 @@ Game.prototype.onLoad = function () {
     if (!this.tempCube) {
         this.tempCube = Fire.Entity.find('/Prefabs/cube');
     }
-	    
+
     this.scoreText = Fire.Entity.find('/GameOver/score');
     var boardObj = Fire.Entity.find('/Board');
     this.board = boardObj.getComponent(Board);
     this.board.create();
-    
+
     var cubeGroupObj = Fire.Entity.find('/CubeGroup');
     this.cubeGroup = cubeGroupObj.getComponent(CubeGroup);
     if (this.cubeGroupList.length === 0) {
@@ -53,7 +53,7 @@ Game.prototype.update = function() {
     }
 };
 
-//-- �方块组放到棋盘�
+//-- 方块组放到棋盘
 Game.prototype.putBoard = function(cubeGroup) {
     if (!cubeGroup && !cubeGroup._children) {
         return;
@@ -119,7 +119,7 @@ Game.prototype.removeLine = function() {
     if (this.board.delCubeRowList.length > 0 || this.board.delCubeColList.length > 0) {
         AudioControl.play_finished();
     }
-    
+
     var i = 0,
     j = 0,
     delCubeList = null;
@@ -147,19 +147,19 @@ Game.prototype.removeLine = function() {
 //-- 添加分数
 Game.prototype.addFraction = function (curbCount) {
     var curFraction = this.fraction;
-    
+
     var lineNum = this.board.delCubeRowList.length;
     var rowNum = lineNum * this.board.count.x;
     if (lineNum > 1) {
         rowNum = (1 + (lineNum - 1) * 0.5) * (this.board.count.x * lineNum);
     }
-    
+
     lineNum =  this.board.delCubeColList.length;
     var colNum = lineNum * this.board.count.x;
     if (lineNum > 1) {
         colNum = (1 + (lineNum - 1) * 0.5) * (this.board.count.y * lineNum);
     }
-    
+
     this.fraction = (curFraction + curbCount) + rowNum + colNum;
 
     this._scoreValue.text = this.fraction;
@@ -177,6 +177,7 @@ Game.prototype.updateIdleCellList = function () {
     }
 };
 
+// 分数跳跃动画
 Game.prototype.jumpAnimation = function () {
     if (this.jumpFirst) {
         this._scoreValue.transform.scaleX += Fire.Time.deltaTime * 10;
@@ -216,12 +217,12 @@ Game.prototype.pass = function () {
     return canPut;
 };
 
+//游戏结束事件
 Game.prototype.gameOver = function () {
     var scoreBitmapText = this.scoreText.getComponent(Fire.BitmapText)
     scoreBitmapText.text = this.fraction;
     var gameOverBoard = Fire.Entity.find('/GameOver');
     gameOverBoard.transform.scale = new Fire.Vec2(1,1);
-//     gameOverBoard.active = true;
     Fire.info('GameOver');
     this.isScore = true;
 };
