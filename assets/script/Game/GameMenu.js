@@ -6,8 +6,8 @@ var GameMenu = Fire.defineComponent(function() {
 
 GameMenu.prototype.onLoad = function () {
 
-    this.homeUUID = "e41bbde0-cee8-475f-b96c-169db4f6d69d";
-    this.gameUUID = "e958312b-03e3-4a03-a2fe-6e7f40f634d6";
+    this.mainMenuScene = "MainMenu";
+    this.gameScene = "Game";
     this.menu = Fire.Entity.find('/Menu');
 
     var btn_Menu = Fire.Entity.find("/Button/btn_Menu");
@@ -22,12 +22,12 @@ GameMenu.prototype.onLoad = function () {
 
     var btn_Restart = Fire.Entity.find('/Menu/btn_Restart');
     btn_Restart.on("mouseup", function () {
-        Fire.Engine.loadScene(this.gameUUID);
+        Fire.Engine.loadScene(this.gameScene);
     }.bind(this));
 
     var btn_Home = Fire.Entity.find('/Menu/btn_Home');
     btn_Home.on("mouseup", function () {
-        Fire.Engine.loadScene(this.homeUUID);
+        Fire.Engine.loadScene(this.mainMenuScene);
     }.bind(this));
 
     var btn_sound = Fire.Entity.find('/Menu/sound/slider_slot');
@@ -49,11 +49,11 @@ GameMenu.prototype.onLoad = function () {
 
     var gameOverRestart = Fire.Entity.find("/GameOver/btn_Restart");
     gameOverRestart.on('mouseup',function () {
-       Fire.Engine.loadScene(this.gameUUID);
+       Fire.Engine.loadScene(this.gameScene);
     }.bind(this));
 
     var gameOverHome = Fire.Entity.find("/GameOver/btn_Home");
     gameOverHome.on('mouseup',function () {
-       Fire.Engine.loadScene(this.homeUUID);
+       Fire.Engine.loadScene(this.mainMenuScene);
     }.bind(this));
 };
