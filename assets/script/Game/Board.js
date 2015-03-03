@@ -65,11 +65,11 @@ Board.prototype.onLoad = function () {
     //-- 判断行是否可以消除
     this.entity.on("putCube", function (event) {
         var cell = event.target.getComponent(Cell);
-        this.delline(cell);
+        this.delLine(cell);
     }.bind(this));
 };
 
-Board.prototype.delline = function (cell) {
+Board.prototype.delLine = function (cell) {
     var clearRow = true, clearCol = true;
     var tempCell = null;
     var x = 0, y = 0;

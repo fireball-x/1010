@@ -433,7 +433,7 @@ CubeGroup.prototype.gridType = {
 var blue = new Fire.Color(97 / 255, 190 / 255, 227 / 255, 1);
 var yellow = new Fire.Color(253 / 255, 197 / 255, 76 / 255, 1);
 var red = new Fire.Color(218 / 255, 192 / 255, 90 / 255, 1);
-var lightblue = new Fire.Color(83 / 255, 211 / 255, 174 / 255, 1);
+var lightblue = new Fire.Color(1 / 255, 158 / 255, 95 / 255, 1);
 var pink = new Fire.Color(229 / 255, 107 / 255, 129 / 255, 1);
 var orange = new Fire.Color(243/255,80/255,12/255,1);
 var green = new Fire.Color(85/255,192/255,67/255,1);
@@ -557,7 +557,8 @@ CubeGroup.prototype.create3 = function(size) {
         groupBoradPositions.push(xy);
         groupBorad.push(group);
     }
-    this.entity.transform.scale = new Fire.Vec2(0.0,0.0);
+
+    this.entity.transform.scale = new Fire.Vec2(0.0, 0.0);
     this.play();
 
     return groupBorad;
@@ -588,38 +589,35 @@ CubeGroup.prototype.resetPosition = function(group) {
     }
 };
 
-CubeGroup.prototype.onLoad = function() {
+CubeGroup.prototype.onLoad = function () {
 
-    if (Fire.Engine.isPlaying) {
+    var Game = require('Game');
 
-        var Game = require('Game');
+    Fire.Input.on('mousedown', function (event) {
+        startX = event.screenX;
+        startY = event.screenY;
+    }.bind(this));
 
-        Fire.Input.on('mousedown', function (event) {
-            startX = event.screenX;
-            startY = event.screenY;
-        }.bind(this));
+    Fire.Input.on('mousemove', function (event) {
+        if (!isMouseUp) {
+            this.move(event.screenX, event.screenY, moveGrid, moveYcount);
+        }
+    }.bind(this));
 
-        Fire.Input.on('mousemove', function (event) {
-            if (!isMouseUp) {
-                this.move(event.screenX, event.screenY, moveGrid, moveYcount);
+    Fire.Input.on('mouseup', function (event) {
+        isMouseUp = true;
+        if (moveGrid) {
+            var canPut = Game.instance.putBoard(moveGrid);
+            if (!canPut) {
+                this.resetPosition(moveGrid);
             }
-        }.bind(this));
+            AudioControl.play_bobo();
+            moveGrid = null;
+        }
+    }.bind(this));
 
-        Fire.Input.on('mouseup', function (event) {
-            isMouseUp = true;
-            if (moveGrid) {
-                var canPut = Game.instance.putBoard(moveGrid);
-                if (!canPut) {
-                    this.resetPosition(moveGrid);
-                }
-                AudioControl.play_bobo();
-                moveGrid = null;
-            }
-        }.bind(this));
-
-        camera = Fire.Entity.find("/Main Camera").getComponent(Fire.Camera);
-        thisTransform = Fire.Entity.find("/CubeGroup").transform.position;
-    }
+    camera = Fire.Entity.find("/Main Camera").getComponent(Fire.Camera);
+    thisTransform = Fire.Entity.find("/CubeGroup").transform.position;
 };
 
 

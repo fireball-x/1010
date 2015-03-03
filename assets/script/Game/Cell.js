@@ -25,4 +25,10 @@ Cell.prototype.putCube = function (cube) {
     }.bind(this));
 };
 
+Cell.prototype.removeCube = function () {
+    var Cube = require('Cube');
+    this.readyClear = true;
+    this.cube.entity.getComponent(Cube).playAnimation();
+};
+
 module.exports = Cell;

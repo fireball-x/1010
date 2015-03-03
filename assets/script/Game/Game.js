@@ -1,8 +1,16 @@
-var Board = require('Board');
+﻿var Board = require('Board');
 var Cell = require('Cell');
 var Cube = require('Cube');
 var CubeGroup = require('CubeGroup');
 var AudioControl = require('AudioControl');
+
+
+var StateType = (function (t) {
+    t[t.ready = 0] = 'Ready';
+    t[t.normal = 1] = 'Normal';
+    t[t.dispel = 2] = 'Dispel';
+    return t;
+})({});
 
 var Game = Fire.defineComponent(function() {
     this.board = null;
@@ -14,10 +22,12 @@ var Game = Fire.defineComponent(function() {
 
     this.scoreText = null;
     this._scoreValue = null;
-
+   
     // 分数上涨动画
     this.isJump = false;
     this.jumpFirst = true;
+
+    this.gameState = StateType.reday;
 
     Game.instance = this;
 });
@@ -50,7 +60,34 @@ Game.prototype.onLoad = function () {
 Game.prototype.update = function() {
 	if (this.isJump) {
         this.jumpAnimation();
-    }
+	}
+
+	switch (this.gameState) {
+	    case StateType.reday:
+	        //-- 更新棋盘上的空格
+	        this.updateIdleCellList();
+
+	        //-- 创建新的Cube Group
+	        if (this.cubeGroupList.length === 0) {
+	            this.cubeGroupList = this.cubeGroup.create3(32);
+	        }
+	        //-- 判断pass或者失败
+	        var pass = this.pass();
+	        if (!pass) {
+	            this.gameOver();
+	        }
+	        break;
+	    case StateType.normal:
+	        break;
+	    case StateType.dispel:
+	        //-- 清除满格
+	        this.removeLine();
+
+	        this.gameState = StateType.reday;
+	        break;
+	    default:
+	        break;
+	}
 };
 
 //-- 方块组放到棋盘
@@ -77,8 +114,8 @@ Game.prototype.putBoard = function(cubeGroup) {
         for (i = 0, len = child.length; i < len; ++i) {
             var cube = child[i].getComponent(Cube);
             if (!cube) {
-           		continue;
-        	}
+                continue;
+            }
             var pos = cube.position;
             var cell = this.board.getCell(center.x + pos.x, center.y + pos.y);
             cell.putCube(cube);
@@ -91,26 +128,14 @@ Game.prototype.putBoard = function(cubeGroup) {
                 break;
             }
         }
-
         //-- 添加分数
         this.addFraction(curbCount);
         cubeGroup.destroy();
 
-        //-- 清除满格
-        this.removeLine();
-
-        //-- 更新棋盘上的空格
-        this.updateIdleCellList();
-
-        //-- 创建新的Cube Group
-        if (this.cubeGroupList.length === 0) {
-            this.cubeGroupList = this.cubeGroup.create3(32);
-        }
-        //-- 判断pass或者失败
-        var pass = this.pass();
-        if (!pass) {
-            this.gameOver();
-        }
+        this.gameState = StateType.dispel;
+    }
+    else {
+        this.gameState = StateType.normal;
     }
     return hasPutCube;
 };
@@ -126,15 +151,13 @@ Game.prototype.removeLine = function() {
     for (i = 0; i < this.board.delCubeRowList.length; i++) {
         delCubeList = this.board.delCubeRowList[i];
         for (j = 0; j < delCubeList.length; j++) {
-            delCubeList[j].readyClear = true;
-            delCubeList[j].cube.playAnimation();
+            delCubeList[j].removeCube();
         }
     }
     for (i = 0; i < this.board.delCubeColList.length; i++) {
         delCubeList = this.board.delCubeColList[i];
         for (j = 0; j < delCubeList.length; j++) {
-            delCubeList[j].readyClear = true;
-            delCubeList[j].cube.playAnimation();
+            delCubeList[j].removeCube();
         }
     }
 
@@ -223,7 +246,6 @@ Game.prototype.gameOver = function () {
     scoreBitmapText.text = this.fraction;
     var gameOverBoard = Fire.Entity.find('/GameOver');
     gameOverBoard.transform.scale = new Fire.Vec2(1,1);
-    Fire.info('GameOver');
     this.isScore = true;
 };
 
