@@ -559,9 +559,7 @@ CubeGroup.prototype.create3 = function(size) {
     }
 
     this.entity.transform.scale = new Fire.Vec2(0.0, 0.0);
-	var timer = setTimeout(function (){
-        this.play();
-    }.bind(this),100);
+    this.play();
 
     return groupBorad;
 };
