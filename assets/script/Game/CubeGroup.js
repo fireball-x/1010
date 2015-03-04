@@ -559,7 +559,9 @@ CubeGroup.prototype.create3 = function(size) {
     }
 
     this.entity.transform.scale = new Fire.Vec2(0.0, 0.0);
-    this.play();
+	var timer = setTimeout(function (){
+        this.play();
+    }.bind(this),100);
 
     return groupBorad;
 };
@@ -627,7 +629,7 @@ CubeGroup.prototype.play = function () {
 
 // cubegroup的出现动画
 CubeGroup.prototype.animation = function () {
-  this.entity.transform.scale = new Fire.Vec2(this.entity.transform.scale.x + Fire.Time.deltaTime * 5, this.entity.transform.scale.x + Fire.Time.deltaTime * 5);
+  this.entity.transform.scale = new Fire.Vec2(this.entity.transform.scale.x + Fire.Time.deltaTime * 2, this.entity.transform.scale.x + Fire.Time.deltaTime * 2);
     if (this.entity.transform.scale.x + Fire.Time.deltaTime >= 1) {
         this.entity.transform.scale = new Fire.Vec2(1,1);
         this.stopAnimation = true;
