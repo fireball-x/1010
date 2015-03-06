@@ -1,6 +1,6 @@
 var AudioControl = require('AudioControl');
 
-var GameMenu = Fire.defineComponent(function() {
+var GameMenu = Fire.extend(Fire.Component, function() {
     this.soundMute = false;
 });
 

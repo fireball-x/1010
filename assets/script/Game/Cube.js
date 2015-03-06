@@ -1,4 +1,4 @@
-var cube = Fire.defineComponent(function() {
+var cube = Fire.extend(Fire.Component, function() {
     this.stopAnimation = true;
 });
 

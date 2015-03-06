@@ -12,7 +12,7 @@ var StateType = (function (t) {
     return t;
 })({});
 
-var Game = Fire.defineComponent(function() {
+var Game = Fire.extend(Fire.Component, function() {
     this.board = null;
     this.cubeGroup = null;
     this.cubeGroupList = [];
@@ -22,7 +22,7 @@ var Game = Fire.defineComponent(function() {
 
     this.scoreText = null;
     this._scoreValue = null;
-   
+
     // 分数上涨动画
     this.isJump = false;
     this.jumpFirst = true;

@@ -1,4 +1,4 @@
-var Toggle = Fire.defineComponent(function () { 
+var Toggle = Fire.extend(Fire.Component, function () { 
 	this._btnRender = null;
     this._tiggle = false;
 });
@@ -10,9 +10,9 @@ Toggle.prop('pressed', null, Fire.ObjectType(Fire.Sprite));
 Toggle.prototype.onLoad = function () {
 
     this._btnRender = this.entity.getComponent(Fire.SpriteRenderer);
-    
+
     this._btnRender.sprite = this.normal;
-    
+
     this.entity.on('mousedown', function () {
         this._tiggle = !this._tiggle;
         if(this._tiggle) {

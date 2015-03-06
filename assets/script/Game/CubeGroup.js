@@ -1,4 +1,4 @@
-var CubeGroup = Fire.defineComponent(function () {
+var CubeGroup = Fire.extend(Fire.Component, function () {
     this.stopAnimation = true;
 });
 
@@ -404,7 +404,7 @@ function(value) {
         this._select = value;
     }
 },
-                 
+
 Fire.Enum(GridType));
 
 CubeGroup.prototype.gridType = {
@@ -473,7 +473,7 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
 
     var grid = this.entity.find('../Prefabs/cube');
     var gridGroup = new Fire.Entity('group');
-    
+
     var touchGrid = Fire.instantiate(grid);
     touchGrid.parent = gridGroup;
     touchGrid.name = 'touchGrid';
