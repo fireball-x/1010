@@ -511,7 +511,10 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
             moveGrid = gridGroup;
             moveYcount = yCount;
         	moveGrid.transform.scale = new Fire.Vec2(0.9,0.9);
-        	moveGrid.transform.position = new Fire.Vec2(moveGrid.transform.position.x,moveGrid.transform.position.y + (yCount + 1) * 30 * 0.9);
+            if (Fire.Input.hasTouch) {
+                moveGrid.transform.position = new Fire.Vec2(moveGrid.transform.position.x,moveGrid.transform.position.y + (yCount + 1) * 30 * 0.9);    
+            }
+        	
         }.bind(this)
 	);
 
@@ -538,7 +541,13 @@ CubeGroup.prototype.move = function (moveX,moveY,grid,moveYcount) {
     var CubeGroupPosition = thisTransform;
     var screenPosition = new Fire.Vec2(moveX,moveY);
     var wordPostion = camera.screenToWorld(screenPosition);
-    grid.transform.position = new Fire.Vec2(wordPostion.x + CubeGroupPosition.x,wordPostion.y - CubeGroupPosition.y + (moveYcount +1) * 30 * 0.9);
+    if (Fire.Input.hasTouch) {
+    	grid.transform.position = new Fire.Vec2(wordPostion.x + CubeGroupPosition.x,wordPostion.y - CubeGroupPosition.y + (moveYcount +1) * 30 * 0.9);    
+    }
+    else {
+        grid.transform.position = new Fire.Vec2(wordPostion.x + CubeGroupPosition.x,wordPostion.y - CubeGroupPosition.y);    
+    } 
+    
 };
 
 var groupBorad = [];

@@ -1,4 +1,4 @@
-﻿var Board = require('Board');
+var Board = require('Board');
 var Cell = require('Cell');
 var Cube = require('Cube');
 var CubeGroup = require('CubeGroup');
