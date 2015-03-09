@@ -12,7 +12,7 @@ var StateType = (function (t) {
     return t;
 })({});
 
-var Game = Fire.defineComponent(function() {
+var Game = Fire.extend(Fire.Component, function() {
     this.board = null;
     this.cubeGroup = null;
     this.cubeGroupList = [];
@@ -22,12 +22,10 @@ var Game = Fire.defineComponent(function() {
 
     this.scoreText = null;
     this._scoreValue = null;
-   
+
     // 分数上涨动画
     this.isJump = false;
     this.jumpFirst = true;
-
-    this.gameState = StateType.reday;
 
     Game.instance = this;
 });
@@ -35,7 +33,6 @@ var Game = Fire.defineComponent(function() {
 Game.instance = null;
 
 Game.prototype.onLoad = function () {
-
     //-- 创建格子到棋盘上
     if (!this.tempCube) {
         this.tempCube = Fire.Entity.find('/Prefabs/cube');
@@ -48,13 +45,11 @@ Game.prototype.onLoad = function () {
 
     var cubeGroupObj = Fire.Entity.find('/CubeGroup');
     this.cubeGroup = cubeGroupObj.getComponent(CubeGroup);
-    if (this.cubeGroupList.length === 0) {
-        this.cubeGroupList = this.cubeGroup.create3(32);
-    }
 
     var soceObj = Fire.Entity.find("/Score/value");
     this._scoreValue = soceObj.getComponent(Fire.BitmapText);
 
+    this.gameState = StateType.reday;
 };
 
 Game.prototype.update = function() {
@@ -67,10 +62,11 @@ Game.prototype.update = function() {
 	        //-- 更新棋盘上的空格
 	        this.updateIdleCellList();
 
-	        //-- 创建新的Cube Group
-	        if (this.cubeGroupList.length === 0) {
-	            this.cubeGroupList = this.cubeGroup.create3(32);
-	        }
+            //-- 创建新的Cube Group
+            if (this.cubeGroupList.length === 0) {
+                this.cubeGroupList = this.cubeGroup.create3(32);
+            }
+
 	        //-- 判断pass或者失败
 	        var pass = this.pass();
 	        if (!pass) {

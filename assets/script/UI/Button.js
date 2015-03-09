@@ -1,4 +1,4 @@
-var Button = Fire.defineComponent(function () { 
+var Button = Fire.extend(Fire.Component, function () { 
 	this._btnRender = null;
 });
 
@@ -13,9 +13,9 @@ Button.prop('disabled', null, Fire.ObjectType(Fire.Sprite));
 Button.prototype.onLoad = function () {
 
     this._btnRender = this.entity.getComponent(Fire.SpriteRenderer);
-    
+
     this._btnRender.sprite = this.normal;
-    
+
     this.entity.on('mousedown', function () {
         this._btnRender.sprite = this.pressed;
     }.bind(this));

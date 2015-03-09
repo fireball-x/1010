@@ -1,4 +1,4 @@
-var CubeGroup = Fire.defineComponent(function () {
+var CubeGroup = Fire.extend(Fire.Component, function () {
     this.stopAnimation = true;
 });
 
@@ -404,7 +404,7 @@ function(value) {
         this._select = value;
     }
 },
-                 
+
 Fire.Enum(GridType));
 
 CubeGroup.prototype.gridType = {
@@ -473,7 +473,7 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
 
     var grid = this.entity.find('../Prefabs/cube');
     var gridGroup = new Fire.Entity('group');
-    
+
     var touchGrid = Fire.instantiate(grid);
     touchGrid.parent = gridGroup;
     touchGrid.name = 'touchGrid';
@@ -492,21 +492,22 @@ CubeGroup.prototype.create = function(size, gridType, _color) {
         obj.getComponent(Fire.SpriteRenderer).color = color;
         obj.transform.position = new Vec2(gridType[i].x * size, gridType[i].y * size);
     }
-    
-    var yCount = 0;
 
-    for (var i =0; i < gridType.length; i ++) {
-        if (gridType[i].y < 0) {
-            if (gridType[i].y < yCount) {
-                yCount = -gridType[i].y;
-            }
-        }
-    }
-    
     gridGroup.transform.scale = new Fire.Vec2(0.6,0.6);
 
     gridGroup.on('mousedown',
         function(event) {
+
+            var yCount = 0;
+
+            for (var i =0; i < gridType.length; i ++) {
+                if (gridType[i].y < 0) {
+                    if (gridType[i].y < yCount) {
+                        yCount = -gridType[i].y;
+                    }
+                }
+            }
+
         	isMouseUp = false;
             moveGrid = gridGroup;
             moveYcount = yCount;
@@ -556,8 +557,8 @@ var groupBoradPositions = [];
 // 生成3个随机cubegroup并排列到指定位置
 CubeGroup.prototype.create3 = function(size) {
     groupBoradPositions = [];
-
     groupBorad = [];
+
     for (var i = 0; i < 3; i++) {
         var group = this.createRandom(size);
         group.transform.position = new Fire.Vec2((( - 5 * size * 0.8) + (5 * size * 0.8) * i), group.transform.position.y);

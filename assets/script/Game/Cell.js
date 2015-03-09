@@ -1,4 +1,4 @@
-var Cell = Fire.defineComponent();
+var Cell = Fire.extend(Fire.Component);
 
 Cell.prop('offset', new Fire.Vec2(0, 0));
 Cell.prop('hasCube', false);
@@ -14,7 +14,7 @@ Cell.prototype.putCube = function (cube) {
     cube.transform.position = new Fire.Vec2(0, 0);
     this.hasCube = true;
     this.cube = cube;
-    
+
     //-- 绑定已经放置方块消息
     this.entity.dispatchEvent(new Fire.Event("putCube", true));
     //-- 绑定Cube销毁消息

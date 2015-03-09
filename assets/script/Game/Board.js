@@ -1,7 +1,7 @@
 ﻿var Cell = require('Cell');
 var Cube = require('Cube');
 
-var Board = Fire.defineComponent(function () {
+var Board = Fire.extend(Fire.Component, function () {
     this._tempGrid = null;
 
     this.delCubeRowList = [];
