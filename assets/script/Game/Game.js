@@ -244,5 +244,3 @@ Game.prototype.gameOver = function () {
     gameOverBoard.transform.scale = new Fire.Vec2(1,1);
     this.isScore = true;
 };
-
-module.exports = Game;

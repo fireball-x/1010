@@ -25,5 +25,3 @@ Button.prototype.onLoad = function () {
     }.bind(this));
 
 };
-
-module.exports = Button;

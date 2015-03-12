@@ -170,5 +170,3 @@ Board.prototype.canPutCubeToCell = function (cubeGroup, center) {
     }
     return true;
 };
-
-module.exports = Board;

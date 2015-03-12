@@ -30,5 +30,3 @@ Cell.prototype.removeCube = function () {
     this.readyClear = true;
     this.cube.entity.getComponent(Cube).playAnimation();
 };
-
-module.exports = Cell;

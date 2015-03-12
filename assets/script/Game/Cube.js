@@ -52,5 +52,3 @@ cube.prototype.update = function() {
         this.animation();
     }
 };
-
-module.exports = cube;
