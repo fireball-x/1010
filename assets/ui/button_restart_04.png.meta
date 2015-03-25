@@ -1,49 +1,43 @@
-[
-  {
-    "__type__": "Fire.TextureMeta",
-    "ver": 0,
-    "uuid": "65b7ccba-195b-498c-b5d4-8e38a041def6",
-    "subAssets": [
-      {
-        "asset": {
-          "__id__": 1
+{
+  "__type__": "Fire.TextureMeta",
+  "ver": 0,
+  "uuid": "65b7ccba-195b-498c-b5d4-8e38a041def6",
+  "subRawData": [
+    {
+      "asset": {
+        "__type__": "Fire.Sprite",
+        "_name": "button_restart_04",
+        "_objFlags": 0,
+        "pivot": {
+          "__type__": "Fire.Vec2",
+          "x": 0.5,
+          "y": 0.5
         },
-        "meta": {
-          "__type__": "Fire.SpriteMeta",
-          "ver": 0,
-          "uuid": "9d62e22b-6ae7-4793-9ac2-53ed34bf901a",
-          "atlasTag": "default",
-          "allowRotation": false,
-          "trim": false,
-          "trimThreshold": 1,
-          "rawTextureUuid": "65b7ccba-195b-498c-b5d4-8e38a041def6"
-        }
+        "trimX": 8,
+        "trimY": 16,
+        "width": 156,
+        "height": 162,
+        "texture": {
+          "__uuid__": "65b7ccba-195b-498c-b5d4-8e38a041def6"
+        },
+        "rotated": false,
+        "x": 8,
+        "y": 16,
+        "rawWidth": 189,
+        "rawHeight": 197
+      },
+      "meta": {
+        "__type__": "Fire.SpriteMeta",
+        "ver": 0,
+        "uuid": "3bf9c75c-6c8b-4f6e-a37b-7819c1cee9df",
+        "atlasTag": "default",
+        "trimType": 0,
+        "trimThreshold": 1,
+        "rawTextureUuid": "65b7ccba-195b-498c-b5d4-8e38a041def6"
       }
-    ],
-    "type": 1,
-    "wrapMode": 1,
-    "filterMode": 1
-  },
-  {
-    "__type__": "Fire.Sprite",
-    "_name": "button_restart_04",
-    "_objFlags": 0,
-    "texture": {
-      "__uuid__": "65b7ccba-195b-498c-b5d4-8e38a041def6"
-    },
-    "rotated": false,
-    "pivot": {
-      "__type__": "Fire.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "trimX": 0,
-    "trimY": 0,
-    "rawWidth": 189,
-    "rawHeight": 197,
-    "x": 0,
-    "y": 0,
-    "width": 189,
-    "height": 197
-  }
-]
+    }
+  ],
+  "type": 1,
+  "wrapMode": 1,
+  "filterMode": 1
+}

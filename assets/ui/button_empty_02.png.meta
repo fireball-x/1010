@@ -1,49 +1,43 @@
-[
-  {
-    "__type__": "Fire.TextureMeta",
-    "ver": 0,
-    "uuid": "dfe95346-9dd3-4ddd-929f-e83401f0a5a1",
-    "subAssets": [
-      {
-        "asset": {
-          "__id__": 1
+{
+  "__type__": "Fire.TextureMeta",
+  "ver": 0,
+  "uuid": "dfe95346-9dd3-4ddd-929f-e83401f0a5a1",
+  "subRawData": [
+    {
+      "asset": {
+        "__type__": "Fire.Sprite",
+        "_name": "button_empty_02",
+        "_objFlags": 0,
+        "pivot": {
+          "__type__": "Fire.Vec2",
+          "x": 0.5,
+          "y": 0.5
         },
-        "meta": {
-          "__type__": "Fire.SpriteMeta",
-          "ver": 0,
-          "uuid": "485a4511-eb0e-47db-9181-a755a3a26602",
-          "atlasTag": "default",
-          "allowRotation": false,
-          "trim": false,
-          "trimThreshold": 1,
-          "rawTextureUuid": "dfe95346-9dd3-4ddd-929f-e83401f0a5a1"
-        }
+        "trimX": 14,
+        "trimY": 18,
+        "width": 119,
+        "height": 122,
+        "texture": {
+          "__uuid__": "dfe95346-9dd3-4ddd-929f-e83401f0a5a1"
+        },
+        "rotated": false,
+        "x": 14,
+        "y": 18,
+        "rawWidth": 152,
+        "rawHeight": 163
+      },
+      "meta": {
+        "__type__": "Fire.SpriteMeta",
+        "ver": 0,
+        "uuid": "773e8d72-121b-4cdd-9f5d-6b677ce5f6ee",
+        "atlasTag": "default",
+        "trimType": 0,
+        "trimThreshold": 1,
+        "rawTextureUuid": "dfe95346-9dd3-4ddd-929f-e83401f0a5a1"
       }
-    ],
-    "type": 1,
-    "wrapMode": 1,
-    "filterMode": 1
-  },
-  {
-    "__type__": "Fire.Sprite",
-    "_name": "button_empty_02",
-    "_objFlags": 0,
-    "texture": {
-      "__uuid__": "dfe95346-9dd3-4ddd-929f-e83401f0a5a1"
-    },
-    "rotated": false,
-    "pivot": {
-      "__type__": "Fire.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "trimX": 0,
-    "trimY": 0,
-    "rawWidth": 152,
-    "rawHeight": 163,
-    "x": 0,
-    "y": 0,
-    "width": 152,
-    "height": 163
-  }
-]
+    }
+  ],
+  "type": 1,
+  "wrapMode": 1,
+  "filterMode": 1
+}

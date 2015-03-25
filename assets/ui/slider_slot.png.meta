@@ -1,49 +1,43 @@
-[
-  {
-    "__type__": "Fire.TextureMeta",
-    "ver": 0,
-    "uuid": "7452d9e9-3927-4edd-a454-a1d1a427ac52",
-    "subAssets": [
-      {
-        "asset": {
-          "__id__": 1
+{
+  "__type__": "Fire.TextureMeta",
+  "ver": 0,
+  "uuid": "7452d9e9-3927-4edd-a454-a1d1a427ac52",
+  "subRawData": [
+    {
+      "asset": {
+        "__type__": "Fire.Sprite",
+        "_name": "slider_slot",
+        "_objFlags": 0,
+        "pivot": {
+          "__type__": "Fire.Vec2",
+          "x": 0.5,
+          "y": 0.5
         },
-        "meta": {
-          "__type__": "Fire.SpriteMeta",
-          "ver": 0,
-          "uuid": "27b29f41-5b18-4c0d-9291-1830dffccde4",
-          "atlasTag": "default",
-          "allowRotation": false,
-          "trim": false,
-          "trimThreshold": 1,
-          "rawTextureUuid": "7452d9e9-3927-4edd-a454-a1d1a427ac52"
-        }
+        "trimX": 21,
+        "trimY": 15,
+        "width": 210,
+        "height": 50,
+        "texture": {
+          "__uuid__": "7452d9e9-3927-4edd-a454-a1d1a427ac52"
+        },
+        "rotated": false,
+        "x": 21,
+        "y": 15,
+        "rawWidth": 260,
+        "rawHeight": 73
+      },
+      "meta": {
+        "__type__": "Fire.SpriteMeta",
+        "ver": 0,
+        "uuid": "34630f11-c46b-427e-9aab-edb7b42496f8",
+        "atlasTag": "default",
+        "trimType": 0,
+        "trimThreshold": 1,
+        "rawTextureUuid": "7452d9e9-3927-4edd-a454-a1d1a427ac52"
       }
-    ],
-    "type": 1,
-    "wrapMode": 1,
-    "filterMode": 1
-  },
-  {
-    "__type__": "Fire.Sprite",
-    "_name": "slider_slot",
-    "_objFlags": 0,
-    "texture": {
-      "__uuid__": "7452d9e9-3927-4edd-a454-a1d1a427ac52"
-    },
-    "rotated": false,
-    "pivot": {
-      "__type__": "Fire.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "trimX": 0,
-    "trimY": 0,
-    "rawWidth": 260,
-    "rawHeight": 73,
-    "x": 0,
-    "y": 0,
-    "width": 260,
-    "height": 73
-  }
-]
+    }
+  ],
+  "type": 1,
+  "wrapMode": 1,
+  "filterMode": 1
+}

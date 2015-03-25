@@ -1,49 +1,43 @@
-[
-  {
-    "__type__": "Fire.TextureMeta",
-    "ver": 0,
-    "uuid": "e4bb16d9-df8e-4784-b473-3eaa2ceb52d8",
-    "subAssets": [
-      {
-        "asset": {
-          "__id__": 1
+{
+  "__type__": "Fire.TextureMeta",
+  "ver": 0,
+  "uuid": "e4bb16d9-df8e-4784-b473-3eaa2ceb52d8",
+  "subRawData": [
+    {
+      "asset": {
+        "__type__": "Fire.Sprite",
+        "_name": "Linotte-black-white-shadow",
+        "_objFlags": 0,
+        "pivot": {
+          "__type__": "Fire.Vec2",
+          "x": 0.5,
+          "y": 0.5
         },
-        "meta": {
-          "__type__": "Fire.SpriteMeta",
-          "ver": 0,
-          "uuid": "2c7689e4-b5bc-49d3-a678-5117c9609687",
-          "atlasTag": "default",
-          "allowRotation": false,
-          "trim": false,
-          "trimThreshold": 1,
-          "rawTextureUuid": "e4bb16d9-df8e-4784-b473-3eaa2ceb52d8"
-        }
+        "trimX": 2,
+        "trimY": 4,
+        "width": 504,
+        "height": 241,
+        "texture": {
+          "__uuid__": "e4bb16d9-df8e-4784-b473-3eaa2ceb52d8"
+        },
+        "rotated": false,
+        "x": 2,
+        "y": 4,
+        "rawWidth": 512,
+        "rawHeight": 256
+      },
+      "meta": {
+        "__type__": "Fire.SpriteMeta",
+        "ver": 0,
+        "uuid": "3a9da667-6935-4623-8250-b838b35de3b8",
+        "atlasTag": "default",
+        "trimType": 0,
+        "trimThreshold": 1,
+        "rawTextureUuid": "e4bb16d9-df8e-4784-b473-3eaa2ceb52d8"
       }
-    ],
-    "type": 1,
-    "wrapMode": 1,
-    "filterMode": 1
-  },
-  {
-    "__type__": "Fire.Sprite",
-    "_name": "Linotte-black-white-shadow",
-    "_objFlags": 0,
-    "texture": {
-      "__uuid__": "e4bb16d9-df8e-4784-b473-3eaa2ceb52d8"
-    },
-    "rotated": false,
-    "pivot": {
-      "__type__": "Fire.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "trimX": 0,
-    "trimY": 0,
-    "rawWidth": 512,
-    "rawHeight": 256,
-    "x": 0,
-    "y": 0,
-    "width": 512,
-    "height": 256
-  }
-]
+    }
+  ],
+  "type": 1,
+  "wrapMode": 1,
+  "filterMode": 1
+}
