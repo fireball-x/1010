@@ -1,17 +1,16 @@
 var Cell = Fire.Class({
     // 继承
     extends: Fire.Component,
-
     // 构造函数
     constructor: function() {
         this.cube = null;
-        this.readyClear = null;
+        this.readyClear = false;
     },
     // 属性
     properties: {
         offset: {
             default: new Fire.Vec2(0, 0),
-            type: Fire.Vec2
+            type: Fire.Vec2()
         },
         hasCube: false
     },
@@ -25,7 +24,6 @@ var Cell = Fire.Class({
         cube.transform.position = new Fire.Vec2(0, 0);
         this.hasCube = true;
         this.cube = cube;
-
         // 绑定已经放置方块消息
         this.entity.dispatchEvent(new Fire.Event("putCube", true));
         // 绑定Cube销毁消息
@@ -37,8 +35,8 @@ var Cell = Fire.Class({
     },
     //
     removeCube: function() {
-        var Cube = require('Cube');
         this.readyClear = true;
-        this.cube.entity.getComponent(Cube).playAnimation();
+        var cube = this.cube.entity.getComponent('Cube')
+        cube.Clear();
     }
 });
