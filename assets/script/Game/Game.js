@@ -214,7 +214,7 @@ var Game = Fire.Class({
             var cubeGroup = this.cubeGroupList[i];
             for (var j = 0; j < this.idleCellList.length; j++) {
                 var idleCell = this.idleCellList[j];
-                var center = new Fire.Vec2(idleCell.offset.x, idleCell.offset.y);
+                var center = idleCell.offset;
                 var canPut = this.board.canPutCubeToCell(cubeGroup, center);
                 if (canPut) {
                     return true;

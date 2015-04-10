@@ -8,6 +8,12 @@ var CubeGroupManager = Fire.Class({
         this._isMouseUp = true;
         this._moveCubeGroup = null;
         this._playAnimation = false;
+        // 定义获取输入事件的回调方法，保存到变量以便之后反注册
+        this.bindedGlobalMouseMoveEvent = this._globalMouseMoveEvent.bind(this);
+        this.bindedGlobalMouseUpEvent = this._globalMouseUpEvent.bind(this);
+        this.bindedMouseDownEvent = this._mouseDownEvent.bind(this);
+        this.bindedMouseUpEvent = this._mouseUpEvent.bind(this);
+
     },
     // 属性
     properties: {
@@ -21,7 +27,7 @@ var CubeGroupManager = Fire.Class({
         //
         createOrClean: {
             get: function () {
-                this._hasCreateCubeGroup = this.cubeGroupList.length > 0 ? true : false;
+                this._hasCreateCubeGroup = this.cubeGroupList.length > 0;
                 return this._hasCreateCubeGroup;
             },
             set: function (value) {
@@ -53,8 +59,12 @@ var CubeGroupManager = Fire.Class({
         var mainCamera = Fire.Entity.find("/Main Camera");
         this._camera = mainCamera.getComponent(Fire.Camera);
         // 事件绑定
-        Fire.Input.on('mousemove', this._globalMouseMove.bind(this));
-        Fire.Input.on('mouseup', this._globalMouseUp.bind(this));
+        Fire.Input.on('mousemove', this.bindedGlobalMouseMoveEvent);
+        Fire.Input.on('mouseup', this.bindedGlobalMouseUpEvent);
+    },
+    onDestroy: function () {
+        Fire.Input.off('mousemove', this.bindedGlobalMouseMoveEvent);
+        Fire.Input.off('mouseup', this.bindedGlobalMouseUpEvent);
     },
     update: function () {
         if (this._playAnimation) {
@@ -75,8 +85,8 @@ var CubeGroupManager = Fire.Class({
             entity.parent = this.entity;
             var cubeGroup = entity.addComponent('CubeGroup');
             cubeGroup.create(this.tempGrid, i, size);
-            entity.on('mousedown', this._mouseDownEvent.bind(this));
-            entity.on('mouseup', this._mouseUpEvent.bind(this));
+            entity.on('mousedown', this.bindedMouseDownEvent);
+            entity.on('mouseup', this.bindedMouseUpEvent);
             cubeGroupList.push(entity);
         }
         this.entity.transform.scale = new Fire.Vec2(0, 0);
@@ -101,11 +111,11 @@ var CubeGroupManager = Fire.Class({
     },
     // 如果move过程中不允许put on,则复原cubegroup的原始位置
     _resetPosition: function (currentGroup) {
-        for (var i = 0; i < this.cubeGroupList.length; i++) {
-            var group = this.cubeGroupList[i].getComponent('CubeGroup');
-            if (group.id === currentGroup.id) {
-                currentGroup.reset()
-            }
+        var contains = this.cubeGroupList.some(function (ent) {
+            return ent.getComponent('CubeGroup') === currentGroup;
+        });
+        if (contains) {
+            currentGroup.reset();
         }
     },
     // 移动
@@ -140,14 +150,14 @@ var CubeGroupManager = Fire.Class({
         this._reset();
     },
     // 全局鼠标移动事件
-    _globalMouseMove: function (event) {
+    _globalMouseMoveEvent: function (event) {
         if (!this._isMouseUp) {
             var screendPos = new Fire.Vec2(event.screenX, event.screenY);
             this._move(this._camera, screendPos, this._moveCubeGroup, this._moveCubeGroup.moveYcount);
         }
     },
     // 全局鼠标松开
-    _globalMouseUp: function (event) {
+    _globalMouseUpEvent: function (event) {
         if(!this._moveCubeGroup) {
             return;
         }
@@ -157,7 +167,7 @@ var CubeGroupManager = Fire.Class({
             this._resetPosition(this._moveCubeGroup);
         }
         else {
-            this._moveCubeGroup.clear();
+            this._moveCubeGroup.destroy();
         }
         // 声音播放
         this.audio_bobo.play();

@@ -9,13 +9,6 @@ var Box_9 = [
     {"y": 1, "x": 0},
     {"y": 1, "x": 1},
 ];
-var box9 = [
-    [0,1,1,1,0],
-    [0,1,1,1,0],
-    [0,1,1,1,0],
-    [0,1,1,1,0],
-    [0,1,1,1,0],
-];
 // 田 *3
 var Curved_3_0 = [
     {"y": 1, "x": 0},
@@ -167,10 +160,7 @@ var CubeGroup = Fire.Class({
     // 属性
     properties: {
         // 创建出来时的坐标
-        initPos: {
-            default: new Fire.Vec2(0, 0),
-            type: Fire.Vec2()
-        },
+        initPos: new Fire.Vec2(0, 0),
         // 高度
         moveYcount: {
             get: function () {
@@ -188,6 +178,7 @@ var CubeGroup = Fire.Class({
     },
     create: function (tempGrid, index, size) {
         var renderer = null;
+        var rendererCustomSize = new Fire.Vec2(size, size);
         // 创建可以点击的范围格子
         var touchGrid = Fire.instantiate(tempGrid);
         touchGrid.parent = this.entity;
@@ -195,12 +186,12 @@ var CubeGroup = Fire.Class({
         touchGrid.transform.position = new Fire.Vec2(0, 0);
         touchGrid.transform.scale = new Fire.Vec2(5, 5);
         renderer = touchGrid.getComponent(Fire.SpriteRenderer);
-        renderer.color = new Fire.Color(0, 0, 0, 0);
-        renderer.customSize = new Fire.Vec2(size, size);
+        renderer.color = Fire.Color.transparent;
+        renderer.customSize = rendererCustomSize;
         // 随机各种类型
-        var gridType = this._randomGridTypes[Math.floor(Math.random() * 19)];
+        var gridType = this._randomGridTypes[Math.randomRangeInt(0, 19)];
         // 随机颜色
-        var color = this._randomColors[Math.floor(Math.random() * 7)];
+        var color = this._randomColors[Math.randomRangeInt(0, 7)];
         // 创建Cube
         for (var i = 0; i < gridType.length; i++) {
             var entity = Fire.instantiate(tempGrid);
@@ -210,19 +201,16 @@ var CubeGroup = Fire.Class({
             cube.position = new Fire.Vec2(gridType[i].x, gridType[i].y);
             renderer = entity.getComponent(Fire.SpriteRenderer);
             renderer.color = color;
-            renderer.customSize = new Fire.Vec2(size, size)
+            renderer.customSize = rendererCustomSize;
             entity.transform.position = new Vec2(gridType[i].x * size, gridType[i].y * size);
         }
         // 储存gridType
         this._gridType = gridType;
         // 设置坐标
-        this.transform.x = ( -5 * size * 0.8) + (5 * size * 0.8) * index;
+        this.transform.x = -128 + ( 128 * index );
         this.transform.scale = new Fire.Vec2(0.6, 0.6);
         // 赋值初始坐标
         this.initPos = this.transform.position;
-    },
-    clear: function () {
-        this.entity.destroy();
     },
     // 重置
     reset: function () {

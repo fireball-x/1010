@@ -4,6 +4,9 @@ var Button =Fire.Class({
     // 构造函数
     constructor: function () {
         this._btnRender = null;
+        // 定义获取输入事件的回调方法，保存到变量以便之后反注册
+        this.bindedPressDownEvent = this.onPressDown.bind(this);
+        this.bindedPressUpEvent = this.onPressUp.bind(this);
     },
     // 属性
     properties: {
@@ -35,12 +38,12 @@ var Button =Fire.Class({
     onLoad: function () {
         this._btnRender = this.entity.getComponent(Fire.SpriteRenderer);
         this._btnRender.sprite = this.normal;
-        this.entity.on('mousedown', this.onPressDown.bind(this));
-        this.entity.on('mouseup', this.onPressUp.bind(this));
+        this.entity.on('mousedown', this.bindedPressDownEvent);
+        this.entity.on('mouseup', this.bindedPressUpEvent);
     },
     // 销毁时
     onDestroy: function () {
-        this.entity.off('mousedown', this.onPressDown.bind(this));
-        this.entity.off('mouseup', this.onPressUp.bind(this));
+        this.entity.off('mousedown', this.bindedPressDownEvent);
+        this.entity.off('mouseup', this.bindedPressUpEvent);
     }
 });

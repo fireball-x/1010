@@ -150,7 +150,7 @@
       "b": 0,
       "a": 1
     },
-    "_size": 801.9776081514834,
+    "_size": 575,
     "_contentStrategy": 1
   },
   {
@@ -1876,6 +1876,11 @@
       "__id__": 53
     },
     "_enabled": true,
+    "soundButtonOffsetXPos": {
+      "__type__": "Fire.Vec2",
+      "x": -60,
+      "y": 60
+    },
     "btn_home": {
       "__id__": 67
     },

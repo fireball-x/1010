@@ -2,7 +2,11 @@ var GameOverMenu = Fire.Class({
     // 继承
     extends: Fire.Component,
     // 构造函数
-    constructor: function () {},
+    constructor: function () {
+        // 定义获取输入事件的回调方法，保存到变量以便之后反注册
+        this.bindedHomePressEvent = this.onHomePressEvent.bind(this);
+        this.bindedRestartPressEvent = this.onRestartPressEvent.bind(this);
+    },
     // 属性
     properties: {
         btn_home: {
@@ -23,17 +27,17 @@ var GameOverMenu = Fire.Class({
         }
     },
     // 按下Home按钮事件
-    onHomePressEvent: function () {
+    onHomePressEvent: function (event) {
         Fire.Engine.loadScene('MainMenu');
     },
     // 按下重新开始按钮事件
-    onRestartPressEvent: function () {
+    onRestartPressEvent: function (event) {
         Fire.Engine.loadScene('Game');
     },
     // 开始时
     onStart: function () {
-        this.btn_home.on('mouseup', this.onHomePressEvent.bind(this));
-        this.btn_restart.on('mouseup', this.onRestartPressEvent.bind(this));
+        this.btn_home.on('mouseup', this.bindedHomePressEvent);
+        this.btn_restart.on('mouseup', this.bindedRestartPressEvent);
     },
     onEnable: function () {
         var Game = require('Game');
@@ -41,7 +45,7 @@ var GameOverMenu = Fire.Class({
     },
     // 销毁时
     onDestroy: function () {
-        this.btn_home.off('mouseup', this.onHomePressEvent.bind(this));
-        this.btn_restart.off('mouseup', this.onRestartPressEvent.bind(this));
+        this.btn_home.off('mouseup', this.bindedHomePressEvent);
+        this.btn_restart.off('mouseup', this.bindedRestartPressEvent);
     }
 });

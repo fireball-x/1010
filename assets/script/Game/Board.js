@@ -20,27 +20,15 @@
             type: Fire.Color()
         },
         // 偏移值
-        offset: {
-            default: new Fire.Vec2(-140, -100),
-            type: Fire.Vec2()
-        },
+        offset: new Fire.Vec2(-140, -100),
         // 数量
-        count: {
-            default: new Fire.Vec2(10, 10),
-            type: Fire.Vec2()
-        },
+        count: new Fire.Vec2(10, 10),
         // 大小
-        size : {
-            default: new Fire.Vec2(30, 30),
-            type: Fire.Vec2()
-        },
+        size: new Fire.Vec2(30, 30),
         // 间距
         spacing: 2,
         // 创建
-        _createOrClean: {
-            default: false,
-            visible: false
-        },
+        _createOrClean: false,
         // 创建
         createOrClean: {
             get: function () {
@@ -63,7 +51,7 @@
     },
     // 通过X Y 获取Cell（X 0-9）(Y 0-9)
     getCell: function(x, y) {
-        if (x > -1 && x < 10 && y > -1 && y < 10) {
+        if (0 <= x && x <= 9 && 0 <= y && y <= 9) {
             return this._board[x][y];
         }
         return null;

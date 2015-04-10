@@ -8,15 +8,8 @@ var Cell = Fire.Class({
     },
     // 属性
     properties: {
-        offset: {
-            default: new Fire.Vec2(0, 0),
-            type: Fire.Vec2()
-        },
+        offset: new Fire.Vec2(0, 0),
         hasCube: false
-    },
-    //
-    clean: function() {
-        this.entity.destroy();
     },
     //
     putCube: function (cube) {
