@@ -1,5 +1,5 @@
 {
-  "__type__": "Fire.TextureMeta",
+  "__type__": "Editor.TextureMeta",
   "ver": 0,
   "uuid": "c7742402-92ec-4f03-8169-f8649c75030b",
   "subRawData": [
@@ -27,7 +27,7 @@
         "rawHeight": 141
       },
       "meta": {
-        "__type__": "Fire.SpriteMeta",
+        "__type__": "Editor.SpriteMeta",
         "ver": 0,
         "uuid": "ee175a5f-57f7-4a97-ae70-c75c646e4d71",
         "atlasTag": "default",

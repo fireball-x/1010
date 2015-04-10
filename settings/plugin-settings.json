@@ -14,6 +14,9 @@
         },
         "sprite-animation": {
             "enable": true
+        },
+        "build-settings": {
+            "enable": true
         }
     },
     "globals": {}
