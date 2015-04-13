@@ -54,7 +54,7 @@ var CubeGroupManager = Fire.Class({
         }
     },
     //
-    onStart: function () {
+    start: function () {
         //
         var mainCamera = Fire.Entity.find("/Main Camera");
         this._camera = mainCamera.getComponent(Fire.Camera);

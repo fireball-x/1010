@@ -71,7 +71,7 @@ var OptionsMenu = Fire.Class({
         this.entity.active = false;
     },
     // 开始时
-    onStart: function () {
+    start: function () {
         this.btn_sound.on('mouseup', this.bindedShoundPressEvent);
         this.btn_home.on('mouseup', this.bindedHomePressEvent);
         this.btn_restart.on('mouseup', this.bindedRestartPressEvent);

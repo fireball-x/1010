@@ -35,7 +35,7 @@ var GameOverMenu = Fire.Class({
         Fire.Engine.loadScene('Game');
     },
     // 开始时
-    onStart: function () {
+    start: function () {
         this.btn_home.on('mouseup', this.bindedHomePressEvent);
         this.btn_restart.on('mouseup', this.bindedRestartPressEvent);
     },

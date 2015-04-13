@@ -20,7 +20,7 @@ var MainMenu = Fire.Class({
         Fire.Engine.loadScene("Game");
     },
     // 载入时
-    onStart: function () {
+    start: function () {
         // 绑定按钮事件
         this.btn_play.on("mouseup", this.bindedGotoGameSceneEvent);
     },

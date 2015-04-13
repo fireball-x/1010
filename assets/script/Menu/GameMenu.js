@@ -22,7 +22,7 @@ var GameMenu = Fire.Class({
         this.opentinsMenu.active = true;
     },
     // 开始时
-    onStart: function () {
+    start: function () {
         this.btn_options.on('mouseup', this.bindedOptionsPressEvent);
     },
     // 销毁时

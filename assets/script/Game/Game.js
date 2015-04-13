@@ -52,7 +52,7 @@ var Game = Fire.Class({
         }
     },
     //
-    onStart: function(){
+    start: function(){
         // 创建棋盘
         this.board.create();
         // 游戏状态

@@ -72,7 +72,7 @@
         return true;
     },
     //
-    onStart: function() {
+    start: function() {
         //-- 判断行是否可以消除
         this.entity.on("putCube", function (event) {
             var cell = event.target.getComponent('Cell');
